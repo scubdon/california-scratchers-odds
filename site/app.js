@@ -1,0 +1,247 @@
+/* California Scratchers odds — front-end. Pure vanilla, no build step. */
+
+const PRICE_COLORS = {
+  1: "#6b7280", 2: "#2f6b46", 3: "#0e7490", 5: "#14618a",
+  10: "#7c3aed", 20: "#c9962a", 25: "#b45309", 30: "#c0392b", 40: "#9d174d",
+};
+const colorFor = (p) => PRICE_COLORS[p] || "#6b7280";
+
+const fmt = (n) => (n == null ? "—" : n.toLocaleString("en-US"));
+const money = (n) => (n == null ? "—" : "$" + n.toLocaleString("en-US"));
+const oddsText = (n) => (n == null ? "—" : "1 in " + n.toLocaleString("en-US"));
+
+const state = { all: [], price: "all", search: "", sort: "odds-desc" };
+
+const $ = (sel) => document.querySelector(sel);
+
+init();
+
+async function init() {
+  try {
+    const res = await fetch("data.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    state.all = data.games || [];
+    hydrateChrome(data);
+    buildControls();
+    render();
+    wireControls();
+  } catch (err) {
+    $("#status").textContent =
+      "Could not load Scratchers data (" + err.message + "). The data file may not have been generated yet.";
+  }
+}
+
+/* ---- header, takeaways, sources ---- */
+function hydrateChrome(data) {
+  if (data.generated_at) {
+    const d = new Date(data.generated_at);
+    $("#updated").textContent =
+      "Data refreshed " + d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) +
+      " · " + data.counts.with_prize_table + " current Scratchers games analyzed.";
+  }
+  if (data.source) {
+    $("#src-scratchers").href = data.source.scratchers;
+  }
+
+  const withTop = state.all.map((g) => ({ g, top: topPrize(g) })).filter((x) => x.top && x.top.odds_one_in);
+  if (!withTop.length) return;
+  const longest = withTop.reduce((a, b) => (b.top.odds_one_in > a.top.odds_one_in ? b : a));
+  const shortest = withTop.reduce((a, b) => (b.top.odds_one_in < a.top.odds_one_in ? b : a));
+
+  $("#stat-games").textContent = withTop.length;
+  $("#stat-longest").textContent = oddsText(longest.top.odds_one_in);
+  $("#stat-longest-label").innerHTML = "longest top-prize odds<br>(" + esc(longest.g.name) + ", " + money(longest.top.prize) + ")";
+  $("#stat-best").textContent = oddsText(shortest.top.odds_one_in);
+  $("#stat-best-label").innerHTML = "shortest top-prize odds<br>(" + esc(shortest.g.name) + ", " + money(shortest.top.prize) + ")";
+  $("#takeaways").hidden = false;
+
+  drawChart(withTop);
+  $("#landscape").hidden = false;
+}
+
+/* the headline prize for a game = the highest dollar level that still has tickets/odds */
+function topPrize(g) {
+  const withOdds = (g.prizes || []).filter((p) => p.odds_one_in);
+  return withOdds.length ? withOdds.reduce((a, b) => (b.prize > a.prize ? b : a)) : (g.prizes || [])[0];
+}
+
+/* ---- log-scale odds landscape ---- */
+function drawChart(points) {
+  const W = 1100, H = 150, padL = 30, padR = 30, padT = 34, padB = 46;
+  const odds = points.map((p) => p.top.odds_one_in);
+  const minE = Math.floor(Math.log10(Math.min(...odds)));
+  const maxE = Math.ceil(Math.log10(Math.max(...odds)));
+  const x = (v) => padL + ((Math.log10(v) - minE) / (maxE - minE)) * (W - padL - padR);
+
+  const NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(NS, "svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Top-prize odds for each game on a logarithmic scale");
+
+  const baseY = H - padB;
+  const axis = document.createElementNS(NS, "line");
+  axis.setAttribute("class", "axis-line");
+  axis.setAttribute("x1", padL); axis.setAttribute("x2", W - padR);
+  axis.setAttribute("y1", baseY); axis.setAttribute("y2", baseY);
+  svg.appendChild(axis);
+
+  for (let e = minE; e <= maxE; e++) {
+    const gx = x(Math.pow(10, e));
+    const g = document.createElementNS(NS, "g");
+    g.setAttribute("class", "tick");
+    const grid = document.createElementNS(NS, "line");
+    grid.setAttribute("class", "grid");
+    grid.setAttribute("x1", gx); grid.setAttribute("x2", gx);
+    grid.setAttribute("y1", padT); grid.setAttribute("y2", baseY);
+    const t = document.createElementNS(NS, "text");
+    t.setAttribute("x", gx); t.setAttribute("y", baseY + 22);
+    t.setAttribute("text-anchor", "middle");
+    t.textContent = "1 in " + shortNum(Math.pow(10, e));
+    g.appendChild(grid); g.appendChild(t);
+    svg.appendChild(g);
+  }
+
+  // beeswarm-ish vertical jitter so dots don't fully overlap
+  const slots = {};
+  const bandH = baseY - padT - 12;
+  points
+    .slice()
+    .sort((a, b) => a.top.odds_one_in - b.top.odds_one_in)
+    .forEach((p) => {
+      const px = Math.round(x(p.top.odds_one_in));
+      const key = Math.round(px / 14);
+      const n = (slots[key] = (slots[key] || 0) + 1);
+      const py = baseY - 10 - ((n - 1) % 8) * (bandH / 9);
+
+      const c = document.createElementNS(NS, "circle");
+      c.setAttribute("class", "dot");
+      c.setAttribute("cx", px); c.setAttribute("cy", py); c.setAttribute("r", 6);
+      c.setAttribute("fill", colorFor(p.g.price));
+      c.setAttribute("opacity", ".82");
+      c.dataset.tip =
+        `<b>${esc(p.g.name)}</b> ($${p.g.price})<br>${money(p.top.prize)} top prize<br>` +
+        `<b>${oddsText(p.top.odds_one_in)}</b> per ticket`;
+      svg.appendChild(c);
+    });
+
+  $("#chart").replaceChildren(svg);
+  wireTip(svg);
+
+  const prices = [...new Set(points.map((p) => p.g.price))].sort((a, b) => a - b);
+  $("#chart-legend").innerHTML = prices
+    .map((p) => `<span><i style="background:${colorFor(p)}"></i>$${p} games</span>`)
+    .join("");
+}
+
+function wireTip(svg) {
+  let tip = document.querySelector(".chart-tip");
+  if (!tip) { tip = document.createElement("div"); tip.className = "chart-tip"; document.body.appendChild(tip); }
+  const show = (e) => {
+    const t = e.target.closest(".dot"); if (!t) return;
+    tip.innerHTML = t.dataset.tip; tip.style.opacity = "1";
+    const px = (e.touches ? e.touches[0].clientX : e.clientX);
+    const py = (e.touches ? e.touches[0].clientY : e.clientY);
+    tip.style.left = Math.min(px + 14, window.innerWidth - 250) + "px";
+    tip.style.top = (py + 16) + "px";
+  };
+  const hide = () => { tip.style.opacity = "0"; };
+  svg.addEventListener("mousemove", show);
+  svg.addEventListener("mouseleave", hide);
+  svg.addEventListener("touchstart", show, { passive: true });
+  svg.addEventListener("touchend", hide);
+}
+
+/* ---- controls ---- */
+function buildControls() {
+  const prices = [...new Set(state.all.map((g) => g.price))].sort((a, b) => a - b);
+  const chips = ['<button class="chip" data-price="all" aria-pressed="true">All</button>']
+    .concat(prices.map((p) => `<button class="chip" data-price="${p}" aria-pressed="false">$${p}</button>`));
+  $("#price-chips").innerHTML = chips.join("");
+  $("#controls").hidden = false;
+}
+
+function wireControls() {
+  $("#price-chips").addEventListener("click", (e) => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    state.price = b.dataset.price;
+    document.querySelectorAll("#price-chips .chip").forEach((c) =>
+      c.setAttribute("aria-pressed", String(c === b)));
+    render();
+  });
+  $("#search").addEventListener("input", (e) => { state.search = e.target.value.toLowerCase().trim(); render(); });
+  $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
+}
+
+/* ---- render cards ---- */
+function render() {
+  let games = state.all.slice();
+  if (state.price !== "all") games = games.filter((g) => String(g.price) === state.price);
+  if (state.search) {
+    games = games.filter((g) =>
+      (g.name || "").toLowerCase().includes(state.search) ||
+      String(g.game_number).includes(state.search));
+  }
+  const top = (g) => (topPrize(g) || {}).odds_one_in || 0;
+  const sorters = {
+    "odds-desc": (a, b) => top(b) - top(a),
+    "odds-asc": (a, b) => top(a) - top(b),
+    "price-desc": (a, b) => b.price - a.price || top(b) - top(a),
+    "price-asc": (a, b) => a.price - b.price || top(b) - top(a),
+    "unsold-desc": (a, b) => (b.percent_unsold || 0) - (a.percent_unsold || 0),
+  };
+  games.sort(sorters[state.sort]);
+
+  const status = $("#status");
+  status.textContent = games.length
+    ? `Showing ${games.length} game${games.length === 1 ? "" : "s"}.`
+    : "No games match those filters.";
+
+  const tpl = $("#card-tpl");
+  const frag = document.createDocumentFragment();
+  for (const g of games) frag.appendChild(buildCard(tpl, g));
+  $("#cards").replaceChildren(frag);
+}
+
+function buildCard(tpl, g) {
+  const node = tpl.content.cloneNode(true);
+  const img = node.querySelector("img");
+  if (g.image_url) { img.src = g.image_url; img.alt = g.name + " scratch ticket"; }
+  else { img.remove(); }
+  node.querySelector(".price-badge").textContent = "$" + g.price;
+  node.querySelector(".card-name").textContent = g.name;
+  node.querySelector(".card-no").textContent = "Game #" + g.game_number;
+  node.querySelector(".m-left").textContent = fmt(g.tickets_remaining);
+  node.querySelector(".m-unsold").textContent = g.percent_unsold != null ? g.percent_unsold + "%" : "—";
+  node.querySelector(".m-overall").textContent = g.overall_odds ? "1 in " + g.overall_odds : "—";
+
+  const tbody = node.querySelector(".prizes tbody");
+  const topP = topPrize(g);
+  for (const p of g.prizes || []) {
+    const tr = document.createElement("tr");
+    if (p === topP) tr.classList.add("top");
+    if (p.remaining === 0) tr.classList.add("gone");
+    const shortOdds = p.odds_one_in && p.odds_one_in <= g.price * 5; // "win back ~5x stake" territory
+    tr.innerHTML =
+      `<td class="prize-amt">${money(p.prize)}</td>` +
+      `<td>${fmt(p.remaining)}</td>` +
+      `<td class="odds${shortOdds ? " short" : ""}">${p.remaining === 0 ? "gone" : oddsText(p.odds_one_in)}</td>` +
+      `<td class="printed">${oddsText(p.odds_printed)}</td>`;
+    tbody.appendChild(tr);
+  }
+
+  const link = node.querySelector(".card-link");
+  if (g.article_url) link.href = g.article_url; else link.remove();
+  return node;
+}
+
+/* ---- helpers ---- */
+function shortNum(n) {
+  if (n >= 1e6) return n / 1e6 + "M";
+  if (n >= 1e3) return n / 1e3 + "K";
+  return String(n);
+}
+function esc(s) {
+  return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}

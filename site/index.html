@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Real Odds — California Scratchers</title>
+  <meta name="description" content="The actual odds of winning each prize on California Lottery Scratchers, calculated live from the prizes still unclaimed and the tickets still unsold." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <p class="kicker">An independent look at the California Lottery</p>
+      <h1>What are your <em>real</em> odds?</h1>
+      <p class="standfirst">
+        The lottery prints the overall odds of winning <em>anything</em> — usually a free
+        ticket or a few dollars back. It doesn't tell you the odds of winning a prize that's
+        actually worth more than the ticket. So we worked them out for every current Scratchers
+        game, live from the prizes still unclaimed and the tickets still unsold.
+      </p>
+      <p class="updated" id="updated"></p>
+    </div>
+  </header>
+
+  <section class="takeaways wrap" id="takeaways" hidden>
+    <div class="stat">
+      <span class="stat-num" id="stat-games">—</span>
+      <span class="stat-label">current games analyzed</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="stat-longest">—</span>
+      <span class="stat-label" id="stat-longest-label">longest odds for a top prize</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="stat-best">—</span>
+      <span class="stat-label" id="stat-best-label">shortest odds for any top prize</span>
+    </div>
+  </section>
+
+  <section class="landscape wrap" id="landscape" hidden>
+    <h2>The odds landscape</h2>
+    <p class="section-note">
+      Every dot is one game's <strong>top prize</strong>, placed by how long the odds are of winning it
+      on a single ticket bought today. The scale is logarithmic — each step to the right is <em>ten times</em>
+      less likely. Hover or tap a dot for the game.
+    </p>
+    <div id="chart"></div>
+    <div class="legend" id="chart-legend"></div>
+  </section>
+
+  <section class="controls wrap" id="controls" hidden>
+    <div class="control">
+      <label>Price</label>
+      <div class="chips" id="price-chips"></div>
+    </div>
+    <div class="control grow">
+      <label for="search">Search</label>
+      <input id="search" type="search" placeholder="Game name or number…" autocomplete="off" />
+    </div>
+    <div class="control">
+      <label for="sort">Sort by</label>
+      <select id="sort">
+        <option value="odds-desc">Longest top-prize odds</option>
+        <option value="odds-asc">Shortest top-prize odds</option>
+        <option value="price-desc">Price: high to low</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="unsold-desc">Most tickets left</option>
+      </select>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <p id="status" class="status">Loading current Scratchers data…</p>
+    <div id="cards" class="cards"></div>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap">
+      <h2>How this is calculated</h2>
+      <p>
+        California publishes, for every game, a table of each prize level: the <strong>printed odds</strong>
+        ("1 in N") and how many of that prize are <strong>still unclaimed</strong> out of how many were
+        printed. From the printed odds and the total number of each prize, we recover the
+        <strong>size of the print run</strong>, then use the share of prizes still unclaimed to estimate how
+        many tickets are still out there to buy. The <em>live</em> odds of winning a given prize are then:
+      </p>
+      <p class="formula">
+        live odds&nbsp;=&nbsp;tickets&nbsp;still&nbsp;unsold&nbsp;÷&nbsp;that&nbsp;prize&nbsp;still&nbsp;unclaimed
+      </p>
+      <p>
+        These move as the game sells down: once the big prizes are gone, the long odds get even longer —
+        even though the lottery keeps the game on sale. We show both the live odds and the original printed
+        odds so you can see the difference.
+      </p>
+      <p class="caveat">
+        These are estimates. They assume the unsold tickets are spread through the pool the same way the
+        printed pool is — which the lottery does not guarantee — and "unclaimed" prizes may already be
+        sitting in a winner's drawer. This site is not affiliated with or endorsed by the California State
+        Lottery. Data:
+        <a id="src-scratchers" href="#">Scratchers listing</a> and each game's own page.
+      </p>
+    </div>
+  </footer>
+
+  <template id="card-tpl">
+    <article class="card">
+      <div class="card-img">
+        <img loading="lazy" alt="" />
+        <span class="price-badge"></span>
+      </div>
+      <div class="card-body">
+        <header class="card-head">
+          <h3 class="card-name"></h3>
+          <span class="card-no"></span>
+        </header>
+        <dl class="card-meta">
+          <div><dt>Tickets left</dt><dd class="m-left"></dd></div>
+          <div><dt>Est. unsold</dt><dd class="m-unsold"></dd></div>
+          <div><dt>Overall odds*</dt><dd class="m-overall"></dd></div>
+        </dl>
+        <table class="prizes">
+          <thead><tr><th>Prize</th><th># left</th><th>Live odds</th><th>Printed</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <a class="card-link" target="_blank" rel="noopener">View official game page →</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

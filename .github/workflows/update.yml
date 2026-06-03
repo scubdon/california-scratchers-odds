@@ -1,0 +1,57 @@
+name: Refresh data & deploy
+
+# Re-scrapes the California Lottery Scratchers data and republishes the static page to
+# GitHub Pages.
+# - on a daily schedule (keeps the odds current)
+# - on every push to main (so code changes ship)
+# - manually via the Actions tab
+
+on:
+  schedule:
+    - cron: "17 11 * * *"   # 11:17 UTC daily
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish; only keep the latest queued run.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Scrape latest Scratchers data
+        run: python scraper/scrape.py
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

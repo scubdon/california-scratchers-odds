@@ -1,0 +1,12 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node (only used locally for screenshot/QA, not for the site itself)
+node_modules/
+package.json
+package-lock.json
+
+# OS
+.DS_Store
