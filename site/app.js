@@ -1,14 +1,17 @@
 /* California Scratchers odds — front-end. Pure vanilla, no build step. */
 
 const PRICE_COLORS = {
-  1: "#6b7280", 2: "#2f6b46", 3: "#0e7490", 5: "#14618a",
-  10: "#7c3aed", 20: "#c9962a", 25: "#b45309", 30: "#c0392b", 40: "#9d174d",
+  1: "#8c8170", 2: "#2e6e4e", 3: "#0f7287", 5: "#2a5e8c",
+  10: "#5b4a9b", 20: "#b08515", 25: "#c4651a", 30: "#c8102e", 40: "#7c1f3f",
 };
-const colorFor = (p) => PRICE_COLORS[p] || "#6b7280";
+const colorFor = (p) => PRICE_COLORS[p] || "#8c8170";
 
 const fmt = (n) => (n == null ? "—" : n.toLocaleString("en-US"));
 const money = (n) => (n == null ? "—" : "$" + n.toLocaleString("en-US"));
 const oddsText = (n) => (n == null ? "—" : "1 in " + n.toLocaleString("en-US"));
+
+/* tiers shown before the "show all" fold kicks in */
+const TIERS_VISIBLE = 5;
 
 const state = { all: [], price: "all", search: "", sort: "odds-desc" };
 
@@ -37,8 +40,7 @@ function hydrateChrome(data) {
   if (data.generated_at) {
     const d = new Date(data.generated_at);
     $("#updated").textContent =
-      "Data refreshed " + d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) +
-      " · " + data.counts.with_prize_table + " current Scratchers games analyzed.";
+      "Data refreshed " + d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   }
   if (data.source) {
     $("#src-scratchers").href = data.source.scratchers;
@@ -56,8 +58,9 @@ function hydrateChrome(data) {
   $("#stat-best-label").innerHTML = "shortest top-prize odds<br>(" + esc(shortest.g.name) + ", " + money(shortest.top.prize) + ")";
   $("#takeaways").hidden = false;
 
-  drawChart(withTop);
+  /* unhide before drawing so the chart can measure its container */
   $("#landscape").hidden = false;
+  drawChart(withTop);
 }
 
 /* the headline prize for a game = the highest dollar level that still has tickets/odds */
@@ -66,10 +69,36 @@ function topPrize(g) {
   return withOdds.length ? withOdds.reduce((a, b) => (b.prize > a.prize ? b : a)) : (g.prizes || [])[0];
 }
 
-/* ---- log-scale odds landscape ---- */
+/* ---- log-scale odds landscape (responsive: redrawn to fit the viewport) ---- */
+let chartPoints = null;
+let resizeTimer = null;
+
 function drawChart(points) {
-  const W = 1100, H = 150, padL = 30, padR = 30, padT = 34, padB = 46;
-  const odds = points.map((p) => p.top.odds_one_in);
+  chartPoints = points;
+  renderChart();
+
+  const prices = [...new Set(points.map((p) => p.g.price))].sort((a, b) => a - b);
+  $("#chart-legend").innerHTML = prices
+    .map((p) => `<span><i style="background:${colorFor(p)}"></i>$${p} games</span>`)
+    .join("");
+
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(renderChart, 120);
+  });
+}
+
+function renderChart() {
+  if (!chartPoints) return;
+  const host = $("#chart");
+  const W = Math.max(300, Math.round(host.getBoundingClientRect().width) || 960);
+  const narrow = W < 520;
+  const H = narrow ? 160 : 190;
+  const padL = 10, padR = 10, padT = 26, padB = 40;
+  const dotR = narrow ? 5 : 6.5;
+  const slotW = narrow ? 11 : 14;
+
+  const odds = chartPoints.map((p) => p.top.odds_one_in);
   const minE = Math.floor(Math.log10(Math.min(...odds)));
   const maxE = Math.ceil(Math.log10(Math.max(...odds)));
   const x = (v) => padL + ((Math.log10(v) - minE) / (maxE - minE)) * (W - padL - padR);
@@ -77,6 +106,8 @@ function drawChart(points) {
   const NS = "http://www.w3.org/2000/svg";
   const svg = document.createElementNS(NS, "svg");
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("width", W);
+  svg.setAttribute("height", H);
   svg.setAttribute("role", "img");
   svg.setAttribute("aria-label", "Top-prize odds for each game on a logarithmic scale");
 
@@ -87,6 +118,8 @@ function drawChart(points) {
   axis.setAttribute("y1", baseY); axis.setAttribute("y2", baseY);
   svg.appendChild(axis);
 
+  /* on narrow screens with many decades, label every other tick */
+  const labelStep = narrow && maxE - minE > 4 ? 2 : 1;
   for (let e = minE; e <= maxE; e++) {
     const gx = x(Math.pow(10, e));
     const g = document.createElementNS(NS, "g");
@@ -95,29 +128,32 @@ function drawChart(points) {
     grid.setAttribute("class", "grid");
     grid.setAttribute("x1", gx); grid.setAttribute("x2", gx);
     grid.setAttribute("y1", padT); grid.setAttribute("y2", baseY);
-    const t = document.createElementNS(NS, "text");
-    t.setAttribute("x", gx); t.setAttribute("y", baseY + 22);
-    t.setAttribute("text-anchor", "middle");
-    t.textContent = "1 in " + shortNum(Math.pow(10, e));
-    g.appendChild(grid); g.appendChild(t);
+    g.appendChild(grid);
+    if ((e - minE) % labelStep === 0) {
+      const t = document.createElementNS(NS, "text");
+      t.setAttribute("x", gx); t.setAttribute("y", baseY + 22);
+      t.setAttribute("text-anchor", e === minE ? "start" : e === maxE ? "end" : "middle");
+      t.textContent = "1 in " + shortNum(Math.pow(10, e));
+      g.appendChild(t);
+    }
     svg.appendChild(g);
   }
 
   // beeswarm-ish vertical jitter so dots don't fully overlap
   const slots = {};
   const bandH = baseY - padT - 12;
-  points
+  chartPoints
     .slice()
     .sort((a, b) => a.top.odds_one_in - b.top.odds_one_in)
     .forEach((p) => {
       const px = Math.round(x(p.top.odds_one_in));
-      const key = Math.round(px / 14);
+      const key = Math.round(px / slotW);
       const n = (slots[key] = (slots[key] || 0) + 1);
       const py = baseY - 10 - ((n - 1) % 8) * (bandH / 9);
 
       const c = document.createElementNS(NS, "circle");
       c.setAttribute("class", "dot");
-      c.setAttribute("cx", px); c.setAttribute("cy", py); c.setAttribute("r", 6);
+      c.setAttribute("cx", px); c.setAttribute("cy", py); c.setAttribute("r", dotR);
       c.setAttribute("fill", colorFor(p.g.price));
       c.setAttribute("opacity", ".82");
       c.dataset.tip =
@@ -128,11 +164,6 @@ function drawChart(points) {
 
   $("#chart").replaceChildren(svg);
   wireTip(svg);
-
-  const prices = [...new Set(points.map((p) => p.g.price))].sort((a, b) => a - b);
-  $("#chart-legend").innerHTML = prices
-    .map((p) => `<span><i style="background:${colorFor(p)}"></i>$${p} games</span>`)
-    .join("");
 }
 
 function wireTip(svg) {
@@ -200,35 +231,62 @@ function render() {
 
   const tpl = $("#card-tpl");
   const frag = document.createDocumentFragment();
-  for (const g of games) frag.appendChild(buildCard(tpl, g));
+  games.forEach((g, i) => frag.appendChild(buildCard(tpl, g, i)));
   $("#cards").replaceChildren(frag);
 }
 
-function buildCard(tpl, g) {
+function buildCard(tpl, g, i) {
   const node = tpl.content.cloneNode(true);
-  const img = node.querySelector("img");
+  const card = node.querySelector(".card");
+  card.style.animationDelay = Math.min(i, 10) * 35 + "ms";
+
+  const img = node.querySelector(".thumb");
   if (g.image_url) { img.src = g.image_url; img.alt = g.name + " scratch ticket"; }
   else { img.remove(); }
-  node.querySelector(".price-badge").textContent = "$" + g.price;
+  node.querySelector(".price-tag").textContent = "$" + g.price;
   node.querySelector(".card-name").textContent = g.name;
-  node.querySelector(".card-no").textContent = "Game #" + g.game_number;
+  node.querySelector(".card-no").textContent = "Game No. " + g.game_number;
   node.querySelector(".m-left").textContent = fmt(g.tickets_remaining);
   node.querySelector(".m-unsold").textContent = g.percent_unsold != null ? g.percent_unsold + "%" : "—";
   node.querySelector(".m-overall").textContent = g.overall_odds ? "1 in " + g.overall_odds : "—";
 
-  const tbody = node.querySelector(".prizes tbody");
+  const list = node.querySelector(".tiers");
   const topP = topPrize(g);
-  for (const p of g.prizes || []) {
-    const tr = document.createElement("tr");
-    if (p === topP) tr.classList.add("top");
-    if (p.remaining === 0) tr.classList.add("gone");
+  const prizes = g.prizes || [];
+  prizes.forEach((p, idx) => {
+    const li = document.createElement("li");
+    li.className = "tier";
+    if (p === topP) li.classList.add("top");
+    if (p.remaining === 0) li.classList.add("gone");
+    if (idx >= TIERS_VISIBLE && prizes.length > TIERS_VISIBLE + 2) li.classList.add("extra");
+
     const shortOdds = p.odds_one_in && p.odds_one_in <= g.price * 5; // "win back ~5x stake" territory
-    tr.innerHTML =
-      `<td class="prize-amt">${money(p.prize)}</td>` +
-      `<td>${fmt(p.remaining)}</td>` +
-      `<td class="odds${shortOdds ? " short" : ""}">${p.remaining === 0 ? "gone" : oddsText(p.odds_one_in)}</td>` +
-      `<td class="printed">${oddsText(p.odds_printed)}</td>`;
-    tbody.appendChild(tr);
+    const oddsCell = p.remaining === 0
+      ? '<span class="t-odds gone-txt">all claimed</span>'
+      : `<span class="t-odds${shortOdds ? " short" : ""}">${oddsText(p.odds_one_in)}</span>`;
+
+    li.innerHTML =
+      `<div class="tier-line">` +
+        `<span class="t-prize">${money(p.prize)}</span>` +
+        `<i class="lead" aria-hidden="true"></i>` +
+        oddsCell +
+      `</div>` +
+      `<div class="tier-sub">` +
+        `<span>${fmt(p.remaining)} of ${fmt(p.total)} unclaimed</span>` +
+        `<span>printed ${oddsText(p.odds_printed)}</span>` +
+      `</div>`;
+    list.appendChild(li);
+  });
+
+  const hiddenCount = list.querySelectorAll(".extra").length;
+  const more = node.querySelector(".more");
+  if (hiddenCount > 0) {
+    more.hidden = false;
+    more.textContent = `Show all ${prizes.length} prize tiers ▾`;
+    more.addEventListener("click", () => {
+      const open = list.classList.toggle("open");
+      more.textContent = open ? "Show fewer ▴" : `Show all ${prizes.length} prize tiers ▾`;
+    });
   }
 
   const link = node.querySelector(".card-link");

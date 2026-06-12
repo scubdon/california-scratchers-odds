@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Real Odds — California Scratchers</title>
   <meta name="description" content="The actual odds of winning each prize on California Lottery Scratchers, calculated live from the prizes still unclaimed and the tickets still unsold." />
+  <meta name="theme-color" content="#f3ecda" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="masthead">
     <div class="wrap">
-      <p class="kicker">An independent look at the California Lottery</p>
-      <h1>What are your <em>real</em> odds?</h1>
+      <div class="dateline">
+        <span>An independent ledger of the California Lottery</span>
+        <span class="updated" id="updated"></span>
+      </div>
+      <h1>The <em>real</em> odds.</h1>
       <p class="standfirst">
         The lottery prints the overall odds of winning <em>anything</em> — usually a free
         ticket or a few dollars back. It doesn't tell you the odds of winning a prize that's
         actually worth more than the ticket. So we worked them out for every current Scratchers
         game, live from the prizes still unclaimed and the tickets still unsold.
       </p>
-      <p class="updated" id="updated"></p>
     </div>
   </header>
 
@@ -45,7 +48,7 @@
     <p class="section-note">
       Every dot is one game's <strong>top prize</strong>, placed by how long the odds are of winning it
       on a single ticket bought today. The scale is logarithmic — each step to the right is <em>ten times</em>
-      less likely. Hover or tap a dot for the game.
+      less likely. Tap a dot for the game.
     </p>
     <div id="chart"></div>
     <div class="legend" id="chart-legend"></div>
@@ -107,26 +110,23 @@
 
   <template id="card-tpl">
     <article class="card">
-      <div class="card-img">
-        <img loading="lazy" alt="" />
-        <span class="price-badge"></span>
-      </div>
-      <div class="card-body">
-        <header class="card-head">
+      <header class="card-top">
+        <img class="thumb" loading="lazy" alt="" />
+        <div class="card-id">
           <h3 class="card-name"></h3>
           <span class="card-no"></span>
-        </header>
-        <dl class="card-meta">
-          <div><dt>Tickets left</dt><dd class="m-left"></dd></div>
-          <div><dt>Est. unsold</dt><dd class="m-unsold"></dd></div>
-          <div><dt>Overall odds*</dt><dd class="m-overall"></dd></div>
-        </dl>
-        <table class="prizes">
-          <thead><tr><th>Prize</th><th># left</th><th>Live odds</th><th>Printed</th></tr></thead>
-          <tbody></tbody>
-        </table>
-        <a class="card-link" target="_blank" rel="noopener">View official game page →</a>
-      </div>
+        </div>
+        <span class="price-tag"></span>
+      </header>
+      <dl class="card-meta">
+        <div><dt>Tickets left</dt><dd class="m-left"></dd></div>
+        <div><dt>Est. unsold</dt><dd class="m-unsold"></dd></div>
+        <div><dt>Overall odds*</dt><dd class="m-overall"></dd></div>
+      </dl>
+      <div class="tier-head"><span>Prize</span><span>Live odds today</span></div>
+      <ol class="tiers"></ol>
+      <button class="more" type="button" hidden></button>
+      <a class="card-link" target="_blank" rel="noopener">Official game page ↗</a>
     </article>
   </template>
 
