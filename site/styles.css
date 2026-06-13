@@ -231,19 +231,27 @@ h2 {
 
 .card-top {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: .8rem; align-items: center;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "ticket ticket"
+    "id     price";
+  column-gap: .8rem; row-gap: .75rem;
+  align-items: start;
   padding-bottom: .8rem;
   border-bottom: 1px solid var(--ink);
 }
+/* the full ticket, shown at its native ~2.37:1 ratio so the game is recognizable */
 .thumb {
-  width: 50px; height: 50px;
+  grid-area: ticket;
+  width: 100%; height: auto;
+  aspect-ratio: 615 / 260;
   object-fit: cover;
   border: 1px solid var(--line);
   border-radius: 2px;
   background: var(--paper-deep);
+  display: block;
 }
-.card-id { min-width: 0; }
+.card-id { grid-area: id; min-width: 0; align-self: center; }
 .card-name {
   font-family: var(--serif);
   font-weight: 600;
@@ -259,6 +267,7 @@ h2 {
   color: var(--ink-soft);
 }
 .price-tag {
+  grid-area: price;
   align-self: start;
   font-family: var(--label); font-weight: 700;
   font-size: .9rem; letter-spacing: .02em;
