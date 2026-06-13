@@ -290,7 +290,7 @@ h2 {
   font-size: 1rem;
   background: var(--ink); color: var(--paper);
   padding: .28em .55em;
-  font-variant-numeric: tabular-nums;
+  /* Besley's tabular zero renders thin at weight 900, so no tabular-nums here */
   /* ticket-stub notches */
   clip-path: polygon(
     0 0, 100% 0,
