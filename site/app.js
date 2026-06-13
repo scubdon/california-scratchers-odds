@@ -1,10 +1,11 @@
 /* California Scratchers odds — front-end. Pure vanilla, no build step. */
 
+/* Muted single-hue slate ramp: price encoded by darkness, not by hue. */
 const PRICE_COLORS = {
-  1: "#8c8170", 2: "#2e6e4e", 3: "#0f7287", 5: "#2a5e8c",
-  10: "#5b4a9b", 20: "#b08515", 25: "#c4651a", 30: "#c8102e", 40: "#7c1f3f",
+  1: "#a9b2bb", 2: "#94a0ac", 3: "#7f8e9c", 5: "#6a7d8d",
+  10: "#586c7e", 20: "#475b6d", 25: "#384b5c", 30: "#2b3c4b", 40: "#1f2c38",
 };
-const colorFor = (p) => PRICE_COLORS[p] || "#8c8170";
+const colorFor = (p) => PRICE_COLORS[p] || "#9aa0a6";
 
 const fmt = (n) => (n == null ? "—" : n.toLocaleString("en-US"));
 const money = (n) => (n == null ? "—" : "$" + n.toLocaleString("en-US"));
