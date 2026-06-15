@@ -240,15 +240,20 @@ h2 {
   padding-bottom: .8rem;
   border-bottom: 1px solid var(--ink);
 }
-/* the full ticket, shown at its native ~2.37:1 ratio so the game is recognizable */
-.thumb {
+/* the whole ticket, centered in a frame and shown at its native portrait ratio */
+.ticket-frame {
   grid-area: ticket;
-  width: 100%; height: auto;
-  aspect-ratio: 615 / 260;
-  object-fit: cover;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1rem;
+  background: var(--paper-deep);
   border: 1px solid var(--line);
   border-radius: 2px;
-  background: var(--paper-deep);
+}
+.thumb {
+  width: auto; height: auto;
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
   display: block;
 }
 .card-id { grid-area: id; min-width: 0; align-self: center; }
@@ -294,6 +299,35 @@ h2 {
   font-family: var(--label);
   font-weight: 700; font-size: 1.05rem;
   font-variant-numeric: tabular-nums;
+}
+
+/* ---------- the headline: odds of winning a prize worth keeping ---------- */
+.odds-over {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  margin: 0 0 .9rem;
+  padding: .65rem .4rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+.odds-over div {
+  min-width: 0; text-align: center;
+  border-left: 1px solid var(--line-soft);
+}
+.odds-over div:first-child { border-left: 0; }
+.odds-over dt {
+  font-family: var(--label);
+  font-size: .68rem; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.odds-over dd {
+  margin: .2rem 0 0;
+  font-family: var(--label);
+  font-weight: 700; font-size: 1.08rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 /* ---------- the prize ledger ---------- */

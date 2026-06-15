@@ -20,10 +20,12 @@
       </div>
       <h1>The <em>real</em> odds.</h1>
       <p class="standfirst">
-        The lottery prints the overall odds of winning <em>anything</em> — usually a free
-        ticket or a few dollars back. It doesn't tell you the odds of winning a prize that's
-        actually worth more than the ticket. So we worked them out for every current Scratchers
-        game, live from the prizes still unclaimed and the tickets still unsold.
+        California publishes more than most states — for every game, the printed odds of each
+        prize and how many of them are still unclaimed. What it still advertises, though, is the
+        overall odds of winning <em>anything</em>, usually a free ticket or a few dollars back. We
+        take their own numbers and turn them into what you actually want to know: the <em>live</em>
+        odds, today, of winning a prize worth keeping — and of clearing <strong>$100</strong>,
+        <strong>$500</strong>, or <strong>$1,000</strong>.
       </p>
     </div>
   </header>
@@ -66,6 +68,9 @@
     <div class="control">
       <label for="sort">Sort by</label>
       <select id="sort">
+        <option value="over100-asc">Best odds of winning $100+</option>
+        <option value="over500-asc">Best odds of winning $500+</option>
+        <option value="over1000-asc">Best odds of winning $1,000+</option>
         <option value="odds-desc">Longest top-prize odds</option>
         <option value="odds-asc">Shortest top-prize odds</option>
         <option value="price-desc">Price: high to low</option>
@@ -111,7 +116,9 @@
   <template id="card-tpl">
     <article class="card">
       <header class="card-top">
-        <img class="thumb" loading="lazy" alt="" />
+        <div class="ticket-frame">
+          <img class="thumb" loading="lazy" alt="" />
+        </div>
         <div class="card-id">
           <h3 class="card-name"></h3>
           <span class="card-no"></span>
@@ -122,6 +129,11 @@
         <div><dt>Tickets left</dt><dd class="m-left"></dd></div>
         <div><dt>Est. unsold</dt><dd class="m-unsold"></dd></div>
         <div><dt>Overall odds*</dt><dd class="m-overall"></dd></div>
+      </dl>
+      <dl class="odds-over">
+        <div><dt>Win $100+</dt><dd class="o-100"></dd></div>
+        <div><dt>Win $500+</dt><dd class="o-500"></dd></div>
+        <div><dt>Win $1,000+</dt><dd class="o-1000"></dd></div>
       </dl>
       <div class="tier-head"><span>Prize</span><span>Live odds today</span></div>
       <ol class="tiers"></ol>

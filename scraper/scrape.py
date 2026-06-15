@@ -168,6 +168,21 @@ def encode_path(path: str) -> str:
 # --------------------------------------------------------------------------- #
 # 2. The per-prize table on each game's page
 # --------------------------------------------------------------------------- #
+# The list API only gives a wide banner crop ("…-thumbnail.jpg", 615x260). Each
+# game page also embeds the full portrait ticket as "…-cv.png" (~800x1800), which
+# is what we actually want to show.
+CV_IMAGE_RE = re.compile(
+    r"https://static\.www\.calottery\.com/-/media/project/calottery/pws/"
+    r"scratchers/[A-Za-z0-9%_-]+-cv\.png\?rev=[0-9a-fA-F]+",
+)
+
+
+def parse_ticket_image(html: str) -> str | None:
+    """The full portrait ticket image embedded on a game page, or None."""
+    m = CV_IMAGE_RE.search(html)
+    return m.group(0) if m else None
+
+
 def parse_prize_table(html: str) -> list[dict]:
     """
     Find the 'Odds and Available Prizes' table and return
@@ -220,6 +235,9 @@ def enrich(game: dict) -> dict | None:
     if not table:
         return None
 
+    # Prefer the full ticket scan from the game page; fall back to the banner thumb.
+    full_image = parse_ticket_image(html)
+
     # tickets printed: each level implies odds*total tickets; take the median to
     # shrug off the rounding the lottery applies to the printed odds.
     estimates = [r["odds_printed"] * r["total"] for r in table if r["total"]]
@@ -258,6 +276,7 @@ def enrich(game: dict) -> dict | None:
 
     return {
         **game,
+        "image_url": full_image or game.get("image_url"),
         "tickets_printed": tickets_printed,
         "tickets_remaining": tickets_remaining,
         "percent_unsold": percent_unsold,

@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-03T14:34:03+00:00",
+  "generated_at": "2026-06-13T14:45:11+00:00",
   "source": {
     "scratchers": "https://www.calottery.com/en/scratchers",
     "list_api": "https://www.calottery.com/api/Sitecore/ScratchersFilteredList/GetScratchers"
   },
   "counts": {
-    "in_roster": 58,
-    "with_prize_table": 58
+    "in_roster": 57,
+    "with_prize_table": 57
   },
   "games": [
     {
@@ -17,79 +17,79 @@
       "overall_odds": 2.43,
       "top_prize": 15000000,
       "on_sale": "February 16, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1718-40-royal-jackpot-thumbnail.jpg?rev=d0b07fab05e04ffc8de3b8be65f4b4c8",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1718-40-royal-jackpot-cv.png?rev=57e1a716200d4d8ba41e630163eaecb2",
       "article_url": "https://www.calottery.com/scratchers/%2440/royal-jackpot-1718",
       "tickets_printed": 15294773,
-      "tickets_remaining": 11394606,
-      "percent_unsold": 74.5,
-      "total_unclaimed": 322739830,
+      "tickets_remaining": 11088710,
+      "percent_unsold": 72.5,
+      "total_unclaimed": 315563120,
       "prizes": [
         {
           "prize": 15000000,
           "remaining": 3,
           "total": 5,
           "odds_printed": 3058926,
-          "odds_one_in": 3798202
+          "odds_one_in": 3696237
         },
         {
           "prize": 1000000,
           "remaining": 4,
           "total": 5,
           "odds_printed": 3058926,
-          "odds_one_in": 2848652
+          "odds_one_in": 2772178
         },
         {
           "prize": 40000,
-          "remaining": 525,
+          "remaining": 513,
           "total": 655,
           "odds_printed": 23351,
-          "odds_one_in": 21704
+          "odds_one_in": 21615
         },
         {
           "prize": 10000,
-          "remaining": 621,
+          "remaining": 609,
           "total": 769,
           "odds_printed": 19889,
-          "odds_one_in": 18349
+          "odds_one_in": 18208
         },
         {
           "prize": 1000,
-          "remaining": 11951,
+          "remaining": 11653,
           "total": 15305,
           "odds_printed": 999,
-          "odds_one_in": 953
+          "odds_one_in": 952
         },
         {
           "prize": 400,
-          "remaining": 142703,
+          "remaining": 138828,
           "total": 191527,
           "odds_printed": 80,
           "odds_one_in": 80
         },
         {
           "prize": 200,
-          "remaining": 47426,
+          "remaining": 46157,
           "total": 63758,
           "odds_printed": 240,
           "odds_one_in": 240
         },
         {
           "prize": 100,
-          "remaining": 312833,
+          "remaining": 304492,
           "total": 420544,
           "odds_printed": 36,
           "odds_one_in": 36
         },
         {
           "prize": 50,
-          "remaining": 1518065,
+          "remaining": 1477352,
           "total": 2039284,
           "odds_printed": 8,
           "odds_one_in": 8
         },
         {
           "prize": 40,
-          "remaining": 1520647,
+          "remaining": 1480518,
           "total": 2039284,
           "odds_printed": 8,
           "odds_one_in": 7
@@ -104,86 +104,86 @@
       "overall_odds": 2.85,
       "top_prize": 15000000,
       "on_sale": "January 20, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1660-40-40-years-of-play-thumbnail.jpg?rev=1fb84bc8782c49cda6122af20f19c7a9",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1660-40-40-years-of-play-cv.png?rev=d432509628ca43fe8c304180a4c39e03",
       "article_url": "https://www.calottery.com/scratchers/%2440/40-years-of-play-1660",
       "tickets_printed": 21324086,
-      "tickets_remaining": 2921400,
-      "percent_unsold": 13.7,
-      "total_unclaimed": 94407440,
+      "tickets_remaining": 2814779,
+      "percent_unsold": 13.2,
+      "total_unclaimed": 91490980,
       "prizes": [
         {
           "prize": 15000000,
           "remaining": 1,
           "total": 7,
           "odds_printed": 3046299,
-          "odds_one_in": 2921400
+          "odds_one_in": 2814779
         },
         {
           "prize": 100000,
           "remaining": 1,
           "total": 14,
           "odds_printed": 1523149,
-          "odds_one_in": 2921400
+          "odds_one_in": 2814779
         },
         {
           "prize": 40000,
-          "remaining": 33,
+          "remaining": 32,
           "total": 182,
           "odds_printed": 117165,
-          "odds_one_in": 88527
+          "odds_one_in": 87962
         },
         {
           "prize": 10000,
           "remaining": 30,
           "total": 182,
           "odds_printed": 117165,
-          "odds_one_in": 97380
+          "odds_one_in": 93826
         },
         {
           "prize": 4000,
-          "remaining": 577,
+          "remaining": 562,
           "total": 3568,
           "odds_printed": 5976,
-          "odds_one_in": 5063
+          "odds_one_in": 5009
         },
         {
           "prize": 1000,
-          "remaining": 419,
+          "remaining": 405,
           "total": 2673,
           "odds_printed": 7978,
-          "odds_one_in": 6972
+          "odds_one_in": 6950
         },
         {
           "prize": 400,
-          "remaining": 35616,
+          "remaining": 34266,
           "total": 266797,
           "odds_printed": 80,
           "odds_one_in": 82
         },
         {
           "prize": 200,
-          "remaining": 31648,
+          "remaining": 30425,
           "total": 235977,
           "odds_printed": 90,
-          "odds_one_in": 92
+          "odds_one_in": 93
         },
         {
           "prize": 100,
-          "remaining": 76016,
+          "remaining": 73125,
           "total": 568406,
           "odds_printed": 38,
           "odds_one_in": 38
         },
         {
           "prize": 80,
-          "remaining": 288182,
+          "remaining": 277381,
           "total": 2132781,
           "odds_printed": 10,
           "odds_one_in": 10
         },
         {
           "prize": 40,
-          "remaining": 593207,
+          "remaining": 571590,
           "total": 4264665,
           "odds_printed": 5,
           "odds_one_in": 5
@@ -198,107 +198,107 @@
       "overall_odds": 2.72,
       "top_prize": 7000000,
       "on_sale": "April 20, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1726-30-crossword-xtreme-thumbnail.jpg?rev=a348403916e14a6593f6830ac7d6976a",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1726-30-crossword-xtreme-cv.png?rev=f6e409b00c094503a8e0bb76154d5b45",
       "article_url": "https://www.calottery.com/scratchers/%2430/crossword-xtreme-1726",
       "tickets_printed": 19200000,
-      "tickets_remaining": 16761600,
-      "percent_unsold": 87.3,
-      "total_unclaimed": 356618730,
+      "tickets_remaining": 16166400,
+      "percent_unsold": 84.2,
+      "total_unclaimed": 344991110,
       "prizes": [
         {
           "prize": 7000000,
           "remaining": 4,
           "total": 4,
           "odds_printed": 4800000,
-          "odds_one_in": 4190400
+          "odds_one_in": 4041600
         },
         {
           "prize": 500000,
-          "remaining": 20,
+          "remaining": 19,
           "total": 24,
           "odds_printed": 800000,
-          "odds_one_in": 838080
+          "odds_one_in": 850863
         },
         {
           "prize": 50000,
-          "remaining": 30,
+          "remaining": 29,
           "total": 31,
           "odds_printed": 619355,
-          "odds_one_in": 558720
+          "odds_one_in": 557462
         },
         {
           "prize": 10000,
-          "remaining": 61,
+          "remaining": 60,
           "total": 64,
           "odds_printed": 300000,
-          "odds_one_in": 274780
+          "odds_one_in": 269440
         },
         {
           "prize": 5000,
-          "remaining": 767,
+          "remaining": 743,
           "total": 802,
           "odds_printed": 23940,
-          "odds_one_in": 21853
+          "odds_one_in": 21758
         },
         {
           "prize": 1000,
-          "remaining": 17464,
+          "remaining": 16847,
           "total": 19242,
           "odds_printed": 998,
           "odds_one_in": 960
         },
         {
           "prize": 500,
-          "remaining": 55948,
+          "remaining": 53980,
           "total": 64004,
           "odds_printed": 300,
-          "odds_one_in": 300
+          "odds_one_in": 299
         },
         {
           "prize": 250,
-          "remaining": 69901,
+          "remaining": 67388,
           "total": 80146,
           "odds_printed": 240,
           "odds_one_in": 240
         },
         {
           "prize": 150,
-          "remaining": 157068,
+          "remaining": 151601,
           "total": 179981,
           "odds_printed": 107,
           "odds_one_in": 107
         },
         {
           "prize": 100,
-          "remaining": 279422,
+          "remaining": 269662,
           "total": 320079,
           "odds_printed": 60,
           "odds_one_in": 60
         },
         {
           "prize": 75,
-          "remaining": 558126,
+          "remaining": 538558,
           "total": 639838,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 60,
-          "remaining": 558226,
+          "remaining": 538718,
           "total": 639920,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 50,
-          "remaining": 1116935,
+          "remaining": 1078015,
           "total": 1280000,
           "odds_printed": 15,
           "odds_one_in": 15
         },
         {
           "prize": 40,
-          "remaining": 1676458,
+          "remaining": 1618002,
           "total": 1920000,
           "odds_printed": 10,
           "odds_one_in": 10
@@ -313,204 +313,103 @@
       "overall_odds": 2.71,
       "top_prize": 10000000,
       "on_sale": "August 25, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1692-30-7s-thumbnail.jpg?rev=83ac220fe81848f8b75249c5b10bfbff",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1692-30-7s-cv.png?rev=bcef757effed42c48e08c63021061ac1",
       "article_url": "https://www.calottery.com/scratchers/%2430/7s-1692",
       "tickets_printed": 15196320,
-      "tickets_remaining": 6382454,
-      "percent_unsold": 42.0,
-      "total_unclaimed": 171337650,
+      "tickets_remaining": 6154510,
+      "percent_unsold": 40.5,
+      "total_unclaimed": 156534090,
       "prizes": [
         {
           "prize": 10000000,
-          "remaining": 4,
+          "remaining": 3,
           "total": 5,
           "odds_printed": 3039396,
-          "odds_one_in": 1595614
+          "odds_one_in": 2051503
         },
         {
           "prize": 750000,
           "remaining": 3,
           "total": 10,
           "odds_printed": 1519698,
-          "odds_one_in": 2127485
+          "odds_one_in": 2051503
         },
         {
           "prize": 50000,
-          "remaining": 25,
+          "remaining": 22,
           "total": 52,
           "odds_printed": 292250,
-          "odds_one_in": 255298
+          "odds_one_in": 279750
         },
         {
           "prize": 10000,
-          "remaining": 123,
+          "remaining": 121,
           "total": 260,
           "odds_printed": 58450,
-          "odds_one_in": 51890
+          "odds_one_in": 50864
         },
         {
           "prize": 2000,
-          "remaining": 670,
+          "remaining": 651,
           "total": 1390,
           "odds_printed": 10933,
-          "odds_one_in": 9526
+          "odds_one_in": 9454
         },
         {
           "prize": 1000,
-          "remaining": 6825,
+          "remaining": 6557,
           "total": 15206,
           "odds_printed": 999,
-          "odds_one_in": 935
+          "odds_one_in": 939
         },
         {
           "prize": 500,
-          "remaining": 10710,
+          "remaining": 10320,
           "total": 25350,
           "odds_printed": 599,
           "odds_one_in": 596
         },
         {
           "prize": 400,
-          "remaining": 10515,
+          "remaining": 10145,
           "total": 25316,
           "odds_printed": 600,
           "odds_one_in": 607
         },
         {
           "prize": 200,
-          "remaining": 42269,
+          "remaining": 40730,
           "total": 101195,
           "odds_printed": 150,
           "odds_one_in": 151
         },
         {
           "prize": 100,
-          "remaining": 279848,
+          "remaining": 269658,
           "total": 668711,
           "odds_printed": 23,
           "odds_one_in": 23
         },
         {
           "prize": 50,
-          "remaining": 297622,
+          "remaining": 286791,
           "total": 709360,
           "odds_printed": 21,
           "odds_one_in": 21
         },
         {
           "prize": 40,
-          "remaining": 639545,
+          "remaining": 616210,
           "total": 1519571,
           "odds_printed": 10,
           "odds_one_in": 10
         },
         {
           "prize": 30,
-          "remaining": 1066005,
+          "remaining": 1026578,
           "total": 2532720,
           "odds_printed": 6,
           "odds_one_in": 6
-        }
-      ]
-    },
-    {
-      "game_number": 1700,
-      "name": "Celebrate 2026",
-      "price": 25,
-      "game_type": "Key Number Match",
-      "overall_odds": 2.93,
-      "top_prize": 7500000,
-      "on_sale": "October 20, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1700-25-celebrate-2026-thumbnail.jpg?rev=f944d8b15b87462ba82742c420fd0155",
-      "article_url": "https://www.calottery.com/scratchers/%2425/celebrate-2026-1700",
-      "tickets_printed": 9191940,
-      "tickets_remaining": 3658392,
-      "percent_unsold": 39.8,
-      "total_unclaimed": 60917855,
-      "prizes": [
-        {
-          "prize": 7500000,
-          "remaining": 1,
-          "total": 3,
-          "odds_printed": 3063980,
-          "odds_one_in": 3658392
-        },
-        {
-          "prize": 250000,
-          "remaining": 6,
-          "total": 15,
-          "odds_printed": 612796,
-          "odds_one_in": 609732
-        },
-        {
-          "prize": 25000,
-          "remaining": 72,
-          "total": 157,
-          "odds_printed": 58547,
-          "odds_one_in": 50811
-        },
-        {
-          "prize": 2500,
-          "remaining": 599,
-          "total": 1319,
-          "odds_printed": 6969,
-          "odds_one_in": 6107
-        },
-        {
-          "prize": 1000,
-          "remaining": 669,
-          "total": 1535,
-          "odds_printed": 5988,
-          "odds_one_in": 5468
-        },
-        {
-          "prize": 500,
-          "remaining": 3057,
-          "total": 7710,
-          "odds_printed": 1192,
-          "odds_one_in": 1197
-        },
-        {
-          "prize": 250,
-          "remaining": 33511,
-          "total": 84445,
-          "odds_printed": 109,
-          "odds_one_in": 109
-        },
-        {
-          "prize": 150,
-          "remaining": 12242,
-          "total": 30776,
-          "odds_printed": 299,
-          "odds_one_in": 299
-        },
-        {
-          "prize": 100,
-          "remaining": 24356,
-          "total": 61441,
-          "odds_printed": 150,
-          "odds_one_in": 150
-        },
-        {
-          "prize": 75,
-          "remaining": 75963,
-          "total": 191979,
-          "odds_printed": 48,
-          "odds_one_in": 48
-        },
-        {
-          "prize": 50,
-          "remaining": 365450,
-          "total": 919194,
-          "odds_printed": 10,
-          "odds_one_in": 10
-        },
-        {
-          "prize": 40,
-          "remaining": 245087,
-          "total": 612796,
-          "odds_printed": 15,
-          "odds_one_in": 15
         }
       ]
     },
@@ -522,23 +421,23 @@
       "overall_odds": 7.94,
       "top_prize": 200,
       "on_sale": "May 18, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1731-20-100-and-200-frenzy-thumbnail.jpg?rev=4e95f545e5a24d049e1653eb5a9cf182",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1731-20-100-or-200-frenzy-cv.png?rev=9659f4329f034d2f830bf064ea3efa8f",
       "article_url": "https://www.calottery.com/scratchers/%2420/%24100-or-%24200-frenzy-1731",
       "tickets_printed": 11923516,
-      "tickets_remaining": 10635776,
-      "percent_unsold": 89.2,
-      "total_unclaimed": 162761200,
+      "tickets_remaining": 9884595,
+      "percent_unsold": 82.9,
+      "total_unclaimed": 151122200,
       "prizes": [
         {
           "prize": 200,
-          "remaining": 278409,
+          "remaining": 258562,
           "total": 311764,
           "odds_printed": 38,
           "odds_one_in": 38
         },
         {
           "prize": 100,
-          "remaining": 1070794,
+          "remaining": 994098,
           "total": 1200000,
           "odds_printed": 10,
           "odds_one_in": 10
@@ -553,72 +452,72 @@
       "overall_odds": 3.32,
       "top_prize": 5000000,
       "on_sale": "March 23, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1722-20-100x-the-cash.jpg?rev=346616bdf8324cccb778bae1d6dd6e50",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1722-20-100x-the-cash-cv.png?rev=df5f10b5e3164ee0b453c0f68830f0b3",
       "article_url": "https://www.calottery.com/scratchers/%2420/100x-the-cash-1722",
       "tickets_printed": 18000000,
-      "tickets_remaining": 12780000,
-      "percent_unsold": 71.0,
-      "total_unclaimed": 180139550,
+      "tickets_remaining": 12186000,
+      "percent_unsold": 67.7,
+      "total_unclaimed": 172997710,
       "prizes": [
         {
           "prize": 5000000,
           "remaining": 5,
           "total": 6,
           "odds_printed": 3000000,
-          "odds_one_in": 2556000
+          "odds_one_in": 2437200
         },
         {
           "prize": 2500,
-          "remaining": 3748,
+          "remaining": 3593,
           "total": 4537,
           "odds_printed": 3967,
-          "odds_one_in": 3410
+          "odds_one_in": 3392
         },
         {
           "prize": 500,
-          "remaining": 51996,
+          "remaining": 49658,
           "total": 73184,
           "odds_printed": 246,
-          "odds_one_in": 246
+          "odds_one_in": 245
         },
         {
           "prize": 250,
-          "remaining": 34482,
+          "remaining": 32827,
           "total": 49002,
           "odds_printed": 367,
           "odds_one_in": 371
         },
         {
           "prize": 100,
-          "remaining": 140404,
+          "remaining": 133757,
           "total": 198838,
           "odds_printed": 91,
           "odds_one_in": 91
         },
         {
           "prize": 75,
-          "remaining": 215710,
+          "remaining": 205710,
           "total": 303575,
           "odds_printed": 59,
           "odds_one_in": 59
         },
         {
           "prize": 50,
-          "remaining": 425871,
+          "remaining": 406022,
           "total": 600000,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 40,
-          "remaining": 851780,
+          "remaining": 812186,
           "total": 1200000,
           "odds_printed": 15,
           "odds_one_in": 15
         },
         {
           "prize": 30,
-          "remaining": 852255,
+          "remaining": 812899,
           "total": 1200000,
           "odds_printed": 15,
           "odds_one_in": 15
@@ -633,93 +532,93 @@
       "overall_odds": 3.1,
       "top_prize": 2000000,
       "on_sale": "January 19, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1714-20-red-carpet-riches-thumbnail.jpg?rev=40085e200a944bcd94748d330d458469",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1714-20-red-carpet-riches-cv.png?rev=f12ef914e0fd4095a4e82df7caebcf54",
       "article_url": "https://www.calottery.com/scratchers/%2420/red-carpet-riches-1714",
       "tickets_printed": 14555160,
-      "tickets_remaining": 8907758,
-      "percent_unsold": 61.2,
-      "total_unclaimed": 117880375,
+      "tickets_remaining": 8602100,
+      "percent_unsold": 59.1,
+      "total_unclaimed": 114404950,
       "prizes": [
         {
           "prize": 2000000,
           "remaining": 8,
           "total": 12,
           "odds_printed": 1212930,
-          "odds_one_in": 1113470
+          "odds_one_in": 1075262
         },
         {
           "prize": 25000,
           "remaining": 18,
           "total": 24,
           "odds_printed": 606465,
-          "odds_one_in": 494875
+          "odds_one_in": 477894
         },
         {
           "prize": 10000,
-          "remaining": 14,
+          "remaining": 13,
           "total": 24,
           "odds_printed": 606465,
-          "odds_one_in": 636268
+          "odds_one_in": 661700
         },
         {
           "prize": 5000,
-          "remaining": 83,
+          "remaining": 81,
           "total": 124,
           "odds_printed": 117380,
-          "odds_one_in": 107322
+          "odds_one_in": 106199
         },
         {
           "prize": 2000,
-          "remaining": 2501,
+          "remaining": 2425,
           "total": 3657,
           "odds_printed": 3980,
-          "odds_one_in": 3562
+          "odds_one_in": 3547
         },
         {
           "prize": 1000,
-          "remaining": 6253,
+          "remaining": 6046,
           "total": 9713,
           "odds_printed": 1499,
-          "odds_one_in": 1425
+          "odds_one_in": 1423
         },
         {
           "prize": 500,
-          "remaining": 15521,
+          "remaining": 14976,
           "total": 25488,
           "odds_printed": 571,
           "odds_one_in": 574
         },
         {
           "prize": 250,
-          "remaining": 22288,
+          "remaining": 21474,
           "total": 36407,
           "odds_printed": 400,
-          "odds_one_in": 400
+          "odds_one_in": 401
         },
         {
           "prize": 200,
-          "remaining": 47935,
+          "remaining": 46284,
           "total": 78774,
           "odds_printed": 185,
           "odds_one_in": 186
         },
         {
           "prize": 100,
-          "remaining": 221888,
+          "remaining": 214229,
           "total": 363962,
           "odds_printed": 40,
           "odds_one_in": 40
         },
         {
           "prize": 50,
-          "remaining": 413912,
+          "remaining": 399681,
           "total": 679182,
           "odds_printed": 21,
           "odds_one_in": 22
         },
         {
           "prize": 25,
-          "remaining": 952659,
+          "remaining": 920148,
           "total": 1552668,
           "odds_printed": 9,
           "odds_one_in": 9
@@ -737,69 +636,69 @@
       "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1709205000000superstarthumbnail.jpg?rev=c0398a936ac6436f841b314cffbee532",
       "article_url": "https://www.calottery.com/scratchers/%2420/%245000000-superstar-1709",
       "tickets_printed": 15210960,
-      "tickets_remaining": 7803222,
-      "percent_unsold": 51.3,
-      "total_unclaimed": 104885130,
+      "tickets_remaining": 7529425,
+      "percent_unsold": 49.5,
+      "total_unclaimed": 101552350,
       "prizes": [
         {
           "prize": 5000000,
           "remaining": 3,
           "total": 5,
           "odds_printed": 3042192,
-          "odds_one_in": 2601074
+          "odds_one_in": 2509808
         },
         {
           "prize": 100000,
-          "remaining": 64,
+          "remaining": 60,
           "total": 130,
           "odds_printed": 117007,
-          "odds_one_in": 121925
+          "odds_one_in": 125490
         },
         {
           "prize": 10000,
-          "remaining": 295,
+          "remaining": 281,
           "total": 510,
           "odds_printed": 29825,
-          "odds_one_in": 26452
+          "odds_one_in": 26795
         },
         {
           "prize": 1000,
-          "remaining": 2056,
+          "remaining": 1983,
           "total": 3798,
           "odds_printed": 4005,
-          "odds_one_in": 3795
+          "odds_one_in": 3797
         },
         {
           "prize": 500,
-          "remaining": 51767,
+          "remaining": 49961,
           "total": 101397,
           "odds_printed": 150,
           "odds_one_in": 151
         },
         {
           "prize": 100,
-          "remaining": 136232,
+          "remaining": 131554,
           "total": 266354,
           "odds_printed": 57,
           "odds_one_in": 57
         },
         {
           "prize": 50,
-          "remaining": 259236,
+          "remaining": 250261,
           "total": 507032,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 40,
-          "remaining": 259509,
+          "remaining": 250555,
           "total": 507032,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 30,
-          "remaining": 521009,
+          "remaining": 502940,
           "total": 1014064,
           "odds_printed": 15,
           "odds_one_in": 15
@@ -814,72 +713,72 @@
       "overall_odds": 3.32,
       "top_prize": 200000,
       "on_sale": "November 17, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1705-20-set-for-life-thumbnail.jpg?rev=e2bc421337e6435c9490115a7b00b22f",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1705-20-set-for-life-cv.png?rev=d4a0ee942bb34bec9810304df5360e6f",
       "article_url": "https://www.calottery.com/scratchers/%2420/set-for-life-1705",
       "tickets_printed": 18016710,
-      "tickets_remaining": 9999274,
-      "percent_unsold": 55.5,
-      "total_unclaimed": 150794820,
+      "tickets_remaining": 9692990,
+      "percent_unsold": 53.8,
+      "total_unclaimed": 147022255,
       "prizes": [
         {
           "prize": 5000000,
           "remaining": 6,
           "total": 6,
           "odds_printed": 3002785,
-          "odds_one_in": 1666546
+          "odds_one_in": 1615498
         },
         {
           "prize": 2500,
-          "remaining": 2763,
+          "remaining": 2677,
           "total": 4503,
           "odds_printed": 4001,
-          "odds_one_in": 3619
+          "odds_one_in": 3621
         },
         {
           "prize": 500,
-          "remaining": 39855,
+          "remaining": 38590,
           "total": 72202,
           "odds_printed": 250,
           "odds_one_in": 251
         },
         {
           "prize": 250,
-          "remaining": 28009,
+          "remaining": 27095,
           "total": 50691,
           "odds_printed": 355,
-          "odds_one_in": 357
+          "odds_one_in": 358
         },
         {
           "prize": 100,
-          "remaining": 112040,
+          "remaining": 108542,
           "total": 202623,
           "odds_printed": 89,
           "odds_one_in": 89
         },
         {
           "prize": 75,
-          "remaining": 165692,
+          "remaining": 160485,
           "total": 300398,
           "odds_printed": 60,
           "odds_one_in": 60
         },
         {
           "prize": 50,
-          "remaining": 332172,
+          "remaining": 321888,
           "total": 600501,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 40,
-          "remaining": 666930,
+          "remaining": 646353,
           "total": 1201226,
           "odds_printed": 15,
           "odds_one_in": 15
         },
         {
           "prize": 30,
-          "remaining": 668029,
+          "remaining": 647397,
           "total": 1201058,
           "odds_printed": 15,
           "odds_one_in": 15
@@ -894,93 +793,93 @@
       "overall_odds": 3.0,
       "top_prize": 5000000,
       "on_sale": "September 22, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1696-20-100x-thumbnail.jpg?rev=63511c8137ae4b8bbfe0ca1f10f5e812",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1696-20-100x-cv.png?rev=1a52570fcdfe408eabdfad81650fae6a",
       "article_url": "https://www.calottery.com/scratchers/%2420/100x-1696",
       "tickets_printed": 18249210,
-      "tickets_remaining": 5985741,
-      "percent_unsold": 32.8,
-      "total_unclaimed": 97689050,
+      "tickets_remaining": 5803249,
+      "percent_unsold": 31.8,
+      "total_unclaimed": 95093450,
       "prizes": [
         {
           "prize": 5000000,
           "remaining": 3,
           "total": 6,
           "odds_printed": 3041535,
-          "odds_one_in": 1995247
+          "odds_one_in": 1934416
         },
         {
           "prize": 100000,
           "remaining": 3,
           "total": 15,
           "odds_printed": 1216614,
-          "odds_one_in": 1995247
+          "odds_one_in": 1934416
         },
         {
           "prize": 10000,
-          "remaining": 125,
+          "remaining": 118,
           "total": 312,
           "odds_printed": 58491,
-          "odds_one_in": 47886
+          "odds_one_in": 49180
         },
         {
           "prize": 1000,
-          "remaining": 1392,
+          "remaining": 1331,
           "total": 3948,
           "odds_printed": 4622,
-          "odds_one_in": 4300
+          "odds_one_in": 4360
         },
         {
           "prize": 500,
-          "remaining": 12947,
+          "remaining": 12550,
           "total": 39594,
           "odds_printed": 461,
           "odds_one_in": 462
         },
         {
           "prize": 250,
-          "remaining": 37847,
+          "remaining": 36678,
           "total": 115535,
           "odds_printed": 158,
           "odds_one_in": 158
         },
         {
           "prize": 100,
-          "remaining": 149509,
+          "remaining": 144862,
           "total": 456147,
           "odds_printed": 40,
           "odds_one_in": 40
         },
         {
           "prize": 50,
-          "remaining": 200939,
+          "remaining": 194762,
           "total": 608307,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 40,
-          "remaining": 198838,
+          "remaining": 192802,
           "total": 608307,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 30,
-          "remaining": 198661,
+          "remaining": 192476,
           "total": 608307,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 25,
-          "remaining": 199000,
+          "remaining": 192850,
           "total": 608307,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 20,
-          "remaining": 996280,
+          "remaining": 965302,
           "total": 3041535,
           "odds_printed": 6,
           "odds_one_in": 6
@@ -995,23 +894,23 @@
       "overall_odds": 7.94,
       "top_prize": 200,
       "on_sale": "July 21, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1687-20-100-or-200-thumbnail.jpg?rev=eaa00662c17b49978671b630f0597247",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1687-20-100-or-200-cv.png?rev=9fbfcb34e80d4199b2075e5f5cdd2125",
       "article_url": "https://www.calottery.com/scratchers/%2420/%24100-or-%24200-1687",
       "tickets_printed": 16211920,
-      "tickets_remaining": 3485563,
-      "percent_unsold": 21.5,
-      "total_unclaimed": 53285500,
+      "tickets_remaining": 3323444,
+      "percent_unsold": 20.5,
+      "total_unclaimed": 50836000,
       "prizes": [
         {
           "prize": 200,
-          "remaining": 91619,
+          "remaining": 87428,
           "total": 424075,
           "odds_printed": 38,
           "odds_one_in": 38
         },
         {
           "prize": 100,
-          "remaining": 349617,
+          "remaining": 333504,
           "total": 1630899,
           "odds_printed": 10,
           "odds_one_in": 10
@@ -1026,93 +925,93 @@
       "overall_odds": 3.1,
       "top_prize": 2000000,
       "on_sale": "June 23, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1682-20-instant-prize-crossword-thumbnail.jpg?rev=83ba441f092040f58d3aa9b9013b0d7d",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1682-20-instant-prize-crossword-cv.png?rev=93804da502e04c62b76c9e8c9808686e",
       "article_url": "https://www.calottery.com/scratchers/%2420/instant-prize-crossword-1682",
       "tickets_printed": 18387422,
-      "tickets_remaining": 864209,
-      "percent_unsold": 4.7,
-      "total_unclaimed": 13081850,
+      "tickets_remaining": 680335,
+      "percent_unsold": 3.7,
+      "total_unclaimed": 10600675,
       "prizes": [
         {
           "prize": 2000000,
           "remaining": 1,
           "total": 15,
           "odds_printed": 1225828,
-          "odds_one_in": 864209
+          "odds_one_in": 680335
         },
         {
           "prize": 25000,
-          "remaining": 6,
+          "remaining": 4,
           "total": 32,
           "odds_printed": 574607,
-          "odds_one_in": 144035
+          "odds_one_in": 170084
         },
         {
           "prize": 10000,
           "remaining": 1,
           "total": 32,
           "odds_printed": 574607,
-          "odds_one_in": 864209
+          "odds_one_in": 680335
         },
         {
           "prize": 5000,
-          "remaining": 23,
+          "remaining": 18,
           "total": 159,
           "odds_printed": 115644,
-          "odds_one_in": 37574
+          "odds_one_in": 37796
         },
         {
           "prize": 2000,
-          "remaining": 634,
+          "remaining": 504,
           "total": 4640,
           "odds_printed": 3963,
-          "odds_one_in": 1363
+          "odds_one_in": 1350
         },
         {
           "prize": 1000,
-          "remaining": 1055,
+          "remaining": 828,
           "total": 12358,
           "odds_printed": 1488,
-          "odds_one_in": 819
+          "odds_one_in": 822
         },
         {
           "prize": 500,
-          "remaining": 1464,
+          "remaining": 1112,
           "total": 32337,
           "odds_printed": 569,
-          "odds_one_in": 590
+          "odds_one_in": 612
         },
         {
           "prize": 250,
-          "remaining": 2070,
+          "remaining": 1597,
           "total": 46292,
           "odds_printed": 397,
-          "odds_one_in": 417
+          "odds_one_in": 426
         },
         {
           "prize": 200,
-          "remaining": 4417,
+          "remaining": 3390,
           "total": 100486,
           "odds_printed": 183,
-          "odds_one_in": 196
+          "odds_one_in": 201
         },
         {
           "prize": 100,
-          "remaining": 19986,
+          "remaining": 15327,
           "total": 458548,
           "odds_printed": 40,
-          "odds_one_in": 43
+          "odds_one_in": 44
         },
         {
           "prize": 50,
-          "remaining": 39966,
+          "remaining": 31024,
           "total": 857951,
           "odds_printed": 21,
           "odds_one_in": 22
         },
         {
           "prize": 25,
-          "remaining": 94162,
+          "remaining": 73901,
           "total": 1961582,
           "odds_printed": 9,
           "odds_one_in": 9
@@ -1130,69 +1029,69 @@
       "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/167820showme5000000.jpg?rev=36c977d17f26427fa62879be884b1cd4",
       "article_url": "https://www.calottery.com/scratchers/%2420/show-me-%245000000-1678",
       "tickets_printed": 15193230,
-      "tickets_remaining": 6153258,
-      "percent_unsold": 40.5,
-      "total_unclaimed": 84040810,
+      "tickets_remaining": 6077292,
+      "percent_unsold": 40.0,
+      "total_unclaimed": 83250935,
       "prizes": [
         {
           "prize": 5000000,
           "remaining": 2,
           "total": 5,
           "odds_printed": 3038646,
-          "odds_one_in": 3076629
+          "odds_one_in": 3038646
         },
         {
           "prize": 2500,
-          "remaining": 1599,
+          "remaining": 1583,
           "total": 3813,
           "odds_printed": 3985,
-          "odds_one_in": 3848
+          "odds_one_in": 3839
         },
         {
           "prize": 500,
-          "remaining": 24443,
+          "remaining": 24197,
           "total": 60796,
           "odds_printed": 250,
-          "odds_one_in": 252
+          "odds_one_in": 251
         },
         {
           "prize": 250,
-          "remaining": 17288,
+          "remaining": 17104,
           "total": 42851,
           "odds_printed": 355,
-          "odds_one_in": 356
+          "odds_one_in": 355
         },
         {
           "prize": 100,
-          "remaining": 68706,
+          "remaining": 67957,
           "total": 170820,
           "odds_printed": 89,
-          "odds_one_in": 90
+          "odds_one_in": 89
         },
         {
           "prize": 75,
-          "remaining": 102050,
+          "remaining": 100899,
           "total": 253170,
           "odds_printed": 60,
           "odds_one_in": 60
         },
         {
           "prize": 50,
-          "remaining": 204709,
+          "remaining": 202500,
           "total": 506441,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 40,
-          "remaining": 409621,
+          "remaining": 405200,
           "total": 1012882,
           "odds_printed": 15,
           "odds_one_in": 15
         },
         {
           "prize": 30,
-          "remaining": 411839,
+          "remaining": 407427,
           "total": 1012882,
           "odds_printed": 15,
           "odds_one_in": 15
@@ -1207,114 +1106,114 @@
       "overall_odds": 3.67,
       "top_prize": 5000000,
       "on_sale": "April 21, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1672-20-double-the-luck-thumbnail.jpg?rev=b9a0cbf3cde64811b803a07d3d57f4dd",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1672-20-double-the-luck-cv.png?rev=147911fe06f14f039b860ac770da65ef",
       "article_url": "https://www.calottery.com/scratchers/%2420/double-the-luck-1672",
       "tickets_printed": 12087240,
-      "tickets_remaining": 3154770,
-      "percent_unsold": 26.1,
-      "total_unclaimed": 48826430,
+      "tickets_remaining": 3130595,
+      "percent_unsold": 25.9,
+      "total_unclaimed": 48548400,
       "prizes": [
         {
           "prize": 5000000,
           "remaining": 2,
           "total": 4,
           "odds_printed": 3021810,
-          "odds_one_in": 1577385
+          "odds_one_in": 1565298
         },
         {
           "prize": 75000,
           "remaining": 9,
           "total": 40,
           "odds_printed": 302181,
-          "odds_one_in": 350530
+          "odds_one_in": 347844
         },
         {
           "prize": 15000,
           "remaining": 30,
           "total": 103,
           "odds_printed": 117352,
-          "odds_one_in": 105159
+          "odds_one_in": 104353
         },
         {
           "prize": 8000,
           "remaining": 46,
           "total": 164,
           "odds_printed": 73703,
-          "odds_one_in": 68582
+          "odds_one_in": 68056
         },
         {
           "prize": 3000,
           "remaining": 93,
           "total": 311,
           "odds_printed": 38866,
-          "odds_one_in": 33922
+          "odds_one_in": 33662
         },
         {
           "prize": 600,
           "remaining": 176,
           "total": 608,
           "odds_printed": 19880,
-          "odds_one_in": 17925
+          "odds_one_in": 17787
         },
         {
           "prize": 500,
-          "remaining": 778,
+          "remaining": 767,
           "total": 3019,
           "odds_printed": 4004,
-          "odds_one_in": 4055
+          "odds_one_in": 4082
         },
         {
           "prize": 400,
-          "remaining": 5151,
+          "remaining": 5114,
           "total": 20108,
           "odds_printed": 601,
           "odds_one_in": 612
         },
         {
           "prize": 300,
-          "remaining": 7774,
+          "remaining": 7718,
           "total": 30128,
           "odds_printed": 401,
           "odds_one_in": 406
         },
         {
           "prize": 200,
-          "remaining": 22221,
+          "remaining": 22046,
           "total": 80565,
           "odds_printed": 150,
           "odds_one_in": 142
         },
         {
           "prize": 100,
-          "remaining": 88344,
+          "remaining": 87699,
           "total": 340991,
           "odds_printed": 35,
           "odds_one_in": 36
         },
         {
           "prize": 60,
-          "remaining": 104764,
+          "remaining": 103963,
           "total": 403116,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 50,
-          "remaining": 105052,
+          "remaining": 104272,
           "total": 402908,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 40,
-          "remaining": 104794,
+          "remaining": 104010,
           "total": 402908,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 30,
-          "remaining": 105281,
+          "remaining": 104514,
           "total": 402908,
           "odds_printed": 30,
           "odds_one_in": 30
@@ -1329,72 +1228,72 @@
       "overall_odds": 3.32,
       "top_prize": 5000000,
       "on_sale": "March 24, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1669-20-monopoly-thumbnail.jpg?rev=e0587d5d32864d14b78c496c94a41299",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1669-20-monopoly-cv.png?rev=18f71ed1f2e548728538ba6fc0e21011",
       "article_url": "https://www.calottery.com/scratchers/%2420/monopoly-1669",
       "tickets_printed": 18224430,
-      "tickets_remaining": 8510809,
-      "percent_unsold": 46.7,
-      "total_unclaimed": 122608060,
+      "tickets_remaining": 8456136,
+      "percent_unsold": 46.4,
+      "total_unclaimed": 121888920,
       "prizes": [
         {
           "prize": 5000000,
           "remaining": 4,
           "total": 6,
           "odds_printed": 3037405,
-          "odds_one_in": 2127702
+          "odds_one_in": 2114034
         },
         {
           "prize": 2500,
-          "remaining": 2219,
+          "remaining": 2197,
           "total": 4573,
           "odds_printed": 3985,
-          "odds_one_in": 3835
+          "odds_one_in": 3849
         },
         {
           "prize": 500,
-          "remaining": 34015,
+          "remaining": 33760,
           "total": 72952,
           "odds_printed": 250,
           "odds_one_in": 250
         },
         {
           "prize": 250,
-          "remaining": 23912,
+          "remaining": 23762,
           "total": 51300,
           "odds_printed": 355,
           "odds_one_in": 356
         },
         {
           "prize": 100,
-          "remaining": 95522,
+          "remaining": 94865,
           "total": 205023,
           "odds_printed": 89,
           "odds_one_in": 89
         },
         {
           "prize": 75,
-          "remaining": 141670,
+          "remaining": 140694,
           "total": 303827,
           "odds_printed": 60,
           "odds_one_in": 60
         },
         {
           "prize": 50,
-          "remaining": 283141,
+          "remaining": 281240,
           "total": 607481,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 40,
-          "remaining": 566404,
+          "remaining": 562580,
           "total": 1214962,
           "odds_printed": 15,
           "odds_one_in": 15
         },
         {
           "prize": 30,
-          "remaining": 569480,
+          "remaining": 565739,
           "total": 1214962,
           "odds_printed": 15,
           "odds_one_in": 15
@@ -1409,93 +1308,93 @@
       "overall_odds": 3.0,
       "top_prize": 5000000,
       "on_sale": "February 17, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1664-20-cash-king-thumbnail.jpg?rev=f73f7dc872f148498a41f811aa1ef289",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1664-20-cash-king-cv.png?rev=e7d3bc580c2d4a3c84a65f5fccc73f68",
       "article_url": "https://www.calottery.com/scratchers/%2420/cash-king-1664",
       "tickets_printed": 18324750,
-      "tickets_remaining": 7971266,
-      "percent_unsold": 43.5,
-      "total_unclaimed": 120024260,
+      "tickets_remaining": 7934617,
+      "percent_unsold": 43.3,
+      "total_unclaimed": 119458245,
       "prizes": [
         {
           "prize": 5000000,
           "remaining": 2,
           "total": 6,
           "odds_printed": 3054125,
-          "odds_one_in": 3985633
+          "odds_one_in": 3967308
         },
         {
           "prize": 100000,
           "remaining": 7,
           "total": 15,
           "odds_printed": 1221650,
-          "odds_one_in": 1138752
+          "odds_one_in": 1133517
         },
         {
           "prize": 10000,
-          "remaining": 140,
+          "remaining": 139,
           "total": 314,
           "odds_printed": 58359,
-          "odds_one_in": 56938
+          "odds_one_in": 57084
         },
         {
           "prize": 1000,
-          "remaining": 1724,
+          "remaining": 1716,
           "total": 3938,
           "odds_printed": 4653,
           "odds_one_in": 4624
         },
         {
           "prize": 500,
-          "remaining": 17175,
+          "remaining": 17083,
           "total": 39732,
           "odds_printed": 461,
           "odds_one_in": 464
         },
         {
           "prize": 250,
-          "remaining": 50362,
+          "remaining": 50097,
           "total": 116106,
           "odds_printed": 158,
           "odds_one_in": 158
         },
         {
           "prize": 100,
-          "remaining": 198789,
+          "remaining": 197812,
           "total": 458472,
           "odds_printed": 40,
           "odds_one_in": 40
         },
         {
           "prize": 50,
-          "remaining": 266120,
+          "remaining": 264716,
           "total": 610825,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 40,
-          "remaining": 265350,
+          "remaining": 263970,
           "total": 610825,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 30,
-          "remaining": 265749,
+          "remaining": 264371,
           "total": 610825,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 25,
-          "remaining": 265782,
+          "remaining": 264421,
           "total": 610825,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 20,
-          "remaining": 1330317,
+          "remaining": 1323452,
           "total": 3054125,
           "odds_printed": 6,
           "odds_one_in": 6
@@ -1510,93 +1409,93 @@
       "overall_odds": 3.1,
       "top_prize": 2000000,
       "on_sale": "July 22, 2024",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1634-20-instant-prize-crossword-thumbnail.jpg?rev=d998b5e4244446299d09a8e1ce26021a",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1634-20-instant-prize-crossword-cv.png?rev=1fa25be1f8704daf97eb1b204a61bffd",
       "article_url": "https://www.calottery.com/scratchers/%2420/instant-prize-crossword-1634",
       "tickets_printed": 23312676,
-      "tickets_remaining": 2587707,
-      "percent_unsold": 11.1,
-      "total_unclaimed": 36009700,
+      "tickets_remaining": 2377893,
+      "percent_unsold": 10.2,
+      "total_unclaimed": 33765100,
       "prizes": [
         {
           "prize": 2000000,
           "remaining": 3,
           "total": 19,
           "odds_printed": 1227000,
-          "odds_one_in": 862569
+          "odds_one_in": 792631
         },
         {
           "prize": 25000,
           "remaining": 4,
           "total": 40,
           "odds_printed": 582825,
-          "odds_one_in": 646927
+          "odds_one_in": 594473
         },
         {
           "prize": 10000,
-          "remaining": 7,
+          "remaining": 6,
           "total": 39,
           "odds_printed": 597769,
-          "odds_one_in": 369672
+          "odds_one_in": 396316
         },
         {
           "prize": 5000,
           "remaining": 23,
           "total": 201,
           "odds_printed": 115985,
-          "odds_one_in": 112509
+          "odds_one_in": 103387
         },
         {
           "prize": 2000,
-          "remaining": 798,
+          "remaining": 783,
           "total": 5885,
           "odds_printed": 3961,
-          "odds_one_in": 3243
+          "odds_one_in": 3037
         },
         {
           "prize": 1000,
-          "remaining": 2048,
+          "remaining": 1927,
           "total": 15688,
           "odds_printed": 1486,
-          "odds_one_in": 1264
+          "odds_one_in": 1234
         },
         {
           "prize": 500,
-          "remaining": 4618,
+          "remaining": 4253,
           "total": 41121,
           "odds_printed": 567,
-          "odds_one_in": 560
+          "odds_one_in": 559
         },
         {
           "prize": 250,
-          "remaining": 6719,
+          "remaining": 6200,
           "total": 58791,
           "odds_printed": 397,
-          "odds_one_in": 385
+          "odds_one_in": 384
         },
         {
           "prize": 200,
-          "remaining": 14204,
+          "remaining": 13035,
           "total": 127211,
           "odds_printed": 183,
           "odds_one_in": 182
         },
         {
           "prize": 100,
-          "remaining": 62375,
+          "remaining": 57190,
           "total": 581371,
           "odds_printed": 40,
-          "odds_one_in": 41
+          "odds_one_in": 42
         },
         {
           "prize": 50,
-          "remaining": 122163,
+          "remaining": 112506,
           "total": 1090132,
           "odds_printed": 21,
           "odds_one_in": 21
         },
         {
           "prize": 25,
-          "remaining": 276220,
+          "remaining": 254772,
           "total": 2482336,
           "odds_printed": 9,
           "odds_one_in": 9
@@ -1611,93 +1510,93 @@
       "overall_odds": 3.1,
       "top_prize": 2000000,
       "on_sale": "September 18, 2023",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1590-20-instant-prize-crossword-thumbnail.jpg?rev=f80291b036ca40deb4cd8e28447e9b83",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1590-20-instant-prize-crossword-cv.png?rev=a0f5ef12b2784161a29aef5a296ae5e9",
       "article_url": "https://www.calottery.com/scratchers/%2420/instant-prize-crossword-1590",
       "tickets_printed": 33293655,
-      "tickets_remaining": 12052303,
-      "percent_unsold": 36.2,
-      "total_unclaimed": 155468625,
+      "tickets_remaining": 12019009,
+      "percent_unsold": 36.1,
+      "total_unclaimed": 155233700,
       "prizes": [
         {
           "prize": 2000000,
           "remaining": 9,
           "total": 27,
           "odds_printed": 1233167,
-          "odds_one_in": 1339145
+          "odds_one_in": 1335445
         },
         {
           "prize": 25000,
           "remaining": 21,
           "total": 55,
           "odds_printed": 605373,
-          "odds_one_in": 573919
+          "odds_one_in": 572334
         },
         {
           "prize": 10000,
           "remaining": 22,
           "total": 56,
           "odds_printed": 594562,
-          "odds_one_in": 547832
+          "odds_one_in": 546319
         },
         {
           "prize": 5000,
           "remaining": 101,
           "total": 280,
           "odds_printed": 118912,
-          "odds_one_in": 119330
+          "odds_one_in": 119000
         },
         {
           "prize": 2000,
-          "remaining": 3140,
+          "remaining": 3135,
           "total": 8426,
           "odds_printed": 3952,
-          "odds_one_in": 3838
+          "odds_one_in": 3834
         },
         {
           "prize": 1000,
-          "remaining": 8347,
+          "remaining": 8327,
           "total": 22525,
           "odds_printed": 1478,
-          "odds_one_in": 1444
+          "odds_one_in": 1443
         },
         {
           "prize": 500,
-          "remaining": 21517,
+          "remaining": 21483,
           "total": 59047,
           "odds_printed": 564,
-          "odds_one_in": 560
+          "odds_one_in": 559
         },
         {
           "prize": 250,
-          "remaining": 30973,
+          "remaining": 30916,
           "total": 84272,
           "odds_printed": 395,
           "odds_one_in": 389
         },
         {
           "prize": 200,
-          "remaining": 65954,
+          "remaining": 65833,
           "total": 181913,
           "odds_printed": 183,
           "odds_one_in": 183
         },
         {
           "prize": 100,
-          "remaining": 296936,
+          "remaining": 296438,
           "total": 829444,
           "odds_printed": 40,
           "odds_one_in": 41
         },
         {
           "prize": 50,
-          "remaining": 558967,
+          "remaining": 558078,
           "total": 1550454,
           "odds_printed": 21,
           "odds_one_in": 22
         },
         {
           "prize": 25,
-          "remaining": 1290285,
+          "remaining": 1288076,
           "total": 3558192,
           "odds_printed": 9,
           "odds_one_in": 9
@@ -1715,90 +1614,90 @@
       "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1725-10-1000000-pokerthumbnail.jpg?rev=860c77dc6b60469a9b4548b92e231c56",
       "article_url": "https://www.calottery.com/scratchers/%2410/%241000000-poker-1725",
       "tickets_printed": 14400000,
-      "tickets_remaining": 10684800,
-      "percent_unsold": 74.2,
-      "total_unclaimed": 74534650,
+      "tickets_remaining": 10051200,
+      "percent_unsold": 69.8,
+      "total_unclaimed": 69648155,
       "prizes": [
         {
           "prize": 1000000,
-          "remaining": 10,
+          "remaining": 9,
           "total": 12,
           "odds_printed": 1200000,
-          "odds_one_in": 1068480
+          "odds_one_in": 1116800
         },
         {
           "prize": 20000,
-          "remaining": 12,
+          "remaining": 11,
           "total": 12,
           "odds_printed": 1200000,
-          "odds_one_in": 890400
+          "odds_one_in": 913745
         },
         {
           "prize": 10000,
-          "remaining": 21,
+          "remaining": 19,
           "total": 24,
           "odds_printed": 600000,
-          "odds_one_in": 508800
+          "odds_one_in": 529011
         },
         {
           "prize": 5000,
           "remaining": 22,
           "total": 25,
           "odds_printed": 576000,
-          "odds_one_in": 485673
+          "odds_one_in": 456873
         },
         {
           "prize": 1000,
-          "remaining": 746,
+          "remaining": 691,
           "total": 924,
           "odds_printed": 15584,
-          "odds_one_in": 14323
+          "odds_one_in": 14546
         },
         {
           "prize": 500,
-          "remaining": 3578,
+          "remaining": 3373,
           "total": 4859,
           "odds_printed": 2964,
-          "odds_one_in": 2986
+          "odds_one_in": 2980
         },
         {
           "prize": 200,
-          "remaining": 16289,
+          "remaining": 15321,
           "total": 22116,
           "odds_printed": 651,
           "odds_one_in": 656
         },
         {
           "prize": 100,
-          "remaining": 114115,
+          "remaining": 107158,
           "total": 154613,
           "odds_printed": 93,
           "odds_one_in": 94
         },
         {
           "prize": 50,
-          "remaining": 172968,
+          "remaining": 162517,
           "total": 233663,
           "odds_printed": 62,
           "odds_one_in": 62
         },
         {
           "prize": 25,
-          "remaining": 284427,
+          "remaining": 267302,
           "total": 383568,
           "odds_printed": 38,
           "odds_one_in": 38
         },
         {
           "prize": 20,
-          "remaining": 749773,
+          "remaining": 705010,
           "total": 1010745,
           "odds_printed": 14,
           "odds_one_in": 14
         },
         {
           "prize": 15,
-          "remaining": 1067721,
+          "remaining": 1004137,
           "total": 1436340,
           "odds_printed": 10,
           "odds_one_in": 10
@@ -1813,93 +1712,93 @@
       "overall_odds": 3.5,
       "top_prize": 1000000,
       "on_sale": "March 23, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1721-california-color-pop-thumbnail.jpg?rev=56f9ab7a72c64ba39262e58488cc4cbb",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1721-10-california-color-pop-cv.png?rev=c770f45852a049a3be2fb04064c879f8",
       "article_url": "https://www.calottery.com/scratchers/%2410/california-color-pop-1721",
       "tickets_printed": 14212050,
-      "tickets_remaining": 7688719,
-      "percent_unsold": 54.1,
-      "total_unclaimed": 53566225,
+      "tickets_remaining": 7077601,
+      "percent_unsold": 49.8,
+      "total_unclaimed": 49669765,
       "prizes": [
         {
           "prize": 1000000,
           "remaining": 4,
           "total": 6,
           "odds_printed": 2368675,
-          "odds_one_in": 1922180
+          "odds_one_in": 1769400
         },
         {
           "prize": 20000,
           "remaining": 9,
           "total": 15,
           "odds_printed": 947470,
-          "odds_one_in": 854302
+          "odds_one_in": 786400
         },
         {
           "prize": 10000,
-          "remaining": 14,
+          "remaining": 13,
           "total": 24,
           "odds_printed": 592169,
-          "odds_one_in": 549194
+          "odds_one_in": 544431
         },
         {
           "prize": 5000,
-          "remaining": 35,
+          "remaining": 31,
           "total": 48,
           "odds_printed": 296084,
-          "odds_one_in": 219678
+          "odds_one_in": 228310
         },
         {
           "prize": 1000,
-          "remaining": 372,
+          "remaining": 346,
           "total": 609,
           "odds_printed": 23337,
-          "odds_one_in": 20669
+          "odds_one_in": 20455
         },
         {
           "prize": 500,
-          "remaining": 2229,
+          "remaining": 2067,
           "total": 4040,
           "odds_printed": 3518,
-          "odds_one_in": 3449
+          "odds_one_in": 3424
         },
         {
           "prize": 200,
-          "remaining": 10071,
+          "remaining": 9256,
           "total": 18606,
           "odds_printed": 764,
-          "odds_one_in": 763
+          "odds_one_in": 765
         },
         {
           "prize": 100,
-          "remaining": 108537,
+          "remaining": 99865,
           "total": 202168,
           "odds_printed": 70,
           "odds_one_in": 71
         },
         {
           "prize": 50,
-          "remaining": 173540,
+          "remaining": 160027,
           "total": 320073,
           "odds_printed": 44,
           "odds_one_in": 44
         },
         {
           "prize": 25,
-          "remaining": 211181,
+          "remaining": 194412,
           "total": 391106,
           "odds_printed": 36,
           "odds_one_in": 36
         },
         {
           "prize": 20,
-          "remaining": 461019,
+          "remaining": 424650,
           "total": 852723,
           "odds_printed": 17,
           "odds_one_in": 17
         },
         {
           "prize": 15,
-          "remaining": 769328,
+          "remaining": 708861,
           "total": 1421205,
           "odds_printed": 10,
           "odds_one_in": 10
@@ -1917,97 +1816,97 @@
       "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1713101000000moneymaniathumbnail.jpg?rev=cd9ee334548e45a9980b41432ae3d215",
       "article_url": "https://www.calottery.com/scratchers/%2410/%241000000-money-mania-1713",
       "tickets_printed": 23304174,
-      "tickets_remaining": 9531407,
-      "percent_unsold": 40.9,
-      "total_unclaimed": 66247135,
+      "tickets_remaining": 8739065,
+      "percent_unsold": 37.5,
+      "total_unclaimed": 61151355,
       "prizes": [
         {
           "prize": 1000000,
           "remaining": 4,
           "total": 12,
           "odds_printed": 1942012,
-          "odds_one_in": 2382852
+          "odds_one_in": 2184766
         },
         {
           "prize": 10000,
           "remaining": 27,
           "total": 59,
           "odds_printed": 394986,
-          "odds_one_in": 353015
+          "odds_one_in": 323669
         },
         {
           "prize": 5000,
-          "remaining": 59,
+          "remaining": 54,
           "total": 116,
           "odds_printed": 200898,
-          "odds_one_in": 161549
+          "odds_one_in": 161835
         },
         {
           "prize": 1000,
-          "remaining": 3941,
+          "remaining": 3605,
           "total": 8727,
           "odds_printed": 2670,
-          "odds_one_in": 2419
+          "odds_one_in": 2424
         },
         {
           "prize": 500,
-          "remaining": 6840,
+          "remaining": 6274,
           "total": 17015,
           "odds_printed": 1370,
           "odds_one_in": 1393
         },
         {
           "prize": 100,
-          "remaining": 105880,
+          "remaining": 97061,
           "total": 262234,
           "odds_printed": 89,
           "odds_one_in": 90
         },
         {
           "prize": 50,
-          "remaining": 94186,
+          "remaining": 86419,
           "total": 233377,
           "odds_printed": 100,
           "odds_one_in": 101
         },
         {
           "prize": 40,
-          "remaining": 94283,
+          "remaining": 86532,
           "total": 233017,
           "odds_printed": 100,
           "odds_one_in": 101
         },
         {
           "prize": 30,
-          "remaining": 94724,
+          "remaining": 86847,
           "total": 233187,
           "odds_printed": 100,
           "odds_one_in": 101
         },
         {
           "prize": 25,
-          "remaining": 190298,
+          "remaining": 174686,
           "total": 466472,
           "odds_printed": 50,
           "odds_one_in": 50
         },
         {
           "prize": 20,
-          "remaining": 476581,
+          "remaining": 438061,
           "total": 1164975,
           "odds_printed": 20,
           "odds_one_in": 20
         },
         {
           "prize": 15,
-          "remaining": 950275,
+          "remaining": 872363,
           "total": 2330765,
           "odds_printed": 10,
           "odds_one_in": 10
         },
         {
           "prize": 10,
-          "remaining": 386760,
+          "remaining": 356180,
           "total": 932106,
           "odds_printed": 25,
           "odds_one_in": 25
@@ -2022,86 +1921,86 @@
       "overall_odds": 3.47,
       "top_prize": 750000,
       "on_sale": "December 15, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1708-10-mystery-crossword-thumbnail.jpg?rev=c4d1727b80c0450db3147d314961efd4",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1708-10-mystery-crossword-cv.png?rev=fb41fd0ba071448493fd6f6867bed21a",
       "article_url": "https://www.calottery.com/scratchers/%2410/mystery-crossword-1708",
       "tickets_printed": 54527985,
-      "tickets_remaining": 20175354,
-      "percent_unsold": 37.0,
-      "total_unclaimed": 127411420,
+      "tickets_remaining": 17939707,
+      "percent_unsold": 32.9,
+      "total_unclaimed": 114633080,
       "prizes": [
         {
           "prize": 750000,
-          "remaining": 22,
+          "remaining": 21,
           "total": 45,
           "odds_printed": 1211733,
-          "odds_one_in": 917062
+          "odds_one_in": 854272
         },
         {
           "prize": 10000,
-          "remaining": 48,
+          "remaining": 43,
           "total": 93,
           "odds_printed": 586323,
-          "odds_one_in": 420320
+          "odds_one_in": 417202
         },
         {
           "prize": 4000,
-          "remaining": 69,
+          "remaining": 62,
           "total": 144,
           "odds_printed": 378667,
-          "odds_one_in": 292396
+          "odds_one_in": 289350
         },
         {
           "prize": 2000,
-          "remaining": 71,
+          "remaining": 68,
           "total": 136,
           "odds_printed": 400941,
-          "odds_one_in": 284160
+          "odds_one_in": 263819
         },
         {
           "prize": 1000,
-          "remaining": 2947,
+          "remaining": 2661,
           "total": 6867,
           "odds_printed": 7941,
-          "odds_one_in": 6846
+          "odds_one_in": 6742
         },
         {
           "prize": 400,
-          "remaining": 4272,
+          "remaining": 3819,
           "total": 11455,
           "odds_printed": 4760,
-          "odds_one_in": 4723
+          "odds_one_in": 4697
         },
         {
           "prize": 200,
-          "remaining": 38275,
+          "remaining": 34209,
           "total": 102852,
           "odds_printed": 530,
-          "odds_one_in": 527
+          "odds_one_in": 524
         },
         {
           "prize": 100,
-          "remaining": 404150,
+          "remaining": 359491,
           "total": 1100714,
           "odds_printed": 50,
           "odds_one_in": 50
         },
         {
           "prize": 60,
-          "remaining": 202584,
+          "remaining": 180624,
           "total": 547094,
           "odds_printed": 100,
-          "odds_one_in": 100
+          "odds_one_in": 99
         },
         {
           "prize": 40,
-          "remaining": 320944,
+          "remaining": 286257,
           "total": 872598,
           "odds_printed": 62,
           "odds_one_in": 63
         },
         {
           "prize": 20,
-          "remaining": 1614741,
+          "remaining": 1440093,
           "total": 4362240,
           "odds_printed": 12,
           "odds_one_in": 12
@@ -2116,93 +2015,93 @@
       "overall_odds": 3.5,
       "top_prize": 1000000,
       "on_sale": "November 17, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1704-10-loteria-grande-thumbnail.jpg?rev=f3e8f8f63bd342098568c9e7fdf7d094",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1704-10-loteria-grande-cv.png?rev=89887c2517c24bb6a3623c674c6cb8ac",
       "article_url": "https://www.calottery.com/scratchers/%2410/loteria-grande-1704",
       "tickets_printed": 14638700,
-      "tickets_remaining": 4684384,
-      "percent_unsold": 32.0,
-      "total_unclaimed": 32927215,
+      "tickets_remaining": 4274500,
+      "percent_unsold": 29.2,
+      "total_unclaimed": 30303675,
       "prizes": [
         {
           "prize": 1000000,
           "remaining": 3,
           "total": 6,
           "odds_printed": 2439783,
-          "odds_one_in": 1561461
+          "odds_one_in": 1424833
         },
         {
           "prize": 20000,
           "remaining": 3,
           "total": 12,
           "odds_printed": 1219892,
-          "odds_one_in": 1561461
+          "odds_one_in": 1424833
         },
         {
           "prize": 10000,
-          "remaining": 8,
+          "remaining": 7,
           "total": 25,
           "odds_printed": 585548,
-          "odds_one_in": 585548
+          "odds_one_in": 610643
         },
         {
           "prize": 5000,
-          "remaining": 21,
+          "remaining": 18,
           "total": 50,
           "odds_printed": 292774,
-          "odds_one_in": 223066
+          "odds_one_in": 237472
         },
         {
           "prize": 1000,
-          "remaining": 230,
+          "remaining": 210,
           "total": 627,
           "odds_printed": 23347,
-          "odds_one_in": 20367
+          "odds_one_in": 20355
         },
         {
           "prize": 500,
-          "remaining": 1480,
+          "remaining": 1331,
           "total": 4896,
           "odds_printed": 2990,
-          "odds_one_in": 3165
+          "odds_one_in": 3211
         },
         {
           "prize": 200,
-          "remaining": 5858,
+          "remaining": 5316,
           "total": 18890,
           "odds_printed": 775,
-          "odds_one_in": 800
+          "odds_one_in": 804
         },
         {
           "prize": 100,
-          "remaining": 64940,
+          "remaining": 59294,
           "total": 207364,
           "odds_printed": 71,
           "odds_one_in": 72
         },
         {
           "prize": 50,
-          "remaining": 102427,
+          "remaining": 93114,
           "total": 329657,
           "odds_printed": 44,
           "odds_one_in": 46
         },
         {
           "prize": 25,
-          "remaining": 128997,
+          "remaining": 117796,
           "total": 402645,
           "odds_printed": 36,
           "odds_one_in": 36
         },
         {
           "prize": 20,
-          "remaining": 278779,
+          "remaining": 254543,
           "total": 878322,
           "odds_printed": 17,
           "odds_one_in": 17
         },
         {
           "prize": 15,
-          "remaining": 474984,
+          "remaining": 434941,
           "total": 1463870,
           "odds_printed": 10,
           "odds_one_in": 10
@@ -2217,100 +2116,100 @@
       "overall_odds": 3.42,
       "top_prize": 1000000,
       "on_sale": "September 22, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1695-10-california-jackpot-thumbnail.jpg?rev=203fac70ca40491da4fdfff3792c0d0a",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1695-10-california-jackpot-cv.png?rev=83bb5b5a50134138adf2c313521d3024",
       "article_url": "https://www.calottery.com/scratchers/%2410/california-jackpot-1695",
       "tickets_printed": 16384320,
-      "tickets_remaining": 7274638,
-      "percent_unsold": 44.4,
-      "total_unclaimed": 50200555,
+      "tickets_remaining": 7192716,
+      "percent_unsold": 43.9,
+      "total_unclaimed": 49615910,
       "prizes": [
         {
           "prize": 1000000,
           "remaining": 3,
           "total": 8,
           "odds_printed": 2047812,
-          "odds_one_in": 2424879
+          "odds_one_in": 2397572
         },
         {
           "prize": 10000,
           "remaining": 17,
           "total": 42,
           "odds_printed": 390060,
-          "odds_one_in": 427920
+          "odds_one_in": 423101
         },
         {
           "prize": 5000,
           "remaining": 41,
           "total": 84,
           "odds_printed": 195030,
-          "odds_one_in": 177430
+          "odds_one_in": 175432
         },
         {
           "prize": 1000,
-          "remaining": 2752,
+          "remaining": 2718,
           "total": 6128,
           "odds_printed": 2673,
-          "odds_one_in": 2643
+          "odds_one_in": 2646
         },
         {
           "prize": 500,
-          "remaining": 5183,
+          "remaining": 5121,
           "total": 11953,
           "odds_printed": 1371,
-          "odds_one_in": 1404
+          "odds_one_in": 1405
         },
         {
           "prize": 100,
-          "remaining": 80457,
+          "remaining": 79418,
           "total": 184387,
           "odds_printed": 89,
-          "odds_one_in": 90
+          "odds_one_in": 91
         },
         {
           "prize": 50,
-          "remaining": 71654,
+          "remaining": 70777,
           "total": 163931,
           "odds_printed": 100,
           "odds_one_in": 102
         },
         {
           "prize": 40,
-          "remaining": 72777,
+          "remaining": 71876,
           "total": 163893,
           "odds_printed": 100,
           "odds_one_in": 100
         },
         {
           "prize": 30,
-          "remaining": 72566,
+          "remaining": 71637,
           "total": 163955,
           "odds_printed": 100,
           "odds_one_in": 100
         },
         {
           "prize": 25,
-          "remaining": 144193,
+          "remaining": 142381,
           "total": 328107,
           "odds_printed": 50,
-          "odds_one_in": 50
+          "odds_one_in": 51
         },
         {
           "prize": 20,
-          "remaining": 362524,
+          "remaining": 358060,
           "total": 819216,
           "odds_printed": 20,
           "odds_one_in": 20
         },
         {
           "prize": 15,
-          "remaining": 731688,
+          "remaining": 722491,
           "total": 1638250,
           "odds_printed": 10,
           "odds_one_in": 10
         },
         {
           "prize": 10,
-          "remaining": 293497,
+          "remaining": 289952,
           "total": 655118,
           "odds_printed": 25,
           "odds_one_in": 25
@@ -2325,86 +2224,86 @@
       "overall_odds": 3.3,
       "top_prize": 1000000,
       "on_sale": "July 21, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1686-10-power-10s-thumbnail.jpg?rev=fb252d54ab69451f8dfe958bfac44f13",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1686-10-power-10s-cv.png?rev=7e39ad98adf047f38a474b0483da1e8d",
       "article_url": "https://www.calottery.com/scratchers/%2410/power-10s-1686",
       "tickets_printed": 17021956,
-      "tickets_remaining": 3608655,
-      "percent_unsold": 21.2,
-      "total_unclaimed": 21992105,
+      "tickets_remaining": 3353325,
+      "percent_unsold": 19.7,
+      "total_unclaimed": 20621565,
       "prizes": [
         {
           "prize": 1000000,
           "remaining": 3,
           "total": 14,
           "odds_printed": 1215854,
-          "odds_one_in": 1202885
+          "odds_one_in": 1117775
         },
         {
           "prize": 20000,
-          "remaining": 6,
+          "remaining": 5,
           "total": 28,
           "odds_printed": 607927,
-          "odds_one_in": 601442
+          "odds_one_in": 670665
         },
         {
           "prize": 10000,
           "remaining": 12,
           "total": 28,
           "odds_printed": 607927,
-          "odds_one_in": 300721
+          "odds_one_in": 279444
         },
         {
           "prize": 5000,
           "remaining": 12,
           "total": 57,
           "odds_printed": 298631,
-          "odds_one_in": 300721
+          "odds_one_in": 279444
         },
         {
           "prize": 1000,
-          "remaining": 1401,
+          "remaining": 1302,
           "total": 5949,
           "odds_printed": 2861,
           "odds_one_in": 2576
         },
         {
           "prize": 500,
-          "remaining": 2755,
+          "remaining": 2572,
           "total": 13468,
           "odds_printed": 1264,
-          "odds_one_in": 1310
+          "odds_one_in": 1304
         },
         {
           "prize": 100,
-          "remaining": 43397,
+          "remaining": 40130,
           "total": 207440,
           "odds_printed": 82,
-          "odds_one_in": 83
+          "odds_one_in": 84
         },
         {
           "prize": 50,
-          "remaining": 36183,
+          "remaining": 33542,
           "total": 170496,
           "odds_printed": 100,
           "odds_one_in": 100
         },
         {
           "prize": 30,
-          "remaining": 36390,
+          "remaining": 33891,
           "total": 170517,
           "odds_printed": 100,
           "odds_one_in": 99
         },
         {
           "prize": 20,
-          "remaining": 325490,
+          "remaining": 302040,
           "total": 1531602,
           "odds_printed": 11,
           "odds_one_in": 11
         },
         {
           "prize": 15,
-          "remaining": 144217,
+          "remaining": 133729,
           "total": 681376,
           "odds_printed": 25,
           "odds_one_in": 25
@@ -2419,23 +2318,23 @@
       "overall_odds": 8.13,
       "top_prize": 100,
       "on_sale": "June 23, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1681-10-50-or-100-thumbnail.jpg?rev=64c3aa88076449b5be28c4ec7e6a9dca",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1681-10-50-or-100-cv.png?rev=bd19a8647f064b8bb073b989d6602b54",
       "article_url": "https://www.calottery.com/scratchers/%2410/%2450-or-%24100-1681",
       "tickets_printed": 12365574,
       "tickets_remaining": 2114513,
       "percent_unsold": 17.1,
-      "total_unclaimed": 15322500,
+      "total_unclaimed": 15309350,
       "prizes": [
         {
           "prize": 100,
-          "remaining": 47822,
+          "remaining": 47785,
           "total": 282617,
           "odds_printed": 44,
           "odds_one_in": 44
         },
         {
           "prize": 50,
-          "remaining": 210806,
+          "remaining": 210617,
           "total": 1229600,
           "odds_printed": 10,
           "odds_one_in": 10
@@ -2450,12 +2349,12 @@
       "overall_odds": 3.47,
       "top_prize": 750000,
       "on_sale": "January 20, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1659-10-mystery-crossword-thumbnail.jpg?rev=5352a1ab65424f798a54cc008fdd2cb2",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1659-10-mystery-crossword-cv.png?rev=73bc945e92d04d2ca78fb25aa2dfa2c7",
       "article_url": "https://www.calottery.com/scratchers/%2410/mystery-crossword-1659",
       "tickets_printed": 73775460,
       "tickets_remaining": 1844386,
       "percent_unsold": 2.5,
-      "total_unclaimed": 10774720,
+      "total_unclaimed": 10569440,
       "prizes": [
         {
           "prize": 750000,
@@ -2480,56 +2379,56 @@
         },
         {
           "prize": 2000,
-          "remaining": 6,
+          "remaining": 5,
           "total": 186,
           "odds_printed": 396642,
-          "odds_one_in": 307398
+          "odds_one_in": 368877
         },
         {
           "prize": 1000,
-          "remaining": 295,
+          "remaining": 280,
           "total": 9269,
           "odds_printed": 7959,
-          "odds_one_in": 6252
+          "odds_one_in": 6587
         },
         {
           "prize": 400,
-          "remaining": 383,
+          "remaining": 379,
           "total": 15471,
           "odds_printed": 4769,
-          "odds_one_in": 4816
+          "odds_one_in": 4866
         },
         {
           "prize": 200,
-          "remaining": 3555,
+          "remaining": 3490,
           "total": 139093,
           "odds_printed": 530,
-          "odds_one_in": 519
+          "odds_one_in": 528
         },
         {
           "prize": 100,
-          "remaining": 34727,
+          "remaining": 33975,
           "total": 1497166,
           "odds_printed": 49,
-          "odds_one_in": 53
+          "odds_one_in": 54
         },
         {
           "prize": 60,
-          "remaining": 18722,
+          "remaining": 18357,
           "total": 739650,
           "odds_printed": 100,
-          "odds_one_in": 99
+          "odds_one_in": 100
         },
         {
           "prize": 40,
-          "remaining": 28320,
+          "remaining": 27808,
           "total": 1172605,
           "odds_printed": 63,
-          "odds_one_in": 65
+          "odds_one_in": 66
         },
         {
           "prize": 20,
-          "remaining": 153135,
+          "remaining": 150330,
           "total": 5902036,
           "odds_printed": 12,
           "odds_one_in": 12
@@ -2544,79 +2443,79 @@
       "overall_odds": 4.73,
       "top_prize": 250000,
       "on_sale": "May 18, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/17305redwhiteblue7sthumbnail.jpg?rev=1673d152170c4fa19bf508da0c2beabc",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1730-5-red-white-and-blue-7s-cv.png?rev=dbec25b74f67493eb8b81d74b0fa50d3",
       "article_url": "https://www.calottery.com/scratchers/%245/red-white--blue-7s-1730",
       "tickets_printed": 12000000,
-      "tickets_remaining": 9240000,
-      "percent_unsold": 77.0,
-      "total_unclaimed": 32068630,
+      "tickets_remaining": 7524000,
+      "percent_unsold": 62.7,
+      "total_unclaimed": 26086930,
       "prizes": [
         {
           "prize": 250000,
-          "remaining": 10,
+          "remaining": 8,
           "total": 10,
           "odds_printed": 1200000,
-          "odds_one_in": 924000
+          "odds_one_in": 940500
         },
         {
           "prize": 10000,
           "remaining": 20,
           "total": 20,
           "odds_printed": 600000,
-          "odds_one_in": 462000
+          "odds_one_in": 376200
         },
         {
           "prize": 1000,
-          "remaining": 660,
+          "remaining": 563,
           "total": 758,
           "odds_printed": 15831,
-          "odds_one_in": 14000
+          "odds_one_in": 13364
         },
         {
           "prize": 500,
-          "remaining": 2694,
+          "remaining": 2142,
           "total": 3533,
           "odds_printed": 3397,
-          "odds_one_in": 3430
+          "odds_one_in": 3513
         },
         {
           "prize": 100,
-          "remaining": 15375,
+          "remaining": 12471,
           "total": 20247,
           "odds_printed": 593,
-          "odds_one_in": 601
+          "odds_one_in": 603
         },
         {
           "prize": 50,
-          "remaining": 38562,
+          "remaining": 31230,
           "total": 50621,
           "odds_printed": 237,
-          "odds_one_in": 240
+          "odds_one_in": 241
         },
         {
           "prize": 30,
-          "remaining": 45865,
+          "remaining": 37044,
           "total": 59985,
           "odds_printed": 200,
-          "odds_one_in": 201
+          "odds_one_in": 203
         },
         {
           "prize": 20,
-          "remaining": 230145,
+          "remaining": 186730,
           "total": 300000,
           "odds_printed": 40,
           "odds_one_in": 40
         },
         {
           "prize": 15,
-          "remaining": 345824,
+          "remaining": 280918,
           "total": 450000,
           "odds_printed": 27,
           "odds_one_in": 27
         },
         {
           "prize": 10,
-          "remaining": 1272982,
+          "remaining": 1038464,
           "total": 1650000,
           "odds_printed": 7,
           "odds_one_in": 7
@@ -2631,89 +2530,89 @@
       "overall_odds": 3.81,
       "top_prize": 500000,
       "on_sale": "April 20, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1724-5-jaws-thumbnail.jpg?rev=0ef2ed45037947978b3dc2429543316f",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1724-5-jaws-cv.png?rev=12f0bd54e6c74a079e52bf804435265d",
       "article_url": "https://www.calottery.com/scratchers/%245/jaws-1724",
-      "tickets_printed": 12000000,
-      "tickets_remaining": 5880000,
-      "percent_unsold": 49.0,
-      "total_unclaimed": 18837807,
+      "tickets_printed": 23999895,
+      "tickets_remaining": 16991926,
+      "percent_unsold": 70.8,
+      "total_unclaimed": 54112018,
       "prizes": [
         {
           "prize": 500000,
-          "remaining": 6,
-          "total": 10,
+          "remaining": 16,
+          "total": 20,
           "odds_printed": 1200000,
-          "odds_one_in": 980000
+          "odds_one_in": 1061995
         },
         {
           "prize": 10000,
-          "remaining": 10,
-          "total": 20,
+          "remaining": 30,
+          "total": 40,
           "odds_printed": 600000,
-          "odds_one_in": 588000
+          "odds_one_in": 566398
         },
         {
           "prize": 1000,
-          "remaining": 123,
-          "total": 203,
-          "odds_printed": 59113,
-          "odds_one_in": 47805
+          "remaining": 312,
+          "total": 405,
+          "odds_printed": 59259,
+          "odds_one_in": 54461
         },
         {
           "prize": 500,
-          "remaining": 1444,
-          "total": 3022,
-          "odds_printed": 3971,
-          "odds_one_in": 4072
+          "remaining": 4203,
+          "total": 6030,
+          "odds_printed": 3980,
+          "odds_one_in": 4043
         },
         {
           "prize": 100,
-          "remaining": 14137,
-          "total": 30162,
+          "remaining": 41856,
+          "total": 60256,
           "odds_printed": 398,
-          "odds_one_in": 416
+          "odds_one_in": 406
         },
         {
           "prize": 50,
-          "remaining": 22643,
-          "total": 48218,
+          "remaining": 67024,
+          "total": 96213,
           "odds_printed": 249,
-          "odds_one_in": 260
+          "odds_one_in": 254
         },
         {
           "prize": 30,
-          "remaining": 45975,
-          "total": 97423,
+          "remaining": 136390,
+          "total": 195339,
           "odds_printed": 123,
-          "odds_one_in": 128
+          "odds_one_in": 125
         },
         {
           "prize": 20,
-          "remaining": 143875,
-          "total": 300000,
+          "remaining": 421027,
+          "total": 600000,
           "odds_printed": 40,
-          "odds_one_in": 41
+          "odds_one_in": 40
         },
         {
           "prize": 15,
-          "remaining": 172699,
-          "total": 359522,
+          "remaining": 505334,
+          "total": 719518,
           "odds_printed": 33,
           "odds_one_in": 34
         },
         {
           "prize": 10,
-          "remaining": 322049,
-          "total": 660717,
+          "remaining": 932011,
+          "total": 1320723,
           "odds_printed": 18,
           "odds_one_in": 18
         },
         {
           "prize": 6,
-          "remaining": 379872,
-          "total": 750000,
+          "remaining": 1074893,
+          "total": 1500000,
           "odds_printed": 16,
-          "odds_one_in": 15
+          "odds_one_in": 16
         }
       ]
     },
@@ -2725,86 +2624,86 @@
       "overall_odds": 3.82,
       "top_prize": 75000,
       "on_sale": "February 16, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1717-5-mega-crossword-thumbnail.jpg?rev=10bf90c91ad24558801c604a7ea6bcf9",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1717-5-mega-crossword-cv.png?rev=93690f3531184e06921281e690f4cb46",
       "article_url": "https://www.calottery.com/scratchers/%245/mega-crossword-1717",
       "tickets_printed": 24659856,
-      "tickets_remaining": 12823125,
-      "percent_unsold": 52.0,
-      "total_unclaimed": 38692085,
+      "tickets_remaining": 11787411,
+      "percent_unsold": 47.8,
+      "total_unclaimed": 35653365,
       "prizes": [
         {
           "prize": 75000,
           "remaining": 12,
           "total": 20,
           "odds_printed": 1232984,
-          "odds_one_in": 1068594
+          "odds_one_in": 982284
         },
         {
           "prize": 5000,
-          "remaining": 190,
+          "remaining": 178,
           "total": 300,
           "odds_printed": 82199,
-          "odds_one_in": 67490
+          "odds_one_in": 66221
         },
         {
           "prize": 1000,
-          "remaining": 364,
+          "remaining": 330,
           "total": 624,
           "odds_printed": 39519,
-          "odds_one_in": 35228
+          "odds_one_in": 35719
         },
         {
           "prize": 500,
-          "remaining": 4062,
+          "remaining": 3748,
           "total": 8016,
           "odds_printed": 3076,
-          "odds_one_in": 3157
+          "odds_one_in": 3145
         },
         {
           "prize": 100,
-          "remaining": 21132,
+          "remaining": 19419,
           "total": 41156,
           "odds_printed": 599,
           "odds_one_in": 607
         },
         {
           "prize": 50,
-          "remaining": 40346,
+          "remaining": 36979,
           "total": 78377,
           "odds_printed": 315,
-          "odds_one_in": 318
+          "odds_one_in": 319
         },
         {
           "prize": 30,
-          "remaining": 63584,
+          "remaining": 58499,
           "total": 123359,
           "odds_printed": 200,
-          "odds_one_in": 202
+          "odds_one_in": 201
         },
         {
           "prize": 25,
-          "remaining": 79639,
+          "remaining": 73118,
           "total": 154376,
           "odds_printed": 160,
           "odds_one_in": 161
         },
         {
           "prize": 20,
-          "remaining": 319130,
+          "remaining": 293288,
           "total": 616540,
           "odds_printed": 40,
           "odds_one_in": 40
         },
         {
           "prize": 15,
-          "remaining": 606026,
+          "remaining": 556619,
           "total": 1170950,
           "odds_printed": 21,
           "odds_one_in": 21
         },
         {
           "prize": 10,
-          "remaining": 1094510,
+          "remaining": 1007055,
           "total": 2096554,
           "odds_printed": 12,
           "odds_one_in": 12
@@ -2819,86 +2718,86 @@
       "overall_odds": 4.53,
       "top_prize": 250000,
       "on_sale": "January 19, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1712-5-cash-crush-thumbnail.jpg?rev=df088f3bdbeb49d89e40e5da2dda3a80",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1712-5-cash-crush-cv.png?rev=bda4579adc3948fcb234371e0766e38e",
       "article_url": "https://www.calottery.com/scratchers/%245/cash-crush-1712",
       "tickets_printed": 17074246,
-      "tickets_remaining": 7546817,
-      "percent_unsold": 44.2,
-      "total_unclaimed": 25674072,
+      "tickets_remaining": 7222406,
+      "percent_unsold": 42.3,
+      "total_unclaimed": 24616461,
       "prizes": [
         {
           "prize": 250000,
           "remaining": 8,
           "total": 14,
           "odds_printed": 1219589,
-          "odds_one_in": 943352
+          "odds_one_in": 902801
         },
         {
           "prize": 10000,
-          "remaining": 13,
+          "remaining": 11,
           "total": 29,
           "odds_printed": 588767,
-          "odds_one_in": 580524
+          "odds_one_in": 656582
         },
         {
           "prize": 1000,
-          "remaining": 644,
+          "remaining": 604,
           "total": 1416,
           "odds_printed": 12058,
-          "odds_one_in": 11719
+          "odds_one_in": 11958
         },
         {
           "prize": 500,
-          "remaining": 2706,
+          "remaining": 2584,
           "total": 6550,
           "odds_printed": 2607,
-          "odds_one_in": 2789
+          "odds_one_in": 2795
         },
         {
           "prize": 100,
-          "remaining": 17893,
+          "remaining": 17104,
           "total": 42729,
           "odds_printed": 400,
           "odds_one_in": 422
         },
         {
           "prize": 50,
-          "remaining": 36128,
+          "remaining": 34523,
           "total": 85381,
           "odds_printed": 200,
           "odds_one_in": 209
         },
         {
           "prize": 30,
-          "remaining": 48447,
+          "remaining": 46199,
           "total": 113808,
           "odds_printed": 150,
           "odds_one_in": 156
         },
         {
           "prize": 20,
-          "remaining": 182512,
+          "remaining": 174321,
           "total": 426856,
           "odds_printed": 40,
           "odds_one_in": 41
         },
         {
           "prize": 15,
-          "remaining": 278930,
+          "remaining": 267005,
           "total": 640358,
           "odds_printed": 27,
           "odds_one_in": 27
         },
         {
           "prize": 10,
-          "remaining": 517134,
+          "remaining": 494766,
           "total": 1173743,
           "odds_printed": 15,
           "odds_one_in": 15
         },
         {
           "prize": 6,
-          "remaining": 582072,
+          "remaining": 558131,
           "total": 1280568,
           "odds_printed": 13,
           "odds_one_in": 13
@@ -2913,58 +2812,58 @@
       "overall_odds": 4.43,
       "top_prize": 500,
       "on_sale": "November 17, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1703-5-full-of-500s-thumbnail.jpg?rev=b347d4bd9c114383a3ee256ed170b8b7",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1703-5-full-of-500s-cv.png?rev=41865641f478455ca1a98a1c5120c487",
       "article_url": "https://www.calottery.com/scratchers/%245/full-of-500s-1703",
       "tickets_printed": 22833536,
-      "tickets_remaining": 3105361,
-      "percent_unsold": 13.6,
-      "total_unclaimed": 9576640,
+      "tickets_remaining": 2580190,
+      "percent_unsold": 11.3,
+      "total_unclaimed": 7912355,
       "prizes": [
         {
           "prize": 500,
-          "remaining": 4113,
+          "remaining": 3349,
           "total": 33256,
           "odds_printed": 687,
-          "odds_one_in": 755
+          "odds_one_in": 770
         },
         {
           "prize": 100,
-          "remaining": 7101,
+          "remaining": 5818,
           "total": 57113,
           "odds_printed": 400,
-          "odds_one_in": 437
+          "odds_one_in": 443
         },
         {
           "prize": 50,
-          "remaining": 13450,
+          "remaining": 11019,
           "total": 106536,
           "odds_printed": 214,
-          "odds_one_in": 231
+          "odds_one_in": 234
         },
         {
           "prize": 30,
-          "remaining": 22192,
+          "remaining": 18318,
           "total": 171319,
           "odds_printed": 133,
-          "odds_one_in": 140
+          "odds_one_in": 141
         },
         {
           "prize": 20,
-          "remaining": 47867,
+          "remaining": 39848,
           "total": 356774,
           "odds_printed": 64,
           "odds_one_in": 65
         },
         {
           "prize": 15,
-          "remaining": 77038,
+          "remaining": 63891,
           "total": 570900,
           "odds_printed": 40,
           "odds_one_in": 40
         },
         {
           "prize": 10,
-          "remaining": 335887,
+          "remaining": 280024,
           "total": 2426402,
           "odds_printed": 9,
           "odds_one_in": 9
@@ -2979,79 +2878,79 @@
       "overall_odds": 3.62,
       "top_prize": 75000,
       "on_sale": "September 22, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1694-5-poker-nights-thumbnail.jpg?rev=d6288566e2d645299cf00514ad2170bf",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1694-5-poker-nights-cv.png?rev=6855ec5b6f1d4ea7832cbad6cc3b6fa8",
       "article_url": "https://www.calottery.com/scratchers/%245/poker-nights-1694",
       "tickets_printed": 41026881,
-      "tickets_remaining": 10502882,
-      "percent_unsold": 25.6,
-      "total_unclaimed": 31672334,
+      "tickets_remaining": 9518236,
+      "percent_unsold": 23.2,
+      "total_unclaimed": 28705408,
       "prizes": [
         {
           "prize": 75000,
           "remaining": 9,
           "total": 34,
           "odds_printed": 1206673,
-          "odds_one_in": 1166987
+          "odds_one_in": 1057582
         },
         {
           "prize": 5000,
-          "remaining": 114,
+          "remaining": 109,
           "total": 347,
           "odds_printed": 118233,
-          "odds_one_in": 92131
+          "odds_one_in": 87323
         },
         {
           "prize": 1000,
-          "remaining": 570,
+          "remaining": 519,
           "total": 2046,
           "odds_printed": 20052,
-          "odds_one_in": 18426
+          "odds_one_in": 18340
         },
         {
           "prize": 500,
-          "remaining": 3231,
+          "remaining": 2896,
           "total": 13690,
           "odds_printed": 2997,
-          "odds_one_in": 3251
+          "odds_one_in": 3287
         },
         {
           "prize": 100,
-          "remaining": 29587,
+          "remaining": 26627,
           "total": 122987,
           "odds_printed": 334,
-          "odds_one_in": 355
+          "odds_one_in": 357
         },
         {
           "prize": 50,
-          "remaining": 101081,
+          "remaining": 91120,
           "total": 410244,
           "odds_printed": 100,
           "odds_one_in": 104
         },
         {
           "prize": 20,
-          "remaining": 255812,
+          "remaining": 230803,
           "total": 1025696,
           "odds_printed": 40,
           "odds_one_in": 41
         },
         {
           "prize": 15,
-          "remaining": 388200,
+          "remaining": 350878,
           "total": 1538532,
           "odds_printed": 27,
           "odds_one_in": 27
         },
         {
           "prize": 10,
-          "remaining": 521945,
+          "remaining": 472038,
           "total": 2051260,
           "odds_printed": 20,
           "odds_one_in": 20
         },
         {
           "prize": 6,
-          "remaining": 678399,
+          "remaining": 616683,
           "total": 2564180,
           "odds_printed": 16,
           "odds_one_in": 15
@@ -3066,121 +2965,121 @@
       "overall_odds": 3.51,
       "top_prize": 100000,
       "on_sale": "August 25, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1688-5-loteria-extra-thumbnail.jpg?rev=2d13f28a34fd430184d818d0ce9fb11e",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1688-5-loteria-extra-cv.png?rev=928f6c1e83df43ea8b80cc304a241035",
       "article_url": "https://www.calottery.com/scratchers/%245/loteria-extra-1688",
       "tickets_printed": 37567040,
-      "tickets_remaining": 9880132,
-      "percent_unsold": 26.3,
-      "total_unclaimed": 29139717,
+      "tickets_remaining": 9053657,
+      "percent_unsold": 24.1,
+      "total_unclaimed": 26559279,
       "prizes": [
         {
           "prize": 100000,
-          "remaining": 5,
+          "remaining": 4,
           "total": 19,
           "odds_printed": 1977213,
-          "odds_one_in": 1976026
+          "odds_one_in": 2263414
         },
         {
           "prize": 10000,
-          "remaining": 48,
+          "remaining": 46,
           "total": 160,
           "odds_printed": 234794,
-          "odds_one_in": 205836
+          "odds_one_in": 196819
         },
         {
           "prize": 1000,
-          "remaining": 694,
+          "remaining": 640,
           "total": 2509,
           "odds_printed": 14973,
-          "odds_one_in": 14237
+          "odds_one_in": 14146
         },
         {
           "prize": 500,
-          "remaining": 1162,
+          "remaining": 1046,
           "total": 4757,
           "odds_printed": 7897,
-          "odds_one_in": 8503
+          "odds_one_in": 8656
         },
         {
           "prize": 400,
-          "remaining": 2290,
+          "remaining": 2073,
           "total": 10007,
           "odds_printed": 3754,
-          "odds_one_in": 4314
+          "odds_one_in": 4367
         },
         {
           "prize": 200,
-          "remaining": 5471,
+          "remaining": 4929,
           "total": 23593,
           "odds_printed": 1592,
-          "odds_one_in": 1806
+          "odds_one_in": 1837
         },
         {
           "prize": 100,
-          "remaining": 15028,
+          "remaining": 13669,
           "total": 62532,
           "odds_printed": 601,
-          "odds_one_in": 657
+          "odds_one_in": 662
         },
         {
           "prize": 75,
-          "remaining": 14640,
+          "remaining": 13208,
           "total": 63301,
           "odds_printed": 593,
-          "odds_one_in": 675
+          "odds_one_in": 685
         },
         {
           "prize": 50,
-          "remaining": 20871,
+          "remaining": 18972,
           "total": 86039,
           "odds_printed": 437,
-          "odds_one_in": 473
+          "odds_one_in": 477
         },
         {
           "prize": 40,
-          "remaining": 24474,
+          "remaining": 22140,
           "total": 102402,
           "odds_printed": 367,
-          "odds_one_in": 404
+          "odds_one_in": 409
         },
         {
           "prize": 30,
-          "remaining": 45601,
+          "remaining": 41330,
           "total": 188880,
           "odds_printed": 199,
-          "odds_one_in": 217
+          "odds_one_in": 219
         },
         {
           "prize": 25,
-          "remaining": 46287,
+          "remaining": 42006,
           "total": 189434,
           "odds_printed": 198,
-          "odds_one_in": 213
+          "odds_one_in": 216
         },
         {
           "prize": 20,
-          "remaining": 236380,
+          "remaining": 215813,
           "total": 939176,
           "odds_printed": 40,
           "odds_one_in": 42
         },
         {
           "prize": 15,
-          "remaining": 291554,
+          "remaining": 265557,
           "total": 1174068,
           "odds_printed": 32,
           "odds_one_in": 34
         },
         {
           "prize": 10,
-          "remaining": 466562,
+          "remaining": 428313,
           "total": 1760808,
           "odds_printed": 21,
           "odds_one_in": 21
         },
         {
           "prize": 6,
-          "remaining": 659912,
+          "remaining": 609464,
           "total": 2347940,
           "odds_printed": 16,
           "odds_one_in": 15
@@ -3195,79 +3094,79 @@
       "overall_odds": 4.77,
       "top_prize": 250000,
       "on_sale": "July 21, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1685-5-feeling-lucky-thumbnail.jpg?rev=dcf474b76f664d439cd8245c7d64782a",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1685-5-feeling-lucky-cv.png?rev=53171ea6d4664a5f94d1b4c659d8d9af",
       "article_url": "https://www.calottery.com/scratchers/%245/feeling-lucky-1685",
       "tickets_printed": 14627606,
-      "tickets_remaining": 3130308,
-      "percent_unsold": 21.4,
-      "total_unclaimed": 9129700,
+      "tickets_remaining": 3115680,
+      "percent_unsold": 21.3,
+      "total_unclaimed": 8820440,
       "prizes": [
         {
           "prize": 250000,
-          "remaining": 1,
+          "remaining": 0,
           "total": 12,
           "odds_printed": 1219027,
-          "odds_one_in": 3130308
+          "odds_one_in": null
         },
         {
           "prize": 10000,
           "remaining": 7,
           "total": 25,
           "odds_printed": 585133,
-          "odds_one_in": 447187
+          "odds_one_in": 445097
         },
         {
           "prize": 1000,
-          "remaining": 221,
+          "remaining": 220,
           "total": 1085,
           "odds_printed": 13482,
-          "odds_one_in": 14164
+          "odds_one_in": 14162
         },
         {
           "prize": 500,
-          "remaining": 965,
+          "remaining": 956,
           "total": 4879,
           "odds_printed": 2998,
-          "odds_one_in": 3244
+          "odds_one_in": 3259
         },
         {
           "prize": 100,
-          "remaining": 7503,
+          "remaining": 7455,
           "total": 36636,
           "odds_printed": 399,
-          "odds_one_in": 417
+          "odds_one_in": 418
         },
         {
           "prize": 50,
-          "remaining": 33150,
+          "remaining": 32930,
           "total": 161459,
           "odds_printed": 91,
-          "odds_one_in": 94
+          "odds_one_in": 95
         },
         {
           "prize": 30,
-          "remaining": 32568,
+          "remaining": 32349,
           "total": 158267,
           "odds_printed": 92,
           "odds_one_in": 96
         },
         {
           "prize": 20,
-          "remaining": 77300,
+          "remaining": 76802,
           "total": 365746,
           "odds_printed": 40,
-          "odds_one_in": 40
+          "odds_one_in": 41
         },
         {
           "prize": 15,
-          "remaining": 94880,
+          "remaining": 94226,
           "total": 438756,
           "odds_printed": 33,
           "odds_one_in": 33
         },
         {
           "prize": 10,
-          "remaining": 175216,
+          "remaining": 174054,
           "total": 804622,
           "odds_printed": 18,
           "odds_one_in": 18
@@ -3282,86 +3181,86 @@
       "overall_odds": 3.75,
       "top_prize": 555555,
       "on_sale": "June 23, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1680-5-california-dreamin-thumbnail.jpg?rev=7d72ad456d2345fe9c1e61c33e833feb",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1680-5-california-dreamin-cv.png?rev=320e2ee967674528adb7f9825bf3c22a",
       "article_url": "https://www.calottery.com/scratchers/%245/california-dreamin-1680",
       "tickets_printed": 18219240,
-      "tickets_remaining": 3953575,
-      "percent_unsold": 21.7,
-      "total_unclaimed": 13515855,
+      "tickets_remaining": 3917137,
+      "percent_unsold": 21.5,
+      "total_unclaimed": 13459760,
       "prizes": [
         {
           "prize": 555555,
           "remaining": 5,
           "total": 12,
           "odds_printed": 1518273,
-          "odds_one_in": 790715
+          "odds_one_in": 783427
         },
         {
           "prize": 5000,
           "remaining": 6,
           "total": 30,
           "odds_printed": 607309,
-          "odds_one_in": 658929
+          "odds_one_in": 652856
         },
         {
           "prize": 1000,
           "remaining": 63,
           "total": 302,
           "odds_printed": 60329,
-          "odds_one_in": 62755
+          "odds_one_in": 62177
         },
         {
           "prize": 500,
-          "remaining": 927,
+          "remaining": 923,
           "total": 4580,
           "odds_printed": 3978,
-          "odds_one_in": 4265
+          "odds_one_in": 4244
         },
         {
           "prize": 100,
-          "remaining": 10985,
+          "remaining": 10928,
           "total": 53223,
           "odds_printed": 342,
-          "odds_one_in": 360
+          "odds_one_in": 358
         },
         {
           "prize": 50,
-          "remaining": 18950,
+          "remaining": 18872,
           "total": 91545,
           "odds_printed": 199,
-          "odds_one_in": 209
+          "odds_one_in": 208
         },
         {
           "prize": 25,
-          "remaining": 41676,
+          "remaining": 41437,
           "total": 197221,
           "odds_printed": 92,
           "odds_one_in": 95
         },
         {
           "prize": 20,
-          "remaining": 95043,
+          "remaining": 94529,
           "total": 455482,
           "odds_printed": 40,
-          "odds_one_in": 42
+          "odds_one_in": 41
         },
         {
           "prize": 15,
-          "remaining": 115575,
+          "remaining": 114944,
           "total": 546211,
           "odds_printed": 33,
           "odds_one_in": 34
         },
         {
           "prize": 10,
-          "remaining": 219208,
+          "remaining": 218004,
           "total": 1002199,
           "odds_printed": 18,
           "odds_one_in": 18
         },
         {
           "prize": 5,
-          "remaining": 253423,
+          "remaining": 252076,
           "total": 1139530,
           "odds_printed": 16,
           "odds_one_in": 16
@@ -3376,86 +3275,86 @@
       "overall_odds": 3.76,
       "top_prize": 250000,
       "on_sale": "January 20, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1658-tic-tac-toe-bonus-thumbnail.jpg?rev=9efa8f4e923d4757bac34ded4e7b30d4",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1658-5-tic-tac-toe-bonus-cv.png?rev=2bc722494aee48fb9afaddf54d65bf0a",
       "article_url": "https://www.calottery.com/scratchers/%245/tic-tac-toe-bonus-1658",
       "tickets_printed": 16866880,
-      "tickets_remaining": 9512920,
-      "percent_unsold": 56.4,
-      "total_unclaimed": 29695173,
+      "tickets_remaining": 9496053,
+      "percent_unsold": 56.3,
+      "total_unclaimed": 29681992,
       "prizes": [
         {
           "prize": 250000,
           "remaining": 8,
           "total": 14,
           "odds_printed": 1204777,
-          "odds_one_in": 1189115
+          "odds_one_in": 1187007
         },
         {
           "prize": 10000,
           "remaining": 15,
           "total": 28,
           "odds_printed": 602389,
-          "odds_one_in": 634195
+          "odds_one_in": 633070
         },
         {
           "prize": 1000,
           "remaining": 721,
           "total": 1268,
           "odds_printed": 13302,
-          "odds_one_in": 13194
+          "odds_one_in": 13171
         },
         {
           "prize": 500,
-          "remaining": 3099,
+          "remaining": 3098,
           "total": 5617,
           "odds_printed": 3003,
-          "odds_one_in": 3070
+          "odds_one_in": 3065
         },
         {
           "prize": 100,
-          "remaining": 23166,
+          "remaining": 23151,
           "total": 42069,
           "odds_printed": 401,
-          "odds_one_in": 411
+          "odds_one_in": 410
         },
         {
           "prize": 50,
-          "remaining": 42878,
+          "remaining": 42861,
           "total": 77012,
           "odds_printed": 219,
           "odds_one_in": 222
         },
         {
           "prize": 30,
-          "remaining": 101188,
+          "remaining": 101144,
           "total": 182722,
           "odds_printed": 92,
           "odds_one_in": 94
         },
         {
           "prize": 20,
-          "remaining": 234302,
+          "remaining": 234185,
           "total": 421794,
           "odds_printed": 40,
           "odds_one_in": 41
         },
         {
           "prize": 15,
-          "remaining": 283521,
+          "remaining": 283384,
           "total": 506040,
           "odds_printed": 33,
           "odds_one_in": 34
         },
         {
           "prize": 10,
-          "remaining": 522460,
+          "remaining": 522191,
           "total": 927384,
           "odds_printed": 18,
           "odds_one_in": 18
         },
         {
           "prize": 6,
-          "remaining": 602513,
+          "remaining": 602192,
           "total": 1054180,
           "odds_printed": 16,
           "odds_one_in": 16
@@ -3470,79 +3369,79 @@
       "overall_odds": 4.77,
       "top_prize": 250000,
       "on_sale": "July 22, 2024",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1632-5-winner-winner-chicken-dinner-thumbnail.jpg?rev=c368e7e7d2e346808beff445a801e103",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1632-5-winner-winner-chicken-dinner-cv.png?rev=69f26571194548e1a03a99013196ac39",
       "article_url": "https://www.calottery.com/scratchers/%245/winner-winner-chicken-dinner-1632",
       "tickets_printed": 18422804,
-      "tickets_remaining": 5434727,
-      "percent_unsold": 29.5,
-      "total_unclaimed": 16042265,
+      "tickets_remaining": 5416304,
+      "percent_unsold": 29.4,
+      "total_unclaimed": 15980530,
       "prizes": [
         {
           "prize": 250000,
           "remaining": 2,
           "total": 15,
           "odds_printed": 1228187,
-          "odds_one_in": 2717364
+          "odds_one_in": 2708152
         },
         {
           "prize": 10000,
           "remaining": 9,
           "total": 31,
           "odds_printed": 594284,
-          "odds_one_in": 603859
+          "odds_one_in": 601812
         },
         {
           "prize": 1000,
-          "remaining": 406,
+          "remaining": 403,
           "total": 1383,
           "odds_printed": 13321,
-          "odds_one_in": 13386
+          "odds_one_in": 13440
         },
         {
           "prize": 500,
-          "remaining": 1751,
+          "remaining": 1743,
           "total": 6129,
           "odds_printed": 3006,
-          "odds_one_in": 3104
+          "odds_one_in": 3107
         },
         {
           "prize": 100,
-          "remaining": 13087,
+          "remaining": 13044,
           "total": 46036,
           "odds_printed": 400,
           "odds_one_in": 415
         },
         {
           "prize": 50,
-          "remaining": 59425,
+          "remaining": 59207,
           "total": 203517,
           "odds_printed": 91,
           "odds_one_in": 91
         },
         {
           "prize": 30,
-          "remaining": 57430,
+          "remaining": 57196,
           "total": 199636,
           "odds_printed": 92,
           "odds_one_in": 95
         },
         {
           "prize": 20,
-          "remaining": 134880,
+          "remaining": 134359,
           "total": 460646,
           "odds_printed": 40,
           "odds_one_in": 40
         },
         {
           "prize": 15,
-          "remaining": 163139,
+          "remaining": 162472,
           "total": 552514,
           "odds_printed": 33,
           "odds_one_in": 33
         },
         {
           "prize": 10,
-          "remaining": 302323,
+          "remaining": 301114,
           "total": 1013357,
           "odds_printed": 18,
           "odds_one_in": 18
@@ -3557,79 +3456,79 @@
       "overall_odds": 3.74,
       "top_prize": 30000,
       "on_sale": "May 18, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1729-3-loteria-thumbnail.jpg?rev=55cdfab434e5461ba34800c4207d04be",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1729-3-loteria-cv.png?rev=16c877b4192840269231b6ea42296667",
       "article_url": "https://www.calottery.com/scratchers/%243/loteria-1729",
       "tickets_printed": 24485510,
-      "tickets_remaining": 23285720,
-      "percent_unsold": 95.1,
-      "total_unclaimed": 39009015,
+      "tickets_remaining": 22306300,
+      "percent_unsold": 91.1,
+      "total_unclaimed": 37429130,
       "prizes": [
         {
           "prize": 30000,
           "remaining": 40,
           "total": 40,
           "odds_printed": 612138,
-          "odds_one_in": 582143
+          "odds_one_in": 557658
         },
         {
           "prize": 3000,
-          "remaining": 210,
+          "remaining": 209,
           "total": 210,
           "odds_printed": 116598,
-          "odds_one_in": 110884
+          "odds_one_in": 106729
         },
         {
           "prize": 300,
-          "remaining": 2899,
+          "remaining": 2777,
           "total": 3067,
           "odds_printed": 7984,
-          "odds_one_in": 8032
+          "odds_one_in": 8033
         },
         {
           "prize": 75,
-          "remaining": 36618,
+          "remaining": 34950,
           "total": 38668,
           "odds_printed": 633,
-          "odds_one_in": 636
+          "odds_one_in": 638
         },
         {
           "prize": 50,
-          "remaining": 55937,
+          "remaining": 53574,
           "total": 59175,
           "odds_printed": 414,
           "odds_one_in": 416
         },
         {
           "prize": 25,
-          "remaining": 113835,
+          "remaining": 108769,
           "total": 120258,
           "odds_printed": 204,
           "odds_one_in": 205
         },
         {
           "prize": 20,
-          "remaining": 232138,
+          "remaining": 222176,
           "total": 244855,
           "odds_printed": 100,
           "odds_one_in": 100
         },
         {
           "prize": 15,
-          "remaining": 232136,
+          "remaining": 222129,
           "total": 244788,
           "odds_printed": 100,
           "odds_one_in": 100
         },
         {
           "prize": 10,
-          "remaining": 744226,
+          "remaining": 712815,
           "total": 783507,
           "odds_printed": 31,
           "odds_one_in": 31
         },
         {
           "prize": 5,
-          "remaining": 2470636,
+          "remaining": 2369250,
           "total": 2595722,
           "odds_printed": 9,
           "odds_one_in": 9
@@ -3644,114 +3543,114 @@
       "overall_odds": 3.34,
       "top_prize": 20000,
       "on_sale": "March 23, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1720-3-tripling-bonus-crossword-thumbnail.jpg?rev=5eab3840fe8b4352b800d451c9923547",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1720-3-trpling-bonus-crossword-cv.png?rev=138fa71a652149f3bc4a5f81dfe06629",
       "article_url": "https://www.calottery.com/scratchers/%243/tripling-bonus-crossword-1720",
       "tickets_printed": 23998918,
-      "tickets_remaining": 18479167,
-      "percent_unsold": 77.0,
-      "total_unclaimed": 32725160,
+      "tickets_remaining": 17735200,
+      "percent_unsold": 73.9,
+      "total_unclaimed": 31447814,
       "prizes": [
         {
           "prize": 20000,
           "remaining": 15,
           "total": 20,
           "odds_printed": 1200000,
-          "odds_one_in": 1231944
+          "odds_one_in": 1182347
         },
         {
           "prize": 3000,
-          "remaining": 35,
+          "remaining": 34,
           "total": 41,
           "odds_printed": 585366,
-          "odds_one_in": 527976
+          "odds_one_in": 521624
         },
         {
           "prize": 1000,
-          "remaining": 93,
+          "remaining": 92,
           "total": 114,
           "odds_printed": 210526,
-          "odds_one_in": 198701
+          "odds_one_in": 192774
         },
         {
           "prize": 300,
-          "remaining": 305,
+          "remaining": 294,
           "total": 414,
           "odds_printed": 57971,
-          "odds_one_in": 60587
+          "odds_one_in": 60324
         },
         {
           "prize": 150,
-          "remaining": 1678,
+          "remaining": 1609,
           "total": 2207,
           "odds_printed": 10874,
-          "odds_one_in": 11013
+          "odds_one_in": 11022
         },
         {
           "prize": 100,
-          "remaining": 12815,
+          "remaining": 12301,
           "total": 16682,
           "odds_printed": 1439,
           "odds_one_in": 1442
         },
         {
           "prize": 60,
-          "remaining": 16434,
+          "remaining": 15798,
           "total": 21836,
           "odds_printed": 1099,
-          "odds_one_in": 1124
+          "odds_one_in": 1123
         },
         {
           "prize": 50,
-          "remaining": 50507,
+          "remaining": 48411,
           "total": 66210,
           "odds_printed": 362,
           "odds_one_in": 366
         },
         {
           "prize": 30,
-          "remaining": 60590,
+          "remaining": 58151,
           "total": 79439,
           "odds_printed": 302,
           "odds_one_in": 305
         },
         {
           "prize": 20,
-          "remaining": 110870,
+          "remaining": 106372,
           "total": 144799,
           "odds_printed": 166,
           "odds_one_in": 167
         },
         {
           "prize": 15,
-          "remaining": 146134,
+          "remaining": 140285,
           "total": 191260,
           "odds_printed": 125,
           "odds_one_in": 126
         },
         {
           "prize": 12,
-          "remaining": 182730,
+          "remaining": 175521,
           "total": 238434,
           "odds_printed": 101,
           "odds_one_in": 101
         },
         {
           "prize": 10,
-          "remaining": 295967,
+          "remaining": 284176,
           "total": 386290,
           "odds_printed": 62,
           "odds_one_in": 62
         },
         {
           "prize": 5,
-          "remaining": 1514690,
+          "remaining": 1455557,
           "total": 1968740,
           "odds_printed": 12,
           "odds_one_in": 12
         },
         {
           "prize": 4,
-          "remaining": 2034520,
+          "remaining": 1955923,
           "total": 2636828,
           "odds_printed": 9,
           "odds_one_in": 9
@@ -3766,114 +3665,114 @@
       "overall_odds": 3.61,
       "top_prize": 20000,
       "on_sale": "January 19, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1711-3-fireball-bingo-thumbnail.jpg?rev=be57031766aa47f89c310b93e056aa1a",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1711-3-fireball-bingo-cv.png?rev=95aeec7dc29b47e48042f2b3e6222c9f",
       "article_url": "https://www.calottery.com/scratchers/%243/fireball-bingo-1711",
       "tickets_printed": 30290652,
-      "tickets_remaining": 20870259,
-      "percent_unsold": 68.9,
-      "total_unclaimed": 35506431,
+      "tickets_remaining": 20294737,
+      "percent_unsold": 67.0,
+      "total_unclaimed": 34491740,
       "prizes": [
         {
           "prize": 20000,
-          "remaining": 38,
+          "remaining": 37,
           "total": 50,
           "odds_printed": 605814,
-          "odds_one_in": 549217
+          "odds_one_in": 548506
         },
         {
           "prize": 1000,
-          "remaining": 71,
+          "remaining": 70,
           "total": 103,
           "odds_printed": 294084,
-          "odds_one_in": 293947
+          "odds_one_in": 289925
         },
         {
           "prize": 500,
-          "remaining": 356,
+          "remaining": 346,
           "total": 514,
           "odds_printed": 58931,
-          "odds_one_in": 58624
+          "odds_one_in": 58655
         },
         {
           "prize": 100,
-          "remaining": 18685,
+          "remaining": 18108,
           "total": 27791,
           "odds_printed": 1090,
-          "odds_one_in": 1117
+          "odds_one_in": 1121
         },
         {
           "prize": 50,
-          "remaining": 32256,
+          "remaining": 31302,
           "total": 47998,
           "odds_printed": 631,
-          "odds_one_in": 647
+          "odds_one_in": 648
         },
         {
           "prize": 40,
-          "remaining": 48970,
+          "remaining": 47484,
           "total": 73186,
           "odds_printed": 414,
-          "odds_one_in": 426
+          "odds_one_in": 427
         },
         {
           "prize": 30,
-          "remaining": 61144,
+          "remaining": 59284,
           "total": 90902,
           "odds_printed": 333,
-          "odds_one_in": 341
+          "odds_one_in": 342
         },
         {
           "prize": 25,
-          "remaining": 105711,
+          "remaining": 102515,
           "total": 156397,
           "odds_printed": 194,
-          "odds_one_in": 197
+          "odds_one_in": 198
         },
         {
           "prize": 20,
-          "remaining": 164880,
+          "remaining": 160152,
           "total": 242264,
           "odds_printed": 125,
           "odds_one_in": 127
         },
         {
           "prize": 15,
-          "remaining": 164042,
+          "remaining": 159203,
           "total": 242296,
           "odds_printed": 125,
           "odds_one_in": 127
         },
         {
           "prize": 10,
-          "remaining": 166428,
+          "remaining": 161794,
           "total": 242447,
           "odds_printed": 125,
           "odds_one_in": 125
         },
         {
           "prize": 9,
-          "remaining": 205956,
+          "remaining": 200015,
           "total": 302875,
           "odds_printed": 100,
           "odds_one_in": 101
         },
         {
           "prize": 8,
-          "remaining": 375070,
+          "remaining": 364487,
           "total": 545203,
           "odds_printed": 56,
           "odds_one_in": 56
         },
         {
           "prize": 5,
-          "remaining": 1215230,
+          "remaining": 1181629,
           "total": 1756985,
           "odds_printed": 17,
           "odds_one_in": 17
         },
         {
           "prize": 4,
-          "remaining": 1556853,
+          "remaining": 1514721,
           "total": 2241603,
           "odds_printed": 14,
           "odds_one_in": 13
@@ -3888,79 +3787,79 @@
       "overall_odds": 3.78,
       "top_prize": 30000,
       "on_sale": "July 21, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1684-3-15x-thumbnail.jpg?rev=4f2cf220eba74030bff528b6853dd2fd",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1684-3-15x-cv.png?rev=38f419a243684c08b5085c3694a36960",
       "article_url": "https://www.calottery.com/scratchers/%243/15x-1684",
       "tickets_printed": 22261520,
-      "tickets_remaining": 4763965,
-      "percent_unsold": 21.4,
-      "total_unclaimed": 7646620,
+      "tickets_remaining": 4474566,
+      "percent_unsold": 20.1,
+      "total_unclaimed": 7192860,
       "prizes": [
         {
           "prize": 30000,
           "remaining": 7,
           "total": 37,
           "odds_printed": 601662,
-          "odds_one_in": 680566
+          "odds_one_in": 639224
         },
         {
           "prize": 1000,
-          "remaining": 43,
+          "remaining": 41,
           "total": 190,
           "odds_printed": 117166,
-          "odds_one_in": 110790
+          "odds_one_in": 109136
         },
         {
           "prize": 500,
-          "remaining": 340,
+          "remaining": 319,
           "total": 1885,
           "odds_printed": 11810,
-          "odds_one_in": 14012
+          "odds_one_in": 14027
         },
         {
           "prize": 100,
-          "remaining": 5406,
+          "remaining": 5088,
           "total": 27800,
           "odds_printed": 801,
-          "odds_one_in": 881
+          "odds_one_in": 879
         },
         {
           "prize": 75,
-          "remaining": 7107,
+          "remaining": 6640,
           "total": 37133,
           "odds_printed": 600,
-          "odds_one_in": 670
+          "odds_one_in": 674
         },
         {
           "prize": 50,
-          "remaining": 14898,
+          "remaining": 13892,
           "total": 77921,
           "odds_printed": 286,
-          "odds_one_in": 320
+          "odds_one_in": 322
         },
         {
           "prize": 25,
-          "remaining": 34611,
+          "remaining": 32372,
           "total": 178004,
           "odds_printed": 125,
           "odds_one_in": 138
         },
         {
           "prize": 15,
-          "remaining": 47574,
+          "remaining": 44871,
           "total": 222615,
           "odds_printed": 100,
           "odds_one_in": 100
         },
         {
           "prize": 10,
-          "remaining": 91025,
+          "remaining": 85272,
           "total": 445230,
           "odds_printed": 50,
           "odds_one_in": 52
         },
         {
           "prize": 5,
-          "remaining": 583192,
+          "remaining": 549175,
           "total": 2671380,
           "odds_printed": 8,
           "odds_one_in": 8
@@ -3975,79 +3874,79 @@
       "overall_odds": 3.74,
       "top_prize": 30000,
       "on_sale": "March 24, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1666-3-loteria--thumbnail.jpg?rev=ec5f463a3cbe4f4584f9cf3968dd5456",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1666-3-loteria-cv.png?rev=01ed136b752443c088a110f2b8c23298",
       "article_url": "https://www.calottery.com/scratchers/%243/loteria-1666",
       "tickets_printed": 47329242,
-      "tickets_remaining": 6436777,
-      "percent_unsold": 13.6,
-      "total_unclaimed": 10407500,
+      "tickets_remaining": 6152801,
+      "percent_unsold": 13.0,
+      "total_unclaimed": 9843380,
       "prizes": [
         {
           "prize": 30000,
-          "remaining": 19,
+          "remaining": 17,
           "total": 78,
           "odds_printed": 606863,
-          "odds_one_in": 338778
+          "odds_one_in": 361929
         },
         {
           "prize": 3000,
-          "remaining": 69,
+          "remaining": 60,
           "total": 405,
           "odds_printed": 116877,
-          "odds_one_in": 93287
+          "odds_one_in": 102547
         },
         {
           "prize": 300,
-          "remaining": 724,
+          "remaining": 688,
           "total": 5890,
           "odds_printed": 8037,
-          "odds_one_in": 8891
+          "odds_one_in": 8943
         },
         {
           "prize": 75,
-          "remaining": 8572,
+          "remaining": 8135,
           "total": 74994,
           "odds_printed": 631,
-          "odds_one_in": 751
+          "odds_one_in": 756
         },
         {
           "prize": 50,
-          "remaining": 13116,
+          "remaining": 12445,
           "total": 114384,
           "odds_printed": 414,
-          "odds_one_in": 491
+          "odds_one_in": 494
         },
         {
           "prize": 25,
-          "remaining": 24098,
+          "remaining": 22638,
           "total": 232825,
           "odds_printed": 203,
-          "odds_one_in": 267
+          "odds_one_in": 272
         },
         {
           "prize": 20,
-          "remaining": 57575,
+          "remaining": 54608,
           "total": 473353,
           "odds_printed": 100,
-          "odds_one_in": 112
+          "odds_one_in": 113
         },
         {
           "prize": 15,
-          "remaining": 51795,
+          "remaining": 48723,
           "total": 473233,
           "odds_printed": 100,
-          "odds_one_in": 124
+          "odds_one_in": 126
         },
         {
           "prize": 10,
-          "remaining": 196793,
+          "remaining": 187254,
           "total": 1514894,
           "odds_printed": 31,
           "odds_one_in": 33
         },
         {
           "prize": 5,
-          "remaining": 723159,
+          "remaining": 690622,
           "total": 5017573,
           "odds_printed": 9,
           "odds_one_in": 9
@@ -4062,114 +3961,114 @@
       "overall_odds": 3.61,
       "top_prize": 20000,
       "on_sale": "January 20, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1657-3-bingo-extra-thumbnail.jpg?rev=6430f2c900704c34b0f236602ed2fee6",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1657-3-bingo-extra-cv.png?rev=b53a69ff364f49f89f9eb67259ef1828",
       "article_url": "https://www.calottery.com/scratchers/%243/bingo-extra-1657",
       "tickets_printed": 30358120,
-      "tickets_remaining": 3673333,
-      "percent_unsold": 12.1,
-      "total_unclaimed": 5675141,
+      "tickets_remaining": 3642974,
+      "percent_unsold": 12.0,
+      "total_unclaimed": 5659866,
       "prizes": [
         {
           "prize": 20000,
           "remaining": 7,
           "total": 50,
           "odds_printed": 607166,
-          "odds_one_in": 524762
+          "odds_one_in": 520425
         },
         {
           "prize": 1000,
           "remaining": 10,
           "total": 104,
           "odds_printed": 291907,
-          "odds_one_in": 367333
+          "odds_one_in": 364297
         },
         {
           "prize": 500,
           "remaining": 55,
           "total": 520,
           "odds_printed": 58381,
-          "odds_one_in": 66788
+          "odds_one_in": 66236
         },
         {
           "prize": 100,
-          "remaining": 2667,
+          "remaining": 2663,
           "total": 27760,
           "odds_printed": 1094,
-          "odds_one_in": 1377
+          "odds_one_in": 1368
         },
         {
           "prize": 50,
-          "remaining": 4714,
+          "remaining": 4703,
           "total": 48109,
           "odds_printed": 631,
-          "odds_one_in": 779
+          "odds_one_in": 775
         },
         {
           "prize": 40,
-          "remaining": 5867,
+          "remaining": 5851,
           "total": 73438,
           "odds_printed": 413,
-          "odds_one_in": 626
+          "odds_one_in": 623
         },
         {
           "prize": 30,
-          "remaining": 7857,
+          "remaining": 7828,
           "total": 91083,
           "odds_printed": 333,
-          "odds_one_in": 468
+          "odds_one_in": 465
         },
         {
           "prize": 25,
-          "remaining": 13498,
+          "remaining": 13454,
           "total": 157067,
           "odds_printed": 193,
-          "odds_one_in": 272
+          "odds_one_in": 271
         },
         {
           "prize": 20,
-          "remaining": 24646,
+          "remaining": 24559,
           "total": 242851,
           "odds_printed": 125,
-          "odds_one_in": 149
+          "odds_one_in": 148
         },
         {
           "prize": 15,
-          "remaining": 22721,
+          "remaining": 22656,
           "total": 242924,
           "odds_printed": 125,
-          "odds_one_in": 162
+          "odds_one_in": 161
         },
         {
           "prize": 10,
-          "remaining": 29189,
+          "remaining": 29112,
           "total": 242849,
           "odds_printed": 125,
-          "odds_one_in": 126
-        },
-        {
-          "prize": 9,
-          "remaining": 29354,
-          "total": 303583,
-          "odds_printed": 100,
           "odds_one_in": 125
         },
         {
+          "prize": 9,
+          "remaining": 29265,
+          "total": 303583,
+          "odds_printed": 100,
+          "odds_one_in": 124
+        },
+        {
           "prize": 8,
-          "remaining": 61439,
+          "remaining": 61263,
           "total": 546434,
           "odds_printed": 56,
-          "odds_one_in": 60
+          "odds_one_in": 59
         },
         {
           "prize": 5,
-          "remaining": 228318,
+          "remaining": 227749,
           "total": 1760705,
           "odds_printed": 17,
           "odds_one_in": 16
         },
         {
           "prize": 4,
-          "remaining": 291122,
+          "remaining": 290328,
           "total": 2246545,
           "odds_printed": 14,
           "odds_one_in": 13
@@ -4184,72 +4083,72 @@
       "overall_odds": 4.09,
       "top_prize": 20000,
       "on_sale": "May 18, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1728-2-goooaaal-thumbnail.jpg?rev=6dfccc263806416eaa91885fa228e20e",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1728-2-goooaaal-cv.png?rev=936e97a12cd643b29fa1f6dd62793f1a",
       "article_url": "https://www.calottery.com/scratchers/%242/goooaaal-1728",
       "tickets_printed": 12000000,
-      "tickets_remaining": 10908000,
-      "percent_unsold": 90.9,
-      "total_unclaimed": 12154851,
+      "tickets_remaining": 10164000,
+      "percent_unsold": 84.7,
+      "total_unclaimed": 11323195,
       "prizes": [
         {
           "prize": 20000,
           "remaining": 20,
           "total": 20,
           "odds_printed": 600000,
-          "odds_one_in": 545400
+          "odds_one_in": 508200
         },
         {
           "prize": 1000,
-          "remaining": 94,
+          "remaining": 85,
           "total": 100,
           "odds_printed": 120000,
-          "odds_one_in": 116043
+          "odds_one_in": 119576
         },
         {
           "prize": 500,
-          "remaining": 711,
+          "remaining": 649,
           "total": 811,
           "odds_printed": 14797,
-          "odds_one_in": 15342
+          "odds_one_in": 15661
         },
         {
           "prize": 100,
-          "remaining": 2993,
+          "remaining": 2754,
           "total": 3338,
           "odds_printed": 3595,
-          "odds_one_in": 3645
+          "odds_one_in": 3691
         },
         {
           "prize": 50,
-          "remaining": 17677,
+          "remaining": 16380,
           "total": 19600,
           "odds_printed": 612,
-          "odds_one_in": 617
+          "odds_one_in": 621
         },
         {
           "prize": 20,
-          "remaining": 135805,
+          "remaining": 125980,
           "total": 150320,
           "odds_printed": 80,
-          "odds_one_in": 80
+          "odds_one_in": 81
         },
         {
           "prize": 10,
-          "remaining": 326217,
+          "remaining": 303442,
           "total": 360055,
           "odds_printed": 33,
           "odds_one_in": 33
         },
         {
           "prize": 5,
-          "remaining": 434951,
+          "remaining": 405312,
           "total": 478610,
           "odds_printed": 25,
           "odds_one_in": 25
         },
         {
           "prize": 3,
-          "remaining": 656392,
+          "remaining": 612905,
           "total": 720000,
           "odds_printed": 17,
           "odds_one_in": 17
@@ -4264,86 +4163,86 @@
       "overall_odds": 4.1,
       "top_prize": 30000,
       "on_sale": "April 20, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1723-2-dominoes-thumbnail.jpg?rev=a656e962537742369d29bcc1b626e859",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1723-2-dominoes-cv.png?rev=a6fcc260ca9142caaf4a9f44ba9a6824",
       "article_url": "https://www.calottery.com/scratchers/%242/dominoes-1723",
       "tickets_printed": 12798675,
-      "tickets_remaining": 9752590,
-      "percent_unsold": 76.2,
-      "total_unclaimed": 10883715,
+      "tickets_remaining": 9253442,
+      "percent_unsold": 72.3,
+      "total_unclaimed": 10310234,
       "prizes": [
         {
           "prize": 30000,
-          "remaining": 14,
+          "remaining": 13,
           "total": 16,
           "odds_printed": 800000,
-          "odds_one_in": 696614
+          "odds_one_in": 711803
         },
         {
           "prize": 1000,
           "remaining": 56,
           "total": 78,
           "odds_printed": 164103,
-          "odds_one_in": 174153
+          "odds_one_in": 165240
         },
         {
           "prize": 200,
-          "remaining": 1740,
+          "remaining": 1648,
           "total": 2347,
           "odds_printed": 5454,
-          "odds_one_in": 5605
+          "odds_one_in": 5615
         },
         {
           "prize": 75,
-          "remaining": 2181,
+          "remaining": 2073,
           "total": 2903,
           "odds_printed": 4409,
-          "odds_one_in": 4472
+          "odds_one_in": 4464
         },
         {
           "prize": 50,
-          "remaining": 3750,
+          "remaining": 3553,
           "total": 5025,
           "odds_printed": 2547,
-          "odds_one_in": 2601
+          "odds_one_in": 2604
         },
         {
           "prize": 30,
-          "remaining": 47953,
+          "remaining": 45388,
           "total": 63928,
           "odds_printed": 200,
-          "odds_one_in": 203
+          "odds_one_in": 204
         },
         {
           "prize": 20,
-          "remaining": 38609,
+          "remaining": 36454,
           "total": 51343,
           "odds_printed": 249,
-          "odds_one_in": 253
+          "odds_one_in": 254
         },
         {
           "prize": 15,
-          "remaining": 57804,
+          "remaining": 54735,
           "total": 76542,
           "odds_printed": 167,
           "odds_one_in": 169
         },
         {
           "prize": 10,
-          "remaining": 213013,
+          "remaining": 201847,
           "total": 281670,
           "odds_printed": 45,
           "odds_one_in": 46
         },
         {
           "prize": 5,
-          "remaining": 352156,
+          "remaining": 334106,
           "total": 461714,
           "odds_printed": 28,
           "odds_one_in": 28
         },
         {
           "prize": 4,
-          "remaining": 684975,
+          "remaining": 650191,
           "total": 894935,
           "odds_printed": 14,
           "odds_one_in": 14
@@ -4358,114 +4257,114 @@
       "overall_odds": 4.16,
       "top_prize": 30000,
       "on_sale": "March 23, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1719-2-10x-the-cash.jpg?rev=774e5c36ed3e4571b5d0f6dff544bd7c",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1719-2-10x-the-cash-cv.png?rev=25edda56a3af49a6b07157902b9dec6e",
       "article_url": "https://www.calottery.com/scratchers/%242/10x-the-cash-1719",
       "tickets_printed": 12000000,
-      "tickets_remaining": 4800000,
-      "percent_unsold": 40.0,
-      "total_unclaimed": 5399355,
+      "tickets_remaining": 4104000,
+      "percent_unsold": 34.2,
+      "total_unclaimed": 4626851,
       "prizes": [
         {
           "prize": 30000,
-          "remaining": 14,
+          "remaining": 13,
           "total": 20,
           "odds_printed": 600000,
-          "odds_one_in": 342857
+          "odds_one_in": 315692
         },
         {
           "prize": 1000,
-          "remaining": 24,
+          "remaining": 21,
           "total": 42,
           "odds_printed": 285714,
-          "odds_one_in": 200000
+          "odds_one_in": 195429
         },
         {
           "prize": 300,
-          "remaining": 31,
+          "remaining": 25,
           "total": 95,
           "odds_printed": 126316,
-          "odds_one_in": 154839
+          "odds_one_in": 164160
         },
         {
           "prize": 150,
-          "remaining": 96,
+          "remaining": 87,
           "total": 301,
           "odds_printed": 39867,
-          "odds_one_in": 50000
+          "odds_one_in": 47172
         },
         {
           "prize": 100,
-          "remaining": 222,
+          "remaining": 185,
           "total": 597,
           "odds_printed": 20101,
-          "odds_one_in": 21622
+          "odds_one_in": 22184
         },
         {
           "prize": 75,
-          "remaining": 444,
+          "remaining": 368,
           "total": 1214,
           "odds_printed": 9885,
-          "odds_one_in": 10811
+          "odds_one_in": 11152
         },
         {
           "prize": 60,
-          "remaining": 561,
+          "remaining": 467,
           "total": 1508,
           "odds_printed": 7958,
-          "odds_one_in": 8556
+          "odds_one_in": 8788
         },
         {
           "prize": 50,
-          "remaining": 1855,
+          "remaining": 1570,
           "total": 5018,
           "odds_printed": 2391,
-          "odds_one_in": 2588
+          "odds_one_in": 2614
         },
         {
           "prize": 45,
-          "remaining": 2774,
+          "remaining": 2312,
           "total": 7472,
           "odds_printed": 1606,
-          "odds_one_in": 1730
+          "odds_one_in": 1775
         },
         {
           "prize": 30,
-          "remaining": 13244,
+          "remaining": 11180,
           "total": 35308,
           "odds_printed": 340,
-          "odds_one_in": 362
+          "odds_one_in": 367
         },
         {
           "prize": 20,
-          "remaining": 27123,
+          "remaining": 22999,
           "total": 71702,
           "odds_printed": 167,
-          "odds_one_in": 177
+          "odds_one_in": 178
         },
         {
           "prize": 15,
-          "remaining": 45600,
+          "remaining": 38560,
           "total": 120000,
           "odds_printed": 100,
-          "odds_one_in": 105
+          "odds_one_in": 106
         },
         {
           "prize": 10,
-          "remaining": 138222,
+          "remaining": 117123,
           "total": 360000,
           "odds_printed": 33,
           "odds_one_in": 35
         },
         {
           "prize": 5,
-          "remaining": 144842,
+          "remaining": 124030,
           "total": 361582,
           "odds_printed": 33,
           "odds_one_in": 33
         },
         {
           "prize": 3,
-          "remaining": 298235,
+          "remaining": 257827,
           "total": 719350,
           "odds_printed": 17,
           "odds_one_in": 16
@@ -4480,72 +4379,72 @@
       "overall_odds": 4.09,
       "top_prize": 20000,
       "on_sale": "February 16, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1716-2-your-lucky-stars-thumbnail.jpg?rev=06fd5d5e75cd4442ad835d482d257089",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1716-2-your-lucky-stars-cv.png?rev=4e66bbb4b030404b80cf4ab2d722e3a1",
       "article_url": "https://www.calottery.com/scratchers/%242/your-lucky-stars-1716",
       "tickets_printed": 12185400,
-      "tickets_remaining": 4581710,
-      "percent_unsold": 37.6,
-      "total_unclaimed": 5040387,
+      "tickets_remaining": 4350188,
+      "percent_unsold": 35.7,
+      "total_unclaimed": 4773262,
       "prizes": [
         {
           "prize": 20000,
-          "remaining": 9,
+          "remaining": 8,
           "total": 20,
           "odds_printed": 609270,
-          "odds_one_in": 509079
+          "odds_one_in": 543774
         },
         {
           "prize": 1000,
-          "remaining": 35,
+          "remaining": 29,
           "total": 102,
           "odds_printed": 119465,
-          "odds_one_in": 130906
+          "odds_one_in": 150006
         },
         {
           "prize": 500,
-          "remaining": 265,
+          "remaining": 255,
           "total": 817,
           "odds_printed": 14915,
-          "odds_one_in": 17289
+          "odds_one_in": 17060
         },
         {
           "prize": 100,
-          "remaining": 1177,
+          "remaining": 1105,
           "total": 3413,
           "odds_printed": 3570,
-          "odds_one_in": 3893
+          "odds_one_in": 3937
         },
         {
           "prize": 50,
-          "remaining": 7163,
+          "remaining": 6789,
           "total": 20333,
           "odds_printed": 599,
-          "odds_one_in": 640
+          "odds_one_in": 641
         },
         {
           "prize": 20,
-          "remaining": 55402,
+          "remaining": 52646,
           "total": 152267,
           "odds_printed": 80,
           "odds_one_in": 83
         },
         {
           "prize": 10,
-          "remaining": 136087,
+          "remaining": 129315,
           "total": 365645,
           "odds_printed": 33,
           "odds_one_in": 34
         },
         {
           "prize": 5,
-          "remaining": 181623,
+          "remaining": 172477,
           "total": 487452,
           "odds_printed": 25,
           "odds_one_in": 25
         },
         {
           "prize": 3,
-          "remaining": 280004,
+          "remaining": 266119,
           "total": 731124,
           "odds_printed": 17,
           "odds_one_in": 16
@@ -4560,72 +4459,72 @@
       "overall_odds": 4.25,
       "top_prize": 20000,
       "on_sale": "January 19, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1710-2-spring-green-thumbnail.jpg?rev=0137f18b7fe445b9b3090e941ada8b70",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1710-2-spring-green-cv.png?rev=c2070bfcd3b7475bb98fbb9542844613",
       "article_url": "https://www.calottery.com/scratchers/%242/%24pring-green-1710",
       "tickets_printed": 9151422,
-      "tickets_remaining": 3257906,
-      "percent_unsold": 35.6,
-      "total_unclaimed": 3749548,
+      "tickets_remaining": 3184695,
+      "percent_unsold": 34.8,
+      "total_unclaimed": 3667854,
       "prizes": [
         {
           "prize": 20000,
           "remaining": 7,
           "total": 15,
           "odds_printed": 610120,
-          "odds_one_in": 465415
+          "odds_one_in": 454956
         },
         {
           "prize": 1000,
           "remaining": 50,
           "total": 147,
           "odds_printed": 62257,
-          "odds_one_in": 65158
+          "odds_one_in": 63694
         },
         {
           "prize": 200,
-          "remaining": 229,
+          "remaining": 225,
           "total": 763,
           "odds_printed": 11994,
-          "odds_one_in": 14227
+          "odds_one_in": 14154
         },
         {
           "prize": 100,
-          "remaining": 1718,
+          "remaining": 1682,
           "total": 5421,
           "odds_printed": 1688,
-          "odds_one_in": 1896
+          "odds_one_in": 1893
         },
         {
           "prize": 40,
-          "remaining": 7119,
+          "remaining": 6948,
           "total": 22154,
           "odds_printed": 413,
           "odds_one_in": 458
         },
         {
           "prize": 20,
-          "remaining": 30842,
+          "remaining": 30137,
           "total": 91518,
           "odds_printed": 100,
           "odds_one_in": 106
         },
         {
           "prize": 10,
-          "remaining": 76125,
+          "remaining": 74392,
           "total": 219458,
           "odds_printed": 42,
           "odds_one_in": 43
         },
         {
           "prize": 5,
-          "remaining": 121002,
+          "remaining": 118094,
           "total": 347398,
           "odds_printed": 26,
           "odds_one_in": 27
         },
         {
           "prize": 4,
-          "remaining": 268522,
+          "remaining": 262401,
           "total": 733070,
           "odds_printed": 12,
           "odds_one_in": 12
@@ -4640,79 +4539,79 @@
       "overall_odds": 4.24,
       "top_prize": 20000,
       "on_sale": "December 15, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1707-2-tic-tac-toe-craze-thumbnail.jpg?rev=68c70a2f470b4846a17274ca0d8d67f1",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1707-2-tic-tac-toe-craze-cv.png?rev=7e30cfc35ca444a6816a4317d3dbd549",
       "article_url": "https://www.calottery.com/scratchers/%242/tic-tac-toe-craze-1707",
       "tickets_printed": 9046284,
-      "tickets_remaining": 2143969,
-      "percent_unsold": 23.7,
-      "total_unclaimed": 2151694,
+      "tickets_remaining": 2125877,
+      "percent_unsold": 23.5,
+      "total_unclaimed": 2133336,
       "prizes": [
         {
           "prize": 20000,
           "remaining": 4,
           "total": 15,
           "odds_printed": 603087,
-          "odds_one_in": 535992
+          "odds_one_in": 531469
         },
         {
           "prize": 1000,
           "remaining": 25,
           "total": 77,
           "odds_printed": 117484,
-          "odds_one_in": 85759
+          "odds_one_in": 85035
         },
         {
           "prize": 500,
           "remaining": 45,
           "total": 233,
           "odds_printed": 38825,
-          "odds_one_in": 47644
+          "odds_one_in": 47242
         },
         {
           "prize": 100,
-          "remaining": 525,
+          "remaining": 519,
           "total": 3020,
           "odds_printed": 2995,
-          "odds_one_in": 4084
+          "odds_one_in": 4096
         },
         {
           "prize": 75,
-          "remaining": 886,
+          "remaining": 877,
           "total": 4886,
           "odds_printed": 1851,
-          "odds_one_in": 2420
+          "odds_one_in": 2424
         },
         {
           "prize": 50,
-          "remaining": 4797,
+          "remaining": 4751,
           "total": 26170,
           "odds_printed": 346,
           "odds_one_in": 447
         },
         {
           "prize": 20,
-          "remaining": 18009,
+          "remaining": 17871,
           "total": 90463,
           "odds_printed": 100,
           "odds_one_in": 119
         },
         {
           "prize": 10,
-          "remaining": 38196,
+          "remaining": 37830,
           "total": 180926,
           "odds_printed": 50,
           "odds_one_in": 56
         },
         {
           "prize": 5,
-          "remaining": 87086,
+          "remaining": 86266,
           "total": 380061,
           "odds_printed": 24,
           "odds_one_in": 25
         },
         {
           "prize": 3,
-          "remaining": 162608,
+          "remaining": 161187,
           "total": 633047,
           "odds_printed": 14,
           "odds_one_in": 13
@@ -4727,72 +4626,72 @@
       "overall_odds": 4.27,
       "top_prize": 20000,
       "on_sale": "November 11, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1701-2-winter-double-match-thumbnail.jpg?rev=3dd6fd2a799044b4bdedad4500e1ddb4",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1701-2-winter-double-match-cv.png?rev=42ca2e639c17479e9d4869c85faf36c9",
       "article_url": "https://www.calottery.com/scratchers/%242/winter-double-match-1701",
       "tickets_printed": 12167670,
-      "tickets_remaining": 3066253,
-      "percent_unsold": 25.2,
-      "total_unclaimed": 3215938,
+      "tickets_remaining": 3054085,
+      "percent_unsold": 25.1,
+      "total_unclaimed": 3199626,
       "prizes": [
         {
           "prize": 20000,
           "remaining": 5,
           "total": 20,
           "odds_printed": 608380,
-          "odds_one_in": 613251
+          "odds_one_in": 610817
         },
         {
           "prize": 1000,
-          "remaining": 28,
+          "remaining": 27,
           "total": 104,
           "odds_printed": 116996,
-          "odds_one_in": 109509
+          "odds_one_in": 113114
         },
         {
           "prize": 500,
           "remaining": 51,
           "total": 305,
           "odds_printed": 39894,
-          "odds_one_in": 60123
+          "odds_one_in": 59884
         },
         {
           "prize": 100,
-          "remaining": 1888,
+          "remaining": 1881,
           "total": 10117,
           "odds_printed": 1203,
           "odds_one_in": 1624
         },
         {
           "prize": 50,
-          "remaining": 3234,
+          "remaining": 3214,
           "total": 17222,
           "odds_printed": 707,
-          "odds_one_in": 948
+          "odds_one_in": 950
         },
         {
           "prize": 20,
-          "remaining": 32318,
+          "remaining": 32154,
           "total": 146094,
           "odds_printed": 83,
           "odds_one_in": 95
         },
         {
           "prize": 10,
-          "remaining": 87298,
+          "remaining": 86884,
           "total": 364862,
           "odds_printed": 33,
           "odds_one_in": 35
         },
         {
           "prize": 5,
-          "remaining": 119665,
+          "remaining": 119029,
           "total": 486745,
           "odds_printed": 25,
           "odds_one_in": 26
         },
         {
           "prize": 3,
-          "remaining": 198091,
+          "remaining": 197087,
           "total": 729989,
           "odds_printed": 17,
           "odds_one_in": 15
@@ -4807,86 +4706,86 @@
       "overall_odds": 4.1,
       "top_prize": 30000,
       "on_sale": "March 24, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1665-2-monopoly-thumbnail.jpg?rev=a4159cbb7c3d45b9bfb758ad2a3225e1",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1665-2-monopoly-cv.png?rev=ec198cb2dc3c49b1940188efbc257545",
       "article_url": "https://www.calottery.com/scratchers/%242/monopoly-1665",
       "tickets_printed": 22452512,
-      "tickets_remaining": 11630401,
-      "percent_unsold": 51.8,
-      "total_unclaimed": 12913095,
+      "tickets_remaining": 11607949,
+      "percent_unsold": 51.7,
+      "total_unclaimed": 12845245,
       "prizes": [
         {
           "prize": 30000,
-          "remaining": 16,
+          "remaining": 15,
           "total": 28,
           "odds_printed": 801854,
-          "odds_one_in": 726900
+          "odds_one_in": 773863
         },
         {
           "prize": 1000,
           "remaining": 72,
           "total": 140,
           "odds_printed": 160371,
-          "odds_one_in": 161533
+          "odds_one_in": 161222
         },
         {
           "prize": 200,
-          "remaining": 2064,
+          "remaining": 2058,
           "total": 4055,
           "odds_printed": 5537,
-          "odds_one_in": 5635
+          "odds_one_in": 5640
         },
         {
           "prize": 75,
-          "remaining": 2498,
+          "remaining": 2492,
           "total": 5066,
           "odds_printed": 4432,
-          "odds_one_in": 4656
+          "odds_one_in": 4658
         },
         {
           "prize": 50,
-          "remaining": 4325,
+          "remaining": 4316,
           "total": 8734,
           "odds_printed": 2571,
-          "odds_one_in": 2689
+          "odds_one_in": 2690
         },
         {
           "prize": 30,
-          "remaining": 55914,
+          "remaining": 55718,
           "total": 112215,
           "odds_printed": 200,
           "odds_one_in": 208
         },
         {
           "prize": 20,
-          "remaining": 46063,
+          "remaining": 45940,
           "total": 89857,
           "odds_printed": 250,
-          "odds_one_in": 252
+          "odds_one_in": 253
         },
         {
           "prize": 15,
-          "remaining": 68720,
+          "remaining": 68511,
           "total": 134749,
           "odds_printed": 167,
           "odds_one_in": 169
         },
         {
           "prize": 10,
-          "remaining": 252958,
+          "remaining": 252162,
           "total": 493746,
           "odds_printed": 45,
           "odds_one_in": 46
         },
         {
           "prize": 5,
-          "remaining": 421339,
+          "remaining": 420068,
           "total": 808116,
           "odds_printed": 28,
           "odds_one_in": 28
         },
         {
           "prize": 4,
-          "remaining": 819735,
+          "remaining": 817245,
           "total": 1571925,
           "odds_printed": 14,
           "odds_one_in": 14
@@ -4901,65 +4800,65 @@
       "overall_odds": 4.34,
       "top_prize": 5000,
       "on_sale": "May 18, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/17271rockinrichesthumbnail.jpg?rev=f551b824dde8432e9390da216b42794c",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1727-1-rockin-riches-cv.png?rev=7a46877f0ba94eccbf1c87b9089ab1cf",
       "article_url": "https://www.calottery.com/scratchers/%241/rockin-riches-1727",
       "tickets_printed": 20390110,
-      "tickets_remaining": 18391879,
-      "percent_unsold": 90.2,
-      "total_unclaimed": 10029115,
+      "tickets_remaining": 16903401,
+      "percent_unsold": 82.9,
+      "total_unclaimed": 9216843,
       "prizes": [
         {
           "prize": 5000,
           "remaining": 85,
           "total": 85,
           "odds_printed": 240000,
-          "odds_one_in": 216375
+          "odds_one_in": 198864
         },
         {
           "prize": 100,
-          "remaining": 2235,
+          "remaining": 2000,
           "total": 2505,
           "odds_printed": 8144,
-          "odds_one_in": 8229
+          "odds_one_in": 8452
         },
         {
           "prize": 40,
-          "remaining": 8951,
+          "remaining": 8118,
           "total": 10086,
           "odds_printed": 2023,
-          "odds_one_in": 2055
+          "odds_one_in": 2082
         },
         {
           "prize": 20,
-          "remaining": 61062,
+          "remaining": 55652,
           "total": 68390,
           "odds_printed": 298,
-          "odds_one_in": 301
+          "odds_one_in": 304
         },
         {
           "prize": 10,
-          "remaining": 197921,
+          "remaining": 180769,
           "total": 220872,
           "odds_printed": 92,
-          "odds_one_in": 93
+          "odds_one_in": 94
         },
         {
           "prize": 5,
-          "remaining": 365897,
+          "remaining": 334561,
           "total": 407378,
           "odds_printed": 50,
-          "odds_one_in": 50
+          "odds_one_in": 51
         },
         {
           "prize": 4,
-          "remaining": 382013,
+          "remaining": 350589,
           "total": 423928,
           "odds_printed": 48,
           "odds_one_in": 48
         },
         {
           "prize": 2,
-          "remaining": 1232294,
+          "remaining": 1135616,
           "total": 1360439,
           "odds_printed": 15,
           "odds_one_in": 15
@@ -4974,68 +4873,68 @@
       "overall_odds": 4.56,
       "top_prize": 5000,
       "on_sale": "February 16, 2026",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1715-1-four-leaf-frenzy-thumbnail.jpg?rev=7597aeec68304f56acd4e7f238f3a33b",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1715-1-four-leaf-frenzy-cv.png?rev=acbe291705c6407089961b2c7d28e7f9",
       "article_url": "https://www.calottery.com/scratchers/%241/four-leaf-frenzy-1715",
       "tickets_printed": 20380080,
-      "tickets_remaining": 5502622,
-      "percent_unsold": 27.0,
-      "total_unclaimed": 2936867,
+      "tickets_remaining": 5217300,
+      "percent_unsold": 25.6,
+      "total_unclaimed": 2758554,
       "prizes": [
         {
           "prize": 5000,
-          "remaining": 17,
+          "remaining": 10,
           "total": 42,
           "odds_printed": 485240,
-          "odds_one_in": 323684
+          "odds_one_in": 521730
         },
         {
           "prize": 200,
-          "remaining": 118,
+          "remaining": 114,
           "total": 436,
           "odds_printed": 46743,
-          "odds_one_in": 46632
+          "odds_one_in": 45766
         },
         {
           "prize": 50,
-          "remaining": 1572,
+          "remaining": 1501,
           "total": 6789,
           "odds_printed": 3002,
-          "odds_one_in": 3500
+          "odds_one_in": 3476
         },
         {
           "prize": 20,
-          "remaining": 11946,
+          "remaining": 11322,
           "total": 50967,
           "odds_printed": 400,
           "odds_one_in": 461
         },
         {
           "prize": 10,
-          "remaining": 84959,
+          "remaining": 80609,
           "total": 339620,
           "odds_printed": 60,
           "odds_one_in": 65
         },
         {
           "prize": 4,
-          "remaining": 113203,
+          "remaining": 107544,
           "total": 424597,
           "odds_printed": 48,
           "odds_one_in": 49
         },
         {
           "prize": 3,
-          "remaining": 180767,
+          "remaining": 171298,
           "total": 679336,
           "odds_printed": 30,
           "odds_one_in": 30
         },
         {
           "prize": 2,
-          "remaining": 333022,
+          "remaining": 317052,
           "total": 1188886,
           "odds_printed": 17,
-          "odds_one_in": 17
+          "odds_one_in": 16
         }
       ]
     },
@@ -5047,72 +4946,72 @@
       "overall_odds": 4.59,
       "top_prize": 888,
       "on_sale": "December 15, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1706-1-year-of-the-horse-thumbnail.jpg?rev=7a9015e093784151a3d5cc902fac9d18",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1706-1-year-of-the-horse-cv.png?rev=9e040cdaf13a4f209338e0e02ba0359b",
       "article_url": "https://www.calottery.com/scratchers/%241/year-of-the-horse-1706",
       "tickets_printed": 19642567,
-      "tickets_remaining": 4321365,
-      "percent_unsold": 22.0,
-      "total_unclaimed": 2160926,
+      "tickets_remaining": 4262437,
+      "percent_unsold": 21.7,
+      "total_unclaimed": 2135934,
       "prizes": [
         {
           "prize": 888,
           "remaining": 3,
           "total": 41,
           "odds_printed": 479087,
-          "odds_one_in": 1440455
+          "odds_one_in": 1420812
         },
         {
           "prize": 100,
-          "remaining": 165,
+          "remaining": 162,
           "total": 1235,
           "odds_printed": 15905,
-          "odds_one_in": 26190
+          "odds_one_in": 26311
         },
         {
           "prize": 88,
-          "remaining": 374,
+          "remaining": 369,
           "total": 2625,
           "odds_printed": 7483,
-          "odds_one_in": 11554
+          "odds_one_in": 11551
         },
         {
           "prize": 30,
-          "remaining": 3309,
+          "remaining": 3270,
           "total": 20481,
           "odds_printed": 959,
-          "odds_one_in": 1306
+          "odds_one_in": 1303
         },
         {
           "prize": 18,
-          "remaining": 14601,
+          "remaining": 14437,
           "total": 81844,
           "odds_printed": 240,
-          "odds_one_in": 296
+          "odds_one_in": 295
         },
         {
           "prize": 10,
-          "remaining": 30312,
+          "remaining": 29972,
           "total": 163688,
           "odds_printed": 120,
-          "odds_one_in": 143
+          "odds_one_in": 142
         },
         {
           "prize": 8,
-          "remaining": 63761,
+          "remaining": 62977,
           "total": 327319,
           "odds_printed": 60,
           "odds_one_in": 68
         },
         {
           "prize": 4,
-          "remaining": 88723,
+          "remaining": 87698,
           "total": 409274,
           "odds_printed": 48,
           "odds_one_in": 49
         },
         {
           "prize": 2,
-          "remaining": 289331,
+          "remaining": 286152,
           "total": 1227780,
           "odds_printed": 16,
           "odds_one_in": 15
@@ -5127,72 +5026,72 @@
       "overall_odds": 4.59,
       "top_prize": 888,
       "on_sale": "May 19, 2025",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1674-1-straight-8s-thumbnail.jpg?rev=dca629a4505b4f75a730bba25918b176",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1674-1-straight-8s-cv.png?rev=360a34ff5ab24474961638b3d2bf5576",
       "article_url": "https://www.calottery.com/scratchers/%241/straight-8s-1674",
       "tickets_printed": 44383680,
-      "tickets_remaining": 12782500,
-      "percent_unsold": 28.8,
-      "total_unclaimed": 6786256,
+      "tickets_remaining": 12649349,
+      "percent_unsold": 28.5,
+      "total_unclaimed": 6715132,
       "prizes": [
         {
           "prize": 888,
           "remaining": 24,
           "total": 90,
           "odds_printed": 493152,
-          "odds_one_in": 532604
+          "odds_one_in": 527056
         },
         {
           "prize": 100,
-          "remaining": 716,
+          "remaining": 707,
           "total": 2762,
           "odds_printed": 16069,
-          "odds_one_in": 17853
+          "odds_one_in": 17892
         },
         {
           "prize": 88,
-          "remaining": 1512,
+          "remaining": 1492,
           "total": 5936,
           "odds_printed": 7477,
-          "odds_one_in": 8454
+          "odds_one_in": 8478
         },
         {
           "prize": 30,
-          "remaining": 11929,
+          "remaining": 11789,
           "total": 46236,
           "odds_printed": 960,
-          "odds_one_in": 1072
+          "odds_one_in": 1073
         },
         {
           "prize": 18,
-          "remaining": 48841,
+          "remaining": 48328,
           "total": 184932,
           "odds_printed": 240,
           "odds_one_in": 262
         },
         {
           "prize": 10,
-          "remaining": 99715,
+          "remaining": 98598,
           "total": 369864,
           "odds_printed": 120,
           "odds_one_in": 128
         },
         {
           "prize": 8,
-          "remaining": 202700,
+          "remaining": 200563,
           "total": 739728,
           "odds_printed": 60,
           "odds_one_in": 63
         },
         {
           "prize": 4,
-          "remaining": 263374,
+          "remaining": 260704,
           "total": 924660,
           "odds_printed": 48,
           "odds_one_in": 49
         },
         {
           "prize": 2,
-          "remaining": 825517,
+          "remaining": 817475,
           "total": 2773980,
           "odds_printed": 16,
           "odds_one_in": 15
@@ -5207,79 +5106,79 @@
       "overall_odds": 4.78,
       "top_prize": 1000,
       "on_sale": "February 20, 2023",
-      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1555-1-the-lucky-spot-thumbnail.jpg?rev=d4d3406cc8224969be11490019052100",
+      "image_url": "https://static.www.calottery.com/-/media/project/calottery/pws/scratchers/1555-1-the-lucky-spot-cv.png?rev=98747db5761749b89e4be7a114477a9d",
       "article_url": "https://www.calottery.com/scratchers/%241/the-lucky-spot-1555",
       "tickets_printed": 30807120,
-      "tickets_remaining": 8194694,
-      "percent_unsold": 26.6,
-      "total_unclaimed": 4190438,
+      "tickets_remaining": 8163887,
+      "percent_unsold": 26.5,
+      "total_unclaimed": 4176962,
       "prizes": [
         {
           "prize": 1000,
           "remaining": 28,
           "total": 125,
           "odds_printed": 246457,
-          "odds_one_in": 292668
+          "odds_one_in": 291567
         },
         {
           "prize": 100,
-          "remaining": 679,
+          "remaining": 677,
           "total": 3183,
           "odds_printed": 9679,
-          "odds_one_in": 12069
+          "odds_one_in": 12059
         },
         {
           "prize": 50,
-          "remaining": 1776,
+          "remaining": 1770,
           "total": 8335,
           "odds_printed": 3696,
-          "odds_one_in": 4614
+          "odds_one_in": 4612
         },
         {
           "prize": 40,
-          "remaining": 2193,
+          "remaining": 2189,
           "total": 10275,
           "odds_printed": 2998,
-          "odds_one_in": 3737
+          "odds_one_in": 3730
         },
         {
           "prize": 20,
-          "remaining": 29725,
+          "remaining": 29629,
           "total": 128363,
           "odds_printed": 240,
           "odds_one_in": 276
         },
         {
           "prize": 15,
-          "remaining": 29436,
+          "remaining": 29318,
           "total": 128363,
           "odds_printed": 240,
           "odds_one_in": 278
         },
         {
           "prize": 10,
-          "remaining": 61612,
+          "remaining": 61383,
           "total": 256726,
           "odds_printed": 120,
           "odds_one_in": 133
         },
         {
           "prize": 5,
-          "remaining": 129655,
+          "remaining": 129258,
           "total": 513452,
           "odds_printed": 60,
           "odds_one_in": 63
         },
         {
           "prize": 3,
-          "remaining": 206477,
+          "remaining": 205846,
           "total": 770178,
           "odds_printed": 40,
           "odds_one_in": 40
         },
         {
           "prize": 2,
-          "remaining": 499076,
+          "remaining": 497597,
           "total": 1797082,
           "odds_printed": 17,
           "odds_one_in": 16

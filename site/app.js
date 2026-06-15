@@ -10,11 +10,28 @@ const colorFor = (p) => PRICE_COLORS[p] || "#9aa0a6";
 const fmt = (n) => (n == null ? "—" : n.toLocaleString("en-US"));
 const money = (n) => (n == null ? "—" : "$" + n.toLocaleString("en-US"));
 const oddsText = (n) => (n == null ? "—" : "1 in " + n.toLocaleString("en-US"));
+/* compact odds for the quick-glance strip: 1 in 12K / 1 in 3.7M */
+const oddsShort = (n) => {
+  if (n == null) return "—";
+  if (n >= 1e6) return "1 in " + (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
+  if (n >= 1e4) return "1 in " + Math.round(n / 1e3) + "K";
+  return "1 in " + n.toLocaleString("en-US");
+};
+
+/* combined live odds of winning a prize of at least `threshold` dollars, as the N
+   in "1 in N". Probabilities of each qualifying tier add; null if no tier qualifies. */
+function oddsAtLeast(g, threshold) {
+  const p = (g.prizes || []).reduce(
+    (sum, pr) => (pr.prize >= threshold && pr.odds_one_in ? sum + 1 / pr.odds_one_in : sum),
+    0
+  );
+  return p > 0 ? Math.round(1 / p) : null;
+}
 
 /* tiers shown before the "show all" fold kicks in */
 const TIERS_VISIBLE = 5;
 
-const state = { all: [], price: "all", search: "", sort: "odds-desc" };
+const state = { all: [], price: "all", search: "", sort: "over100-asc" };
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -216,7 +233,17 @@ function render() {
       String(g.game_number).includes(state.search));
   }
   const top = (g) => (topPrize(g) || {}).odds_one_in || 0;
+  /* best (shortest) odds of winning >= threshold first; games with no such tier last */
+  const byOver = (t) => (a, b) => {
+    const oa = oddsAtLeast(a, t), ob = oddsAtLeast(b, t);
+    if (oa == null) return ob == null ? 0 : 1;
+    if (ob == null) return -1;
+    return oa - ob;
+  };
   const sorters = {
+    "over100-asc": byOver(100),
+    "over500-asc": byOver(500),
+    "over1000-asc": byOver(1000),
     "odds-desc": (a, b) => top(b) - top(a),
     "odds-asc": (a, b) => top(a) - top(b),
     "price-desc": (a, b) => b.price - a.price || top(b) - top(a),
@@ -243,13 +270,20 @@ function buildCard(tpl, g, i) {
 
   const img = node.querySelector(".thumb");
   if (g.image_url) { img.src = g.image_url; img.alt = g.name + " scratch ticket"; }
-  else { img.remove(); }
+  else { node.querySelector(".ticket-frame").remove(); }
   node.querySelector(".price-tag").textContent = "$" + g.price;
   node.querySelector(".card-name").textContent = g.name;
   node.querySelector(".card-no").textContent = "Game No. " + g.game_number;
   node.querySelector(".m-left").textContent = fmt(g.tickets_remaining);
   node.querySelector(".m-unsold").textContent = g.percent_unsold != null ? g.percent_unsold + "%" : "—";
   node.querySelector(".m-overall").textContent = g.overall_odds ? "1 in " + g.overall_odds : "—";
+
+  [100, 500, 1000].forEach((t) => {
+    const n = oddsAtLeast(g, t);
+    const dd = node.querySelector(".o-" + t);
+    dd.textContent = oddsShort(n);
+    if (n != null) dd.title = oddsText(n);
+  });
 
   const list = node.querySelector(".tiers");
   const topP = topPrize(g);
