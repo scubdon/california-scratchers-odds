@@ -269,8 +269,16 @@ function buildCard(tpl, g, i) {
   card.style.animationDelay = Math.min(i, 10) * 35 + "ms";
 
   const img = node.querySelector(".thumb");
-  if (g.image_url) { img.src = g.image_url; img.alt = g.name + " scratch ticket"; }
-  else { node.querySelector(".ticket-frame").remove(); }
+  const frame = node.querySelector(".ticket-frame");
+  if (g.image_url) {
+    img.alt = g.name + " scratch ticket";
+    // hotlinked calottery images occasionally fail; drop the frame rather than
+    // leaving a broken-image icon behind
+    img.addEventListener("error", () => frame.remove(), { once: true });
+    img.src = g.image_url;
+  } else {
+    frame.remove();
+  }
   node.querySelector(".price-tag").textContent = "$" + g.price;
   node.querySelector(".card-name").textContent = g.name;
   node.querySelector(".card-no").textContent = "Game No. " + g.game_number;
