@@ -41,6 +41,9 @@ jobs:
       - name: Scrape latest Scratchers data
         run: python scraper/scrape.py
 
+      - name: Cache-bust CSS/JS with content hashes
+        run: python scraper/stamp_assets.py
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v5
         with:
