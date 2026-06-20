@@ -1,12 +1,5 @@
 /* California Scratchers odds — front-end. Pure vanilla, no build step. */
 
-/* Muted single-hue slate ramp: price encoded by darkness, not by hue. */
-const PRICE_COLORS = {
-  1: "#a9b2bb", 2: "#94a0ac", 3: "#7f8e9c", 5: "#6a7d8d",
-  10: "#586c7e", 20: "#475b6d", 25: "#384b5c", 30: "#2b3c4b", 40: "#1f2c38",
-};
-const colorFor = (p) => PRICE_COLORS[p] || "#9aa0a6";
-
 const fmt = (n) => (n == null ? "—" : n.toLocaleString("en-US"));
 const money = (n) => (n == null ? "—" : "$" + n.toLocaleString("en-US"));
 const oddsText = (n) => (n == null ? "—" : "1 in " + n.toLocaleString("en-US"));
@@ -75,131 +68,12 @@ function hydrateChrome(data) {
   $("#stat-best").textContent = oddsText(shortest.top.odds_one_in);
   $("#stat-best-label").innerHTML = "shortest top-prize odds<br>(" + esc(shortest.g.name) + ", " + money(shortest.top.prize) + ")";
   $("#takeaways").hidden = false;
-
-  /* unhide before drawing so the chart can measure its container */
-  $("#landscape").hidden = false;
-  drawChart(withTop);
 }
 
 /* the headline prize for a game = the highest dollar level that still has tickets/odds */
 function topPrize(g) {
   const withOdds = (g.prizes || []).filter((p) => p.odds_one_in);
   return withOdds.length ? withOdds.reduce((a, b) => (b.prize > a.prize ? b : a)) : (g.prizes || [])[0];
-}
-
-/* ---- log-scale odds landscape (responsive: redrawn to fit the viewport) ---- */
-let chartPoints = null;
-let resizeTimer = null;
-
-function drawChart(points) {
-  chartPoints = points;
-  renderChart();
-
-  const prices = [...new Set(points.map((p) => p.g.price))].sort((a, b) => a - b);
-  $("#chart-legend").innerHTML = prices
-    .map((p) => `<span><i style="background:${colorFor(p)}"></i>$${p} games</span>`)
-    .join("");
-
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(renderChart, 120);
-  });
-}
-
-function renderChart() {
-  if (!chartPoints) return;
-  const host = $("#chart");
-  const W = Math.max(300, Math.round(host.getBoundingClientRect().width) || 960);
-  const narrow = W < 520;
-  const H = narrow ? 160 : 190;
-  const padL = 10, padR = 10, padT = 26, padB = 40;
-  const dotR = narrow ? 5 : 6.5;
-  const slotW = narrow ? 11 : 14;
-
-  const odds = chartPoints.map((p) => p.top.odds_one_in);
-  const minE = Math.floor(Math.log10(Math.min(...odds)));
-  const maxE = Math.ceil(Math.log10(Math.max(...odds)));
-  const x = (v) => padL + ((Math.log10(v) - minE) / (maxE - minE)) * (W - padL - padR);
-
-  const NS = "http://www.w3.org/2000/svg";
-  const svg = document.createElementNS(NS, "svg");
-  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-  svg.setAttribute("width", W);
-  svg.setAttribute("height", H);
-  svg.setAttribute("role", "img");
-  svg.setAttribute("aria-label", "Top-prize odds for each game on a logarithmic scale");
-
-  const baseY = H - padB;
-  const axis = document.createElementNS(NS, "line");
-  axis.setAttribute("class", "axis-line");
-  axis.setAttribute("x1", padL); axis.setAttribute("x2", W - padR);
-  axis.setAttribute("y1", baseY); axis.setAttribute("y2", baseY);
-  svg.appendChild(axis);
-
-  /* on narrow screens with many decades, label every other tick */
-  const labelStep = narrow && maxE - minE > 4 ? 2 : 1;
-  for (let e = minE; e <= maxE; e++) {
-    const gx = x(Math.pow(10, e));
-    const g = document.createElementNS(NS, "g");
-    g.setAttribute("class", "tick");
-    const grid = document.createElementNS(NS, "line");
-    grid.setAttribute("class", "grid");
-    grid.setAttribute("x1", gx); grid.setAttribute("x2", gx);
-    grid.setAttribute("y1", padT); grid.setAttribute("y2", baseY);
-    g.appendChild(grid);
-    if ((e - minE) % labelStep === 0) {
-      const t = document.createElementNS(NS, "text");
-      t.setAttribute("x", gx); t.setAttribute("y", baseY + 22);
-      t.setAttribute("text-anchor", e === minE ? "start" : e === maxE ? "end" : "middle");
-      t.textContent = "1 in " + shortNum(Math.pow(10, e));
-      g.appendChild(t);
-    }
-    svg.appendChild(g);
-  }
-
-  // beeswarm-ish vertical jitter so dots don't fully overlap
-  const slots = {};
-  const bandH = baseY - padT - 12;
-  chartPoints
-    .slice()
-    .sort((a, b) => a.top.odds_one_in - b.top.odds_one_in)
-    .forEach((p) => {
-      const px = Math.round(x(p.top.odds_one_in));
-      const key = Math.round(px / slotW);
-      const n = (slots[key] = (slots[key] || 0) + 1);
-      const py = baseY - 10 - ((n - 1) % 8) * (bandH / 9);
-
-      const c = document.createElementNS(NS, "circle");
-      c.setAttribute("class", "dot");
-      c.setAttribute("cx", px); c.setAttribute("cy", py); c.setAttribute("r", dotR);
-      c.setAttribute("fill", colorFor(p.g.price));
-      c.setAttribute("opacity", ".82");
-      c.dataset.tip =
-        `<b>${esc(p.g.name)}</b> ($${p.g.price})<br>${money(p.top.prize)} top prize<br>` +
-        `<b>${oddsText(p.top.odds_one_in)}</b> per ticket`;
-      svg.appendChild(c);
-    });
-
-  $("#chart").replaceChildren(svg);
-  wireTip(svg);
-}
-
-function wireTip(svg) {
-  let tip = document.querySelector(".chart-tip");
-  if (!tip) { tip = document.createElement("div"); tip.className = "chart-tip"; document.body.appendChild(tip); }
-  const show = (e) => {
-    const t = e.target.closest(".dot"); if (!t) return;
-    tip.innerHTML = t.dataset.tip; tip.style.opacity = "1";
-    const px = (e.touches ? e.touches[0].clientX : e.clientX);
-    const py = (e.touches ? e.touches[0].clientY : e.clientY);
-    tip.style.left = Math.min(px + 14, window.innerWidth - 250) + "px";
-    tip.style.top = (py + 16) + "px";
-  };
-  const hide = () => { tip.style.opacity = "0"; };
-  svg.addEventListener("mousemove", show);
-  svg.addEventListener("mouseleave", hide);
-  svg.addEventListener("touchstart", show, { passive: true });
-  svg.addEventListener("touchend", hide);
 }
 
 /* ---- controls ---- */
@@ -338,11 +212,6 @@ function buildCard(tpl, g, i) {
 }
 
 /* ---- helpers ---- */
-function shortNum(n) {
-  if (n >= 1e6) return n / 1e6 + "M";
-  if (n >= 1e3) return n / 1e3 + "K";
-  return String(n);
-}
 function esc(s) {
   return String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 }

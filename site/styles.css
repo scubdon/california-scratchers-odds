@@ -110,39 +110,6 @@ h2 {
   letter-spacing: 0;
   margin: 0 0 .45rem;
 }
-.section-note { color: var(--ink-soft); max-width: 64ch; margin: 0 0 1.2rem; font-size: .92rem; }
-.section-note strong { color: var(--ink); }
-.section-note em { font-style: italic; }
-
-/* ---------- chart ---------- */
-#chart { width: 100%; }
-#chart svg { display: block; width: 100%; height: auto; overflow: visible; }
-.dot { cursor: pointer; transition: opacity .12s ease; }
-.dot:hover { opacity: 1 !important; }
-.axis-line { stroke: var(--ink); stroke-width: 1; }
-.tick text {
-  fill: var(--ink-soft); font-size: 12px; font-weight: 500;
-  font-family: var(--label); letter-spacing: .03em;
-}
-.tick .grid { stroke: var(--line); stroke-dasharray: 2 3; }
-.chart-tip {
-  position: fixed; pointer-events: none; z-index: 70; opacity: 0;
-  background: var(--ink); color: #fff;
-  padding: .5rem .65rem; border-radius: 2px;
-  font-size: .82rem; line-height: 1.4; max-width: 240px;
-  font-family: var(--sans); letter-spacing: 0;
-  box-shadow: 0 6px 18px -10px rgba(20, 20, 18, .5);
-  transition: opacity .1s ease;
-}
-.chart-tip b { color: #fff; font-weight: 600; }
-.legend {
-  display: flex; flex-wrap: wrap; gap: .35rem .9rem; margin-top: .9rem;
-  font-family: var(--label); font-size: .84rem; font-weight: 500;
-  letter-spacing: .03em; color: var(--ink-soft);
-}
-.legend span { display: inline-flex; align-items: center; gap: .35rem; }
-.legend i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
-
 /* ---------- controls ---------- */
 .controls {
   background: var(--card);
