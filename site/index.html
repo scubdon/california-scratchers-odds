@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=5be303b016" />
+  <link rel="stylesheet" href="styles.css?v=a56908a1f3" />
 </head>
 <body>
   <header class="masthead">
@@ -29,6 +29,15 @@
       </p>
     </div>
   </header>
+
+  <nav class="viewnav" id="viewnav" aria-label="Sections">
+    <div class="wrap">
+      <button class="viewtab" data-view="games" aria-pressed="true">The games</button>
+      <button class="viewtab" data-view="compare" aria-pressed="false">Compare games</button>
+    </div>
+  </nav>
+
+  <div id="view-games">
 
   <section class="takeaways wrap" id="takeaways" hidden>
     <div class="stat">
@@ -73,6 +82,77 @@
     <p id="status" class="status">Loading current Scratchers data…</p>
     <div id="cards" class="cards"></div>
   </main>
+
+  </div><!-- /#view-games -->
+
+  <section class="compare wrap" id="view-compare" hidden>
+    <p class="compare-intro">
+      Every Scratcher is a bet with the odds stacked against you — that's how the lottery funds
+      itself. The point of these charts isn't to find a <em>good</em> bet (there isn't one), but to
+      see <em>how</em> bad each game is, and which are merely terrible rather than ruinous. All of it
+      is worked out from California's own published prize tables, and updates with the data.
+    </p>
+
+    <figure class="fig" id="fig-byprice">
+      <figcaption>
+        <h2>What a dollar buys you back</h2>
+        <p>Average value returned for every <strong>$1</strong> spent, grouped by ticket price — i.e.
+          the total prize money printed in a game divided by what it costs to buy every ticket. Even
+          the best deal hands back well under a dollar; the cheapest tickets are the <em>worst</em>
+          value of all.</p>
+      </figcaption>
+      <div class="chart-host" id="chart-byprice"></div>
+      <p class="fig-note" id="note-byprice"></p>
+    </figure>
+
+    <figure class="fig" id="fig-return">
+      <figcaption>
+        <h2>Every game loses you money</h2>
+        <p>Each dot is one game, placed by how much of your dollar it returns on average. Nothing
+          reaches the <strong>break-even</strong> line — if it did, the lottery would be giving money
+          away. Hover or tap a dot for the game.</p>
+      </figcaption>
+      <div class="chart-host" id="chart-return"></div>
+      <div class="chart-legend" id="legend-return"></div>
+    </figure>
+
+    <figure class="fig" id="fig-where">
+      <figcaption>
+        <h2>Where the prize money actually goes</h2>
+        <p>Of every dollar the lottery pays back across all games combined, this is how it's split by
+          prize size. Most of it is small change you'll likely feed straight back in — and roughly a
+          tenth is tied up in jackpots almost nobody will ever claim.</p>
+      </figcaption>
+      <div class="chart-host" id="chart-where"></div>
+      <div class="chart-legend" id="legend-where"></div>
+    </figure>
+
+    <figure class="fig" id="fig-worthwhile">
+      <figcaption>
+        <h2>Odds of winning something worth keeping</h2>
+        <p>The live odds, today, of a single ticket winning a prize over a chosen amount — one dot per
+          game, on a scale where each step is <em>ten times</em> longer odds. Even "win&nbsp;$100+"
+          is a long shot on most games.</p>
+        <div class="seg" id="seg-worthwhile" role="group" aria-label="Prize threshold">
+          <button class="seg-btn" data-th="100" aria-pressed="true">Win $100+</button>
+          <button class="seg-btn" data-th="500" aria-pressed="false">Win $500+</button>
+          <button class="seg-btn" data-th="1000" aria-pressed="false">Win $1,000+</button>
+        </div>
+      </figcaption>
+      <div class="chart-host" id="chart-worthwhile"></div>
+      <div class="chart-legend" id="legend-worthwhile"></div>
+    </figure>
+
+    <figure class="fig" id="fig-jackpot">
+      <figcaption>
+        <h2>The jackpot you'll never see</h2>
+        <p>The top prizes are the reason people play — and the part the printed "1 in N" hides best.
+          Here's what chasing one really means: how many tickets you'd have to buy to <em>expect</em>
+          a single top-prize win, and what that pile of tickets would cost.</p>
+      </figcaption>
+      <div id="jackpot-grid" class="jackpot-grid"></div>
+    </figure>
+  </section>
 
   <footer class="colophon">
     <div class="wrap">
@@ -131,6 +211,6 @@
     </article>
   </template>
 
-  <script src="app.js?v=603fdbc658"></script>
+  <script src="app.js?v=ba5bd17ccf"></script>
 </body>
 </html>
