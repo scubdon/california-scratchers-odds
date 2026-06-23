@@ -430,8 +430,34 @@ function buildWorthwhile() {
       aria: `Live odds of winning over $${worthwhileThreshold}, one dot per game, log scale`,
       note: excluded ? `${excluded} game${excluded === 1 ? " has" : "s have"} no prize tier at $${worthwhileThreshold}+ and ${excluded === 1 ? "is" : "are"} not shown.` : "",
     });
+    const sorted = rows.slice().sort((a, b) => a.n - b.n);
+    const list = $("#list-worthwhile");
+    list.classList.remove("open");
+    list.innerHTML = sorted
+      .map((r, i) => `<li class="${i >= 10 ? "extra" : ""}">
+        <span class="wl-rank">${i + 1}</span>
+        <i class="wl-dot" style="background:${colorFor(r.g.price)}"></i>
+        <span class="wl-name">${esc(r.g.name)}</span>
+        <span class="wl-price">$${r.g.price}</span>
+        <span class="wl-odds">1 in ${fmt(r.n)}</span>
+      </li>`).join("");
+    const more = $("#more-worthwhile");
+    const closedLabel = `Show all ${sorted.length} games ▾`;
+    if (sorted.length > 10) {
+      more.hidden = false;
+      more.textContent = closedLabel;
+    } else {
+      more.hidden = true;
+    }
   };
   redraws.push(draw);
+
+  $("#more-worthwhile").addEventListener("click", () => {
+    const list = $("#list-worthwhile");
+    const open = list.classList.toggle("open");
+    const total = list.querySelectorAll("li").length;
+    $("#more-worthwhile").textContent = open ? "Show fewer ▴" : `Show all ${total} games ▾`;
+  });
 
   $("#seg-worthwhile").addEventListener("click", (e) => {
     const b = e.target.closest(".seg-btn"); if (!b) return;

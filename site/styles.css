@@ -467,6 +467,38 @@ h2 {
 .chart-legend span { display: inline-flex; align-items: center; gap: .35rem; }
 .chart-legend i { width: 11px; height: 11px; border-radius: 2px; display: inline-block; }
 
+/* ---------- worthwhile sorted list ---------- */
+.worthwhile-list {
+  list-style: none; margin: 1.1rem 0 0; padding: 0;
+  border-top: 1px solid var(--line);
+}
+.worthwhile-list li {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .5rem .2rem;
+  border-bottom: 1px solid var(--line);
+  font-size: .9rem;
+}
+.wl-rank {
+  font-family: var(--label); font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  min-width: 1.6rem; text-align: right;
+}
+.wl-dot { width: 11px; height: 11px; border-radius: 2px; flex: none; }
+.wl-name { flex: 1 1 auto; min-width: 0; color: var(--ink);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wl-price {
+  font-family: var(--label); font-weight: 600;
+  color: var(--ink-soft); font-variant-numeric: tabular-nums;
+}
+.wl-odds {
+  font-family: var(--label); font-weight: 700;
+  color: var(--ink); font-variant-numeric: tabular-nums;
+  min-width: 6rem; text-align: right;
+}
+.worthwhile-list li.extra { display: none; }
+.worthwhile-list.open li.extra { display: flex; }
+
 /* ---------- segmented control ---------- */
 .seg { display: inline-flex; margin-top: .9rem; border: 1px solid var(--line); border-radius: 2px; overflow: hidden; }
 .seg-btn {
