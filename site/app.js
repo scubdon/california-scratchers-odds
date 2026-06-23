@@ -150,6 +150,7 @@ function render() {
   status.textContent = games.length
     ? `Showing ${games.length} game${games.length === 1 ? "" : "s"}.`
     : "No games match those filters.";
+  $("#odds-key").hidden = games.length === 0;
 
   const tpl = $("#card-tpl");
   const frag = document.createDocumentFragment();
@@ -205,7 +206,11 @@ function buildCard(tpl, g, i) {
     if (p.remaining === 0) li.classList.add("gone");
     if (idx >= TIERS_VISIBLE && prizes.length > TIERS_VISIBLE + 2) li.classList.add("extra");
 
-    const shortOdds = p.odds_one_in && p.odds_one_in <= g.price * 5; // "win back ~5x stake" territory
+    // Color the odds by how much of your stake this single prize tier returns on
+    // average: (prize / odds) ÷ ticket price. Green when that share is strong
+    // (>= 10%) — a prize large relative to how rare it is — maroon otherwise.
+    const stakeReturn = p.odds_one_in ? (p.prize / p.odds_one_in) / g.price : 0;
+    const shortOdds = stakeReturn >= 0.10;
     const oddsCell = p.remaining === 0
       ? '<span class="t-odds gone-txt">all claimed</span>'
       : `<span class="t-odds${shortOdds ? " short" : ""}">${oddsText(p.odds_one_in)}</span>`;

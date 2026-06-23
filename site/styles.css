@@ -180,6 +180,18 @@ h2 {
   padding: 1.4rem 0 .2rem;
 }
 
+.odds-key {
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: .82rem;
+  line-height: 1.5;
+  margin: .2rem 0 0;
+}
+.odds-key-item { display: inline-flex; align-items: center; gap: .3rem; white-space: nowrap; margin-left: .5rem; }
+.odds-key-item i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.odds-key-item .ok-good { background: var(--accent-good); }
+.odds-key-item .ok-bad { background: var(--accent); }
+
 /* ---------- cards ---------- */
 .cards { margin: 1.1rem 0 4rem; display: grid; gap: 1.1rem; }
 @media (min-width: 720px) {
