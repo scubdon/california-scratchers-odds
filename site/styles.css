@@ -273,7 +273,7 @@ h2 {
 
 /* ---------- the headline: odds of winning a prize worth keeping ---------- */
 .odds-over {
-  display: grid; grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
   gap: .5rem;
   margin: 0 0 .9rem;
   padding: .65rem .4rem;

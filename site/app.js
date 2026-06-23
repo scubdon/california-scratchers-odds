@@ -28,6 +28,18 @@ function oddsAtLeast(g, threshold) {
   return p > 0 ? Math.round(1 / p) : null;
 }
 
+/* Which "worth keeping" thresholds to show on a card. Most games use the standard
+   $100 / $500 / $1,000 ladder, but games that top out below $1,000 (e.g. the
+   "$100 or $200" games) would just show empty $500+/$1,000+ columns — so for those
+   we fall back to the game's own prize tiers. */
+function oddsThresholds(g) {
+  const top = topPrize(g);
+  const ladder = [100, 500, 1000].filter((t) => t <= (top ? top.prize : 0));
+  if (ladder.length >= 2) return ladder;
+  const distinct = [...new Set((g.prizes || []).map((p) => p.prize))].sort((a, b) => a - b);
+  return distinct.slice(-3);
+}
+
 /* tiers shown before the "show all" fold kicks in */
 const TIERS_VISIBLE = 5;
 
@@ -168,11 +180,19 @@ function buildCard(tpl, g, i) {
   node.querySelector(".m-unsold").textContent = g.percent_unsold != null ? g.percent_unsold + "%" : "—";
   node.querySelector(".m-overall").textContent = g.overall_odds ? "1 in " + g.overall_odds : "—";
 
-  [100, 500, 1000].forEach((t) => {
+  const oddsRow = node.querySelector(".odds-over");
+  oddsRow.replaceChildren();
+  oddsThresholds(g).forEach((t) => {
     const n = oddsAtLeast(g, t);
-    const dd = node.querySelector(".o-" + t);
+    const div = document.createElement("div");
+    const dd = document.createElement("dd");
+    dd.className = "o-" + t;
     dd.textContent = oddsShort(n);
     if (n != null) dd.title = oddsText(n);
+    const dt = document.createElement("dt");
+    dt.textContent = "Win " + money(t) + "+";
+    div.append(dt, dd);
+    oddsRow.appendChild(div);
   });
 
   const list = node.querySelector(".tiers");
