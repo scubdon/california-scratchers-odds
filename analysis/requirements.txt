@@ -1,0 +1,5 @@
+# Dependencies for working with the data in a notebook / scripts.
+# Install with:  pip install -r analysis/requirements.txt
+pandas>=2.1
+pyarrow>=14
+jupyter>=1.0
