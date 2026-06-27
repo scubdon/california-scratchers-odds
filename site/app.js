@@ -298,6 +298,7 @@ function buildCompare() {
   buildByPrice();
   buildReturnStrip();
   buildWhere();
+  buildLadders();
   buildWorthwhile();
   buildJackpot();
 }
@@ -537,6 +538,69 @@ function stripPlot(host, pts, opts) {
     if (!noteEl) { noteEl = document.createElement("p"); noteEl.className = "fig-note strip-note"; host.after(noteEl); }
     noteEl.textContent = opts.note;
   } else if (noteEl) { noteEl.remove(); }
+}
+
+/* ---- Chart C2: small-multiples of every game's prize ladder ----
+   One mini bar chart per game. x = prize size, bar height = how many of that
+   prize exist — both on a shared log scale so jackpots stay visible beside the
+   millions of small wins. Fixed viewBox (CSS scales it), so no resize redraw. */
+function buildLadders() {
+  const games = state.all
+    .filter((g) => (g.prizes || []).some((p) => p.prize > 0 && (p.total || 0) > 0))
+    .sort((a, b) => a.price - b.price || a.name.localeCompare(b.name));
+  if (!games.length) return;
+
+  /* shared domains across all games, so panels are directly comparable */
+  let minP = Infinity, maxP = 0, maxN = 0;
+  games.forEach((g) => (g.prizes || []).forEach((p) => {
+    if (!(p.prize > 0) || !(p.total > 0)) return;
+    minP = Math.min(minP, p.prize); maxP = Math.max(maxP, p.prize);
+    maxN = Math.max(maxN, p.total);
+  }));
+  const lpMin = Math.log10(minP), lpMax = Math.log10(maxP), lnMax = Math.log10(maxN);
+
+  const VB_W = 200, VB_H = 92, padL = 6, padR = 6, padT = 6, padB = 8;
+  const innerW = VB_W - padL - padR, innerH = VB_H - padT - padB;
+  const baseY = padT + innerH;
+  const xPos = (v) => padL + ((Math.log10(v) - lpMin) / (lpMax - lpMin)) * innerW;
+  const barH = (v) => Math.max(1.5, (Math.log10(v) / lnMax) * innerH);
+
+  const host = $("#chart-ladders");
+  const frag = document.createDocumentFragment();
+
+  games.forEach((g) => {
+    const cell = document.createElement("figure");
+    cell.className = "ladder-cell";
+    cell.innerHTML =
+      `<figcaption class="ladder-cap"><span class="ladder-name">${esc(g.name)}</span>` +
+      `<span class="ladder-price">$${g.price}</span></figcaption>`;
+
+    const svg = el("svg", { viewBox: `0 0 ${VB_W} ${VB_H}`, role: "img",
+      "aria-label": `Prize ladder for ${g.name}` });
+
+    /* faint decade reference lines at $100 / $10K / $1M, where in range */
+    [100, 1e4, 1e6].forEach((d) => {
+      if (d < minP || d > maxP) return;
+      svg.appendChild(el("line", { x1: xPos(d), x2: xPos(d), y1: padT, y2: baseY, class: "grid" }));
+    });
+
+    (g.prizes || [])
+      .filter((p) => p.prize > 0 && p.total > 0)
+      .forEach((p) => {
+        const h = barH(p.total), x = xPos(p.prize);
+        const rect = el("rect", { x: x - 2.5, y: baseY - h, width: 5, height: h,
+          fill: colorFor(g.price), class: "ladder-bar" });
+        attachTip(rect, `<b>${money(p.prize)}</b><br><span class="tip-sub">${fmt(p.total)} printed</span>`);
+        svg.appendChild(rect);
+      });
+
+    svg.appendChild(el("line", { x1: padL, x2: VB_W - padR, y1: baseY, y2: baseY, class: "axis-line" }));
+    cell.appendChild(svg);
+    frag.appendChild(cell);
+  });
+
+  host.replaceChildren(frag);
+  priceLegend("#legend-ladders", games.map((g) => g.price));
 }
 
 /* ---- Chart C: where the prize money goes (100% stacked bar) ---- */

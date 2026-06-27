@@ -574,3 +574,44 @@ h2 {
 }
 .jp-line { font-size: .92rem; color: var(--ink-soft); margin: .2rem 0; }
 .jp-line strong { color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* small-multiples: every game's prize ladder */
+.ladder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: .8rem 1rem;
+}
+.ladder-cell {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  box-shadow: var(--shadow);
+  padding: .5rem .55rem .35rem;
+}
+.ladder-cap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .4rem;
+  margin-bottom: .25rem;
+}
+.ladder-name {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: .82rem;
+  line-height: 1.15;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ladder-price {
+  font-family: var(--label);
+  font-weight: 700;
+  font-size: .72rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.ladder-bar { transition: opacity .1s ease; cursor: pointer; }
+.ladder-bar:hover { opacity: .7; }
