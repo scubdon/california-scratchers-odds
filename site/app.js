@@ -265,20 +265,27 @@ function wireViews() {
   showView(hashView());
 }
 
-const hashView = () => (location.hash.replace("#", "") === "compare" ? "compare" : "games");
+const VIEWS = ["games", "compare", "kiosk"];
+const hashView = () => {
+  const h = location.hash.replace("#", "");
+  return VIEWS.includes(h) ? h : "games";
+};
 
 function showView(view) {
-  const compare = view === "compare";
-  $("#view-games").hidden = compare;
-  $("#view-compare").hidden = !compare;
+  if (!VIEWS.includes(view)) view = "games";
+  $("#view-games").hidden = view !== "games";
+  $("#view-compare").hidden = view !== "compare";
+  $("#view-kiosk").hidden = view !== "kiosk";
   document.querySelectorAll(".viewtab").forEach((b) =>
     b.setAttribute("aria-pressed", String(b.dataset.view === view)));
-  const want = compare ? "#compare" : "#games";
+  const want = "#" + view;
   if (location.hash !== want) history.replaceState(null, "", want);
 
-  if (compare) {
+  if (view === "compare") {
     if (!compareBuilt) { buildCompare(); compareBuilt = true; }
     else redraws.forEach((fn) => fn()); /* remeasure now that it's visible */
+  } else if (view === "kiosk") {
+    if (!kioskBuilt) { buildKiosk(); kioskBuilt = true; }
   }
 }
 
@@ -674,6 +681,252 @@ function buildJackpot() {
 function priceLegend(sel, prices) {
   const uniq = [...new Set(prices)].sort((a, b) => a - b);
   $(sel).innerHTML = uniq.map((p) => `<span><i style="background:${colorFor(p)}"></i>$${p}</span>`).join("");
+}
+
+/* ================================================================
+   Kiosk view — a simulated corner-store run. Buy from the games on
+   sale right now at their real prices and scratch; outcomes are drawn
+   at each game's exact published odds. Same data.json, no server.
+   ================================================================ */
+
+let kioskBuilt = false;
+const kiosk = { active: false, start: 0, balance: 0, spent: 0, won: 0, scratched: 0, pile: [], priceFilter: "all", nextId: 1 };
+
+/* Per-game outcome model, built once and cached on the game object.
+   Each cash tier gets its published per-ticket probability (1 / printed
+   "1 in N"); the leftover between those and California's advertised
+   overall odds of winning anything is the non-cash *free ticket*. */
+function gameModel(g) {
+  if (g._sim) return g._sim;
+  const tiers = [];
+  let cum = 0;
+  (g.prizes || []).forEach((p) => {
+    const prob = p.odds_printed
+      ? 1 / p.odds_printed
+      : (g.tickets_printed ? (p.total || 0) / g.tickets_printed : 0);
+    if (prob > 0) { cum += prob; tiers.push({ prize: p.prize, cum }); }
+  });
+  let freeProb = 0;
+  if (g.overall_odds) { freeProb = Math.max(0, 1 / g.overall_odds - cum); }
+  g._sim = { tiers, freeProb, freeCum: cum + freeProb };
+  return g._sim;
+}
+
+/* draw a single ticket: {type:'cash',prize} | {type:'free'} | {type:'none'} */
+function drawTicket(g) {
+  const m = gameModel(g);
+  const r = Math.random();
+  for (const t of m.tiers) if (r < t.cum) return { type: "cash", prize: t.prize };
+  if (r < m.freeCum) return { type: "free" };
+  return { type: "none" };
+}
+
+function buildKiosk() {
+  const input = $("#budget-input");
+  const start = () => startRun(Number(input.value));
+  $("#budget-start").addEventListener("click", start);
+  input.addEventListener("keydown", (e) => { if (e.key === "Enter") start(); });
+
+  $("#budget-presets").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-amt]"); if (!b) return;
+    input.value = b.dataset.amt;
+    startRun(Number(b.dataset.amt));
+  });
+
+  $("#kiosk-reset").addEventListener("click", resetRun);
+  $("#scratch-all").addEventListener("click", scratchAll);
+
+  /* rack price filter */
+  const prices = [...new Set(state.all.map((g) => g.price))].sort((a, b) => a - b);
+  $("#rack-price-chips").innerHTML =
+    ['<button class="chip" data-price="all" aria-pressed="true">All</button>']
+      .concat(prices.map((p) => `<button class="chip" data-price="${p}" aria-pressed="false">$${p}</button>`))
+      .join("");
+  $("#rack-price-chips").addEventListener("click", (e) => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    kiosk.priceFilter = b.dataset.price;
+    document.querySelectorAll("#rack-price-chips .chip").forEach((c) =>
+      c.setAttribute("aria-pressed", String(c === b)));
+    renderRack();
+  });
+}
+
+function startRun(amount) {
+  const err = $("#budget-error");
+  if (!Number.isFinite(amount) || amount < 1) {
+    err.textContent = "Enter a budget of at least $1.";
+    err.hidden = false;
+    return;
+  }
+  amount = Math.min(Math.floor(amount), 100000);
+  err.hidden = true;
+  Object.assign(kiosk, { active: true, start: amount, balance: amount, spent: 0, won: 0, scratched: 0, pile: [], nextId: 1 });
+  $("#kiosk-setup").hidden = true;
+  $("#kiosk-play").hidden = false;
+  renderWallet();
+  renderRack();
+  renderPile();
+}
+
+function resetRun() {
+  kiosk.active = false;
+  kiosk.pile = [];
+  $("#kiosk-play").hidden = true;
+  $("#kiosk-setup").hidden = false;
+  $("#budget-input").focus();
+}
+
+/* ---- wallet ---- */
+function renderWallet() {
+  const net = kiosk.balance - kiosk.start;
+  $("#wallet-balance").textContent = money(kiosk.balance);
+  $("#wallet-spent").textContent = money(kiosk.spent);
+  $("#wallet-won").textContent = money(kiosk.won);
+  const netEl = $("#wallet-net");
+  netEl.textContent = (net >= 0 ? "+" : "−") + "$" + Math.abs(net).toLocaleString("en-US");
+  netEl.className = net > 0 ? "net-up" : net < 0 ? "net-down" : "";
+  $("#wallet-tickets").textContent = fmt(kiosk.scratched);
+}
+
+/* ---- the rack (buy) ---- */
+function renderRack() {
+  const cheapest = Math.min(...state.all.map((g) => g.price));
+  $("#rack-broke").hidden = kiosk.balance >= cheapest;
+
+  let games = state.all.slice().sort((a, b) => a.price - b.price || a.name.localeCompare(b.name));
+  if (kiosk.priceFilter !== "all") games = games.filter((g) => String(g.price) === kiosk.priceFilter);
+
+  const tpl = $("#rack-tpl");
+  const frag = document.createDocumentFragment();
+  games.forEach((g) => frag.appendChild(buildRackCard(tpl, g)));
+  $("#rack").replaceChildren(frag);
+  refreshAfford();
+}
+
+function buildRackCard(tpl, g) {
+  const node = tpl.content.cloneNode(true);
+  const card = node.querySelector(".rack-card");
+  card.dataset.price = g.price;
+
+  const img = node.querySelector("img");
+  const thumb = node.querySelector(".rack-thumb");
+  if (g.image_url) {
+    img.alt = g.name + " ticket";
+    img.addEventListener("error", () => thumb.classList.add("noimg"), { once: true });
+    img.src = g.image_url;
+  } else thumb.classList.add("noimg");
+
+  node.querySelector(".rack-name").textContent = g.name;
+
+  const top = topPrize(g);
+  const overall = g.overall_odds ? "1 in " + g.overall_odds : "—";
+  node.querySelector(".rack-odds").innerHTML =
+    `<strong>${money(top ? top.prize : null)}</strong> top prize · ${overall} to win anything`;
+
+  const buy = node.querySelector(".rack-buy");
+  buy.textContent = "Buy · $" + g.price;
+  buy.addEventListener("click", () => buyTicket(g));
+  return node;
+}
+
+/* enable/disable buy buttons against the current balance */
+function refreshAfford() {
+  document.querySelectorAll("#rack .rack-card").forEach((card) => {
+    const price = Number(card.dataset.price);
+    card.querySelector(".rack-buy").disabled = kiosk.balance < price;
+  });
+  const cheapest = Math.min(...state.all.map((g) => g.price));
+  $("#rack-broke").hidden = kiosk.balance >= cheapest;
+}
+
+/* ---- buying & the pile ---- */
+/* single source of truth for the empty-state line and "Scratch all" button */
+function updatePileControls() {
+  const empty = kiosk.pile.length === 0;
+  $("#pile-empty").hidden = !empty;
+  $("#scratch-all").hidden = empty || kiosk.pile.every((t) => t.revealed);
+}
+
+function renderPile() {
+  $("#pile").replaceChildren();
+  updatePileControls();
+}
+
+function buyTicket(g) {
+  if (kiosk.balance < g.price) return;
+  kiosk.balance -= g.price;
+  kiosk.spent += g.price;
+  addTicket(g, false);
+  renderWallet();
+  refreshAfford();
+}
+
+function addTicket(g, isFree) {
+  const t = { id: kiosk.nextId++, g, isFree, revealed: false, outcome: null, node: null };
+  kiosk.pile.unshift(t);
+  const node = buildTicketNode(t);
+  t.node = node;
+  const pile = $("#pile");
+  pile.insertBefore(node, pile.firstChild);
+  updatePileControls();
+}
+
+function buildTicketNode(t) {
+  const node = $("#ticket-tpl").content.cloneNode(true).querySelector(".ticket");
+  const img = node.querySelector(".ticket-img");
+  if (t.g.image_url) { img.src = t.g.image_url; img.alt = t.g.name; }
+  else node.querySelector(".ticket-face").classList.add("noimg");
+  if (t.isFree) node.querySelector(".ticket-free").hidden = false;
+
+  const go = () => revealTicket(t);
+  node.querySelector(".ticket-cover").addEventListener("click", go);
+  node.addEventListener("keydown", (e) => {
+    if ((e.key === "Enter" || e.key === " ") && !t.revealed) { e.preventDefault(); go(); }
+  });
+  return node;
+}
+
+function revealTicket(t) {
+  if (t.revealed) return;
+  t.revealed = true;
+  kiosk.scratched++;
+  t.outcome = drawTicket(t.g);
+  const o = t.outcome;
+
+  if (o.type === "cash") { kiosk.balance += o.prize; kiosk.won += o.prize; }
+  else if (o.type === "free") { addTicket(t.g, true); }
+
+  paintResult(t.node, t.g, o);
+  renderWallet();
+  refreshAfford();
+  updatePileControls();
+}
+
+function paintResult(node, g, o) {
+  const amt = node.querySelector(".result-amt");
+  const label = node.querySelector(".result-label");
+  node.classList.add("scratched");
+  node.removeAttribute("tabindex");
+  if (o.type === "cash") {
+    node.classList.add("win");
+    amt.textContent = money(o.prize);
+    label.textContent = o.prize <= g.price ? "money back" : "winner!";
+  } else if (o.type === "free") {
+    node.classList.add("win", "free-win");
+    amt.textContent = "Free";
+    label.textContent = "ticket — replayed";
+  } else {
+    node.classList.add("loss");
+    amt.textContent = "—";
+    label.textContent = "no win";
+  }
+  node.querySelector(".ticket-result").hidden = false;
+}
+
+function scratchAll() {
+  /* snapshot first: revealing a free ticket appends to the pile mid-loop */
+  kiosk.pile.filter((t) => !t.revealed).forEach((t) => revealTicket(t));
+  updatePileControls();
 }
 
 /* ---- helpers ---- */

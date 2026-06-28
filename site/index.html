@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=4e2fb72ef4" />
+  <link rel="stylesheet" href="styles.css?v=kiosk-v1" />
 </head>
 <body>
   <header class="masthead">
@@ -34,6 +34,7 @@
     <div class="wrap">
       <button class="viewtab" data-view="games" aria-pressed="true">The games</button>
       <button class="viewtab" data-view="compare" aria-pressed="false">Compare games</button>
+      <button class="viewtab" data-view="kiosk" aria-pressed="false">Try your luck</button>
     </div>
   </nav>
 
@@ -175,6 +176,108 @@
     </figure>
   </section>
 
+  <section class="kiosk wrap" id="view-kiosk" hidden>
+    <p class="kiosk-intro">
+      Thinking of walking into the corner store with some cash and walking out with a fistful of
+      Scratchers? Try it here first, for free. Set a budget, buy from the games on sale right now at
+      their real prices, and scratch. <em>Every</em> outcome is drawn at the exact odds California
+      prints for that game — the same as pulling a ticket at random from the full press run. The only
+      thing missing is the loss of your actual money.
+    </p>
+
+    <!-- before play begins: set the stake -->
+    <div class="kiosk-setup" id="kiosk-setup">
+      <label class="kiosk-setup-label" for="budget-input">How much are you walking in with?</label>
+      <div class="kiosk-setup-row">
+        <div class="budget-field">
+          <span class="budget-currency">$</span>
+          <input id="budget-input" type="number" inputmode="numeric" min="1" max="100000" step="1"
+            value="100" autocomplete="off" aria-label="Starting budget in dollars" />
+        </div>
+        <button class="btn-primary" id="budget-start" type="button">Walk in →</button>
+      </div>
+      <div class="kiosk-presets" id="budget-presets" aria-label="Quick budgets">
+        <button class="chip" data-amt="20" type="button">$20</button>
+        <button class="chip" data-amt="50" type="button">$50</button>
+        <button class="chip" data-amt="100" type="button">$100</button>
+        <button class="chip" data-amt="500" type="button">$500</button>
+      </div>
+      <p class="kiosk-note" id="budget-error" hidden></p>
+    </div>
+
+    <!-- during play -->
+    <div class="kiosk-play" id="kiosk-play" hidden>
+      <div class="wallet" id="wallet" aria-live="polite">
+        <div class="wallet-main">
+          <span class="wallet-label">In your pocket</span>
+          <span class="wallet-balance" id="wallet-balance">$0</span>
+        </div>
+        <dl class="wallet-stats">
+          <div><dt>Spent</dt><dd id="wallet-spent">$0</dd></div>
+          <div><dt>Won</dt><dd id="wallet-won">$0</dd></div>
+          <div><dt>Net</dt><dd id="wallet-net">$0</dd></div>
+          <div><dt>Scratched</dt><dd id="wallet-tickets">0</dd></div>
+        </dl>
+        <button class="btn-ghost" id="kiosk-reset" type="button">Start over</button>
+      </div>
+
+      <div class="kiosk-cols">
+        <section class="kiosk-pile-col" id="pile-col">
+          <div class="kiosk-col-head">
+            <h2>Your tickets</h2>
+            <button class="btn-ghost sm" id="scratch-all" type="button" hidden>Scratch all</button>
+          </div>
+          <p class="pile-empty" id="pile-empty">No tickets yet. Buy a few from the rack.</p>
+          <div class="pile" id="pile"></div>
+        </section>
+
+        <section class="kiosk-rack-col">
+          <div class="kiosk-col-head">
+            <h2>On sale now</h2>
+            <div class="chips kiosk-price-chips" id="rack-price-chips" aria-label="Filter rack by price"></div>
+          </div>
+          <p class="rack-broke" id="rack-broke" hidden>You're out of money. Cash out your wins or start over.</p>
+          <div class="rack" id="rack"></div>
+        </section>
+      </div>
+
+      <p class="kiosk-fineprint">
+        Outcomes are generated on the fly at each game's published odds — both the per-prize "1&nbsp;in&nbsp;N"
+        and California's advertised overall odds of winning <em>anything</em> (the gap between the two is the
+        <strong>free ticket</strong> the lottery hands out, which you'll see modeled here as a free replay).
+        No money is real. This is a simulation, not a guarantee of any particular result.
+      </p>
+    </div>
+  </section>
+
+  <template id="rack-tpl">
+    <article class="rack-card">
+      <div class="rack-thumb"><img loading="lazy" alt="" /></div>
+      <div class="rack-body">
+        <h3 class="rack-name"></h3>
+        <p class="rack-odds"></p>
+      </div>
+      <button class="rack-buy" type="button"></button>
+    </article>
+  </template>
+
+  <template id="ticket-tpl">
+    <div class="ticket" tabindex="0" role="button">
+      <div class="ticket-face">
+        <img class="ticket-img" loading="lazy" alt="" />
+        <span class="ticket-free" hidden>Free</span>
+      </div>
+      <button class="ticket-cover" type="button">
+        <span class="cover-coin">$</span>
+        <span class="cover-text">Scratch</span>
+      </button>
+      <div class="ticket-result" hidden>
+        <span class="result-amt"></span>
+        <span class="result-label"></span>
+      </div>
+    </div>
+  </template>
+
   <footer class="colophon">
     <div class="wrap">
       <h2>How this is calculated</h2>
@@ -228,6 +331,6 @@
     </article>
   </template>
 
-  <script src="app.js?v=4a976af9ae"></script>
+  <script src="app.js?v=kiosk-v1"></script>
 </body>
 </html>
