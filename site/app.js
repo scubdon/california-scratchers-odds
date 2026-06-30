@@ -160,6 +160,7 @@ function render() {
     ? `Showing ${games.length} game${games.length === 1 ? "" : "s"}.`
     : "No games match those filters.";
   $("#odds-key").hidden = games.length === 0;
+  $("#odds-key2").hidden = games.length === 0;
 
   const tpl = $("#card-tpl");
   const frag = document.createDocumentFragment();
