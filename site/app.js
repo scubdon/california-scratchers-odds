@@ -17,6 +17,15 @@ const oddsShort = (n) => {
   if (n >= 1e4) return "1 in " + Math.round(n / 1e3) + "K";
   return "1 in " + n.toLocaleString("en-US");
 };
+/* compact dollar amount for the spend subline: ~$2,400 / ~$36K / ~$1.8M */
+const moneyShort = (n) => {
+  if (n == null) return "—";
+  if (n >= 1e6) return "~$" + (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
+  if (n >= 1e4) return "~$" + Math.round(n / 1e3) + "K";
+  return "~$" + Math.round(n).toLocaleString("en-US");
+};
+/* short threshold label so five columns fit: $100 / $1K / $5K */
+const moneyLabel = (n) => (n >= 1000 ? "$" + n / 1000 + "K" : "$" + n);
 
 /* combined live odds of winning a prize of at least `threshold` dollars, as the N
    in "1 in N". Probabilities of each qualifying tier add; null if no tier qualifies. */
@@ -29,12 +38,12 @@ function oddsAtLeast(g, threshold) {
 }
 
 /* Which "worth keeping" thresholds to show on a card. Most games use the standard
-   $100 / $500 / $1,000 ladder, but games that top out below $1,000 (e.g. the
-   "$100 or $200" games) would just show empty $500+/$1,000+ columns — so for those
-   we fall back to the game's own prize tiers. */
+   $100 / $200 / $500 / $1,000 / $5,000 ladder, but games that top out below the
+   higher rungs (e.g. the "$100 or $200" games) would just show empty columns — so
+   for those we fall back to the game's own prize tiers. */
 function oddsThresholds(g) {
   const top = topPrize(g);
-  const ladder = [100, 500, 1000].filter((t) => t <= (top ? top.prize : 0));
+  const ladder = [100, 200, 500, 1000, 5000].filter((t) => t <= (top ? top.prize : 0));
   if (ladder.length >= 2) return ladder;
   const distinct = [...new Set((g.prizes || []).map((p) => p.prize))].sort((a, b) => a - b);
   return distinct.slice(-3);
@@ -185,14 +194,20 @@ function buildCard(tpl, g, i) {
   oddsRow.replaceChildren();
   oddsThresholds(g).forEach((t) => {
     const n = oddsAtLeast(g, t);
+    // average spend before a winner of this size = ticket price x its 1-in-N odds
+    const spend = n != null ? g.price * n : null;
     const div = document.createElement("div");
     const dd = document.createElement("dd");
     dd.className = "o-" + t;
     dd.textContent = oddsShort(n);
     if (n != null) dd.title = oddsText(n);
+    const sd = document.createElement("dd");
+    sd.className = "o-spend";
+    sd.textContent = moneyShort(spend);
+    if (spend != null) sd.title = "~" + money(spend) + " spent on average between " + money(t) + "+ wins";
     const dt = document.createElement("dt");
-    dt.textContent = "Win " + money(t) + "+";
-    div.append(dt, dd);
+    dt.textContent = "Win " + moneyLabel(t) + "+";
+    div.append(dt, dd, sd);
     oddsRow.appendChild(div);
   });
 

@@ -286,30 +286,37 @@ h2 {
 /* ---------- the headline: odds of winning a prize worth keeping ---------- */
 .odds-over {
   display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
-  gap: .5rem;
+  gap: .3rem;
   margin: 0 0 .9rem;
-  padding: .65rem .4rem;
+  padding: .65rem .3rem;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 2px;
 }
 .odds-over div {
   min-width: 0; text-align: center;
+  padding: 0 .15rem;
   border-left: 1px solid var(--line-soft);
 }
 .odds-over div:first-child { border-left: 0; }
 .odds-over dt {
   font-family: var(--label);
-  font-size: .68rem; font-weight: 700;
-  letter-spacing: .06em; text-transform: uppercase;
+  font-size: .64rem; font-weight: 700;
+  letter-spacing: .04em; text-transform: uppercase;
   color: var(--ink-soft);
 }
 .odds-over dd {
   margin: .2rem 0 0;
   font-family: var(--label);
-  font-weight: 700; font-size: 1.08rem;
+  font-weight: 700; font-size: .92rem;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
+}
+/* avg spend before a winner of that size — secondary line under the odds */
+.odds-over dd.o-spend {
+  margin-top: .12rem;
+  font-size: .72rem; font-weight: 600;
+  color: var(--ink-soft);
 }
 
 /* ---------- the prize ledger ---------- */
