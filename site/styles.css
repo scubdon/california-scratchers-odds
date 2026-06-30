@@ -862,6 +862,8 @@ h2 {
   text-align: center; padding: .3rem;
   background: rgba(28,28,26,.82); color: #fff;
   opacity: 0; transition: opacity .3s ease .15s;
+  /* invisible until scratched — must not intercept clicks on the cover beneath */
+  pointer-events: none;
 }
 .ticket.scratched .ticket-result { opacity: 1; }
 .ticket.win .ticket-result { background: rgba(36,84,62,.9); }
