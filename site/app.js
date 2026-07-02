@@ -841,7 +841,10 @@ function buildRackCard(tpl, g) {
 
   const buy = node.querySelector(".rack-buy");
   buy.textContent = "Buy · $" + g.price;
-  buy.addEventListener("click", () => buyTicket(g));
+  /* the whole card is a tap target — the small "Buy" button is easy to miss on
+     touch (no hover to flag it), so tapping anywhere on the card buys. Clicks on
+     the button itself bubble up here, so a single handler covers both. */
+  card.addEventListener("click", () => buyTicket(g));
   return node;
 }
 
@@ -849,7 +852,9 @@ function buildRackCard(tpl, g) {
 function refreshAfford() {
   document.querySelectorAll("#rack .rack-card").forEach((card) => {
     const price = Number(card.dataset.price);
-    card.querySelector(".rack-buy").disabled = kiosk.balance < price;
+    const broke = kiosk.balance < price;
+    card.querySelector(".rack-buy").disabled = broke;
+    card.classList.toggle("unaffordable", broke);
   });
   const cheapest = Math.min(...state.all.map((g) => g.price));
   $("#rack-broke").hidden = kiosk.balance >= cheapest;
